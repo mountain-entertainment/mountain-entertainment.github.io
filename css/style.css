@@ -477,7 +477,7 @@ header .mouse a i {
   padding: 70px 0 70px 0;
 }
 
-.about-inner h4 {
+.about-inner h4, .team .col-md-6.left-box h5 {
   padding: 0 0 20px 70px;
 }
 
@@ -488,7 +488,7 @@ header .mouse a i {
   text-align: justify;
 }
 
-.about-inner h4::before {
+.about-inner h4::before, .team .col-md-6.left-box h5::before {
   display: block;
   position: relative;
   content: '';
@@ -692,24 +692,28 @@ header .mouse a i {
 /* :::::::::::: 5. Team :::::::::::: */
 /* ================================= */
 
-.section-team {
+.team {
   overflow: hidden;
 }
-.section-team .col-md-6.left-box {
+
+.team .col-md-6.left-box {
   display: flex;
-  padding: 150px 80px 150px 80px;
-  align-items: center;
+  flex-direction: column;
+  padding: 100px 80px 100px 80px;
   align-content: center;
   justify-content: center;
+  gap: 25px;
 }
-.section-team .col-md-6.left-box .col-md-6:nth-child(1), .section-team .col-md-6.left-box .col-md-6:nth-child(2) {
+
+.team .col-md-6.left-box .col-md-6:nth-child(1), .section-team .col-md-6.left-box .col-md-6:nth-child(2) {
   border-bottom: 1px solid #eeeeef;
   margin-bottom: 35px;
   padding-bottom: 25px;
 }
-.section-team .col-md-6.right-box {
+
+.team .col-md-6.right-box {
   display: flex;
-  padding: 150px 80px;
+  padding: 100px 80px;
   align-items: center;
   align-content: center;
   justify-content: center;
@@ -720,7 +724,13 @@ header .mouse a i {
   -o-background-size: cover;
   background-size: cover;
 }
-.section-team .col-md-6.right-box .title-section h2 {
+.team .col-md-6.right-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team .col-md-6.right-box .title-section h2 {
   font-size: 1.2em;
   font-weight: 600;
   color: #fff;
@@ -728,7 +738,7 @@ header .mouse a i {
   text-transform: uppercase;
   margin-top: 15px;
 }
-.section-team .col-md-6.right-box .title-section h2:after {
+.team .col-md-6.right-box .title-section h2:after {
   content: "<--";
   display: block;
   margin: 15px auto;
@@ -736,13 +746,13 @@ header .mouse a i {
   color: #fff;
   letter-spacing: 1px;
 }
-.section-team .col-md-6.right-box .title-section i {
+.team .col-md-6.right-box .title-section i {
   color: #fff;
   font-size: 2.1em;
   text-align: left;
   display: block;
 }
-.section-team .col-md-6.right-box .title-section p {
+.team .col-md-6.right-box .title-section p {
   color: #fff;
   text-align: left;
   word-spacing: 1px;
@@ -875,6 +885,14 @@ footer a:hover, footer a:focus {
 
 @media only screen and  (max-width: 756px) {
 
+  .team .col-md-6.left-box {
+    padding: 20px 45px 20px 45px !important;
+  }
+
+  .team .col-md-6.right-box {
+    padding: 0 !important;
+  }
+
   .section-about .col-md-6.right-box .col-md-3 {
     margin-bottom: 50px;
  }
@@ -959,14 +977,18 @@ header .logo img {
 
 @media only screen and  (max-width: 540px) {
 
-  .about-inner h4 {
+  .about-inner h4  {
     padding-left: 0;
     width: 60%;
     text-align: center;
     margin-bottom: 30px;
   }
 
-  .about-inner h4::before {
+  .about-inner p {
+    max-width: 80%;
+  }
+
+  .about-inner h4::before, .team .col-md-6.left-box h5::before {
     right: 0;
     top: 90px;
     transform: translate(-50%, 0);
