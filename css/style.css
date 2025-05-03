@@ -18,6 +18,10 @@
      9. Responsive CSS
 */
 
+:root {
+  --orange: #e74f00;
+  --grey: #363636;
+}
 
 /* ================================= */
 /* :::::::::: 1. General ::::::::::: */
@@ -317,14 +321,14 @@ header .mouse a i {
     font-weight: 700;
 }
 
-header .social-icons li {
+.social-icons li {
   list-style:none;
   font-size: 18px;
   float: left;
   margin: 0 10px 0 0;
 }
 
-header .social-icons li i {
+.social-icons li i {
   color: #FFFFFF;
   display:block;
   width: 40px;
@@ -344,7 +348,7 @@ header .social-icons li i {
   -ms-transition: all 0.5s ease 0s;
 }
 
-header .social-icons li i:hover {
+.social-icons li i:hover {
   color: #000000;
   background: none;
   text-shadow: none;
@@ -355,8 +359,8 @@ header .social-icons li i:hover {
   -webkit-border-radius: 50%;
 }
 
-header .social-icons li a {
-  display:block;
+.social-icons li a {
+  display :block;
   background: rgba(255, 255, 255, 0);
   text-decoration: none;
   border-radius: 50%;
@@ -371,22 +375,22 @@ header .social-icons li a {
   -ms-transition: all 0.5s ease 0s;
 }
 
-header .social-icons li a:hover {
+.social-icons li a:hover {
   background: #fff;
 }
 
 
-header .social-icons {
+.social-icons {
   text-align: center;
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: absolute;
+  align-items: center;
+  justify-content: center;
   z-index: 2;
   top: 120px;
+  margin: 20px 0 30px 0;
 }
 
-header .social-icons ul {
+.social-icons ul {
   line-height: 0px;
   position: relative;
   display: inline-block;
@@ -458,6 +462,43 @@ header .social-icons ul {
 /* ================================= */
 /* :::::::::: 3. About ::::::::::::: */
 /* ================================= */
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 0 70px 0;
+}
+
+.about-inner h4 {
+  padding: 0 0 20px 70px;
+}
+
+.about-inner p {
+  font-size: medium;
+  margin-top: 50px;
+  max-width: 60%;
+  text-align: justify;
+}
+
+.about-inner h4::before {
+  display: block;
+  position: relative;
+  content: '';
+  z-index: -1;
+  right: 70px;
+  top: 10px;
+  height: 3px;
+  width: 4rem;
+  background-color: var(--orange);
+}
 
 .section-about {
   overflow: hidden;
@@ -918,6 +959,20 @@ header .logo img {
 
 @media only screen and  (max-width: 540px) {
 
+  .about-inner h4 {
+    padding-left: 0;
+    width: 60%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .about-inner h4::before {
+    right: 0;
+    top: 90px;
+    transform: translate(-50%, 0);
+    left: 50%;
+  }
+
   header {
     text-align: center;
  }
@@ -927,7 +982,7 @@ header .logo img {
   header .countdown {
     margin-left: 0;
  }
-  header .social-icons {
+  .social-icons {
   width: 100%;
    margin: 0 auto;
    align-items: center;
@@ -935,7 +990,7 @@ header .logo img {
    top: 70px;
    left: 0;
  }
-  header .social-icons li:last-child {
+  .social-icons li:last-child {
     margin-right: 0;
  }
 }
