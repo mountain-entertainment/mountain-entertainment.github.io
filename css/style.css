@@ -988,7 +988,26 @@ header .logo img {
     max-width: 80%;
   }
 
-  .about-inner h4::before, .team .col-md-6.left-box h5::before {
+  
+  .team .col-md-6.left-box h5 {
+    padding-left: 0;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .team .col-md-6.left-box h5::before {
+    right: 0;
+    top: 70px;
+    transform: translate(-50%, 0);
+    left: 50%;
+  }
+
+  .about-inner h4{
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .about-inner h4::before {
     right: 0;
     top: 90px;
     transform: translate(-50%, 0);
