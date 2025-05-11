@@ -15,53 +15,32 @@
     8. Wow
     9. Google map
 */
+const navMenu = document.getElementById('nav-menu'),
+      toggleMenu = document.getElementById('nav-toggle'),
+      closeMenu = document.getElementById('nav-close')
 
-(function($) { "use strict";
+/*SHOW*/ 
+toggleMenu.addEventListener('click', ()=>{
+    navMenu.classList.toggle('show')
+})
 
-	$(function() {
-		var header = $(".start-style");
-		$(window).scroll(function() {    
-			var scroll = $(window).scrollTop();
-		
-			if (scroll >= 10) {
-				header.removeClass('start-style').addClass("scroll-on");
-			} else {
-				header.removeClass("scroll-on").addClass('start-style');
-			}
-		});
-	});		
-		
-	//Animation
-	
-	$(document).ready(function() {
-		$('body.hero-anime').removeClass('hero-anime');
-	});
+/*HIDDEN*/
+closeMenu.addEventListener('click', ()=>{
+    navMenu.classList.remove('show')
+})
 
-	//Menu On Hover
-		
-	$('body').on('mouseenter mouseleave','.nav-item',function(e){
-			if ($(window).width() > 750) {
-				var _d=$(e.target).closest('.nav-item');_d.addClass('show');
-				setTimeout(function(){
-				_d[_d.is(':hover')?'addClass':'removeClass']('show');
-				},1);
-			}
-	});	
-	
-	//Switch light/dark
-	
-	$("#switch").on('click', function () {
-		if ($("body").hasClass("dark")) {
-			$("body").removeClass("dark");
-			$("#switch").removeClass("switched");
-		}
-		else {
-			$("body").addClass("dark");
-			$("#switch").addClass("switched");
-		}
-	});  
-	
-  })(jQuery); 
+/*===== ACTIVE AND REMOVE MENU =====*/
+const navLink = document.querySelectorAll('.nav__link');   
+
+function linkAction(){
+  /*Active link*/
+  navLink.forEach(n => n.classList.remove('active'));
+  this.classList.add('active');
+  
+  /*Remove menu mobile*/
+  navMenu.classList.remove('show')
+}
+navLink.forEach(n => n.addEventListener('click', linkAction));
 
 jQuery.noConflict()(function($) {
 

@@ -23,13 +23,14 @@
       <!-- Animate css -->
       <link rel="stylesheet" type="text/css" href="css/animate.css">
       <!-- Font-Awesome 6 PRO-->
-
+      <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
       <!-- Bootstrap 5 -->
       <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
       <!-- AOS -->
       <link rel="stylesheet" type="text/css" href="css/aos.min.css">
       <!-- Custom styles CSS -->
       <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" href="css/style copy.css">
       <!-- Favicons -->
       <link rel="shortcut icon" href="images/favicon.ico">
 
@@ -43,64 +44,33 @@
 </div>
 <!-- /LOADER TEMPLATE -->
 
-<!-- NAVBAR -->
-<div class="navigation-wrap bg-light start-header start-style">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<nav class="navbar navbar-expand-md navbar-light">
-					
-						<a class="navbar-brand" href="https://front.codes/" target="_blank"><img src="https://assets.codepen.io/1462889/fcy.png" alt=""></a>	
-						
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
-						</button>
-						
-						<div class="collapse navbar-collapse" id="navbarSupportedContent">
-							<ul class="navbar-nav ml-auto py-4 py-md-0">
-								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
-									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
-									<div class="dropdown-menu">
-										<a class="dropdown-item" href="#">Action</a>
-										<a class="dropdown-item" href="#">Another action</a>
-										<a class="dropdown-item" href="#">Something else here</a>
-										<a class="dropdown-item" href="#">Another action</a>
-									</div>
-								</li>
-								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-									<a class="nav-link" href="#">Portfolio</a>
-								</li>
-								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-									<a class="nav-link" href="#">Agency</a>
-								</li>
-								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Services</a>
-									<div class="dropdown-menu">
-										<a class="dropdown-item" href="#">Action</a>
-										<a class="dropdown-item" href="#">Another action</a>
-										<a class="dropdown-item" href="#">Something else here</a>
-										<a class="dropdown-item" href="#">Another action</a>
-									</div>
-								</li>
-								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-									<a class="nav-link" href="#">Journal</a>
-								</li>
-								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-									<a class="nav-link" href="#">Contact</a>
-								</li>
-							</ul>
-						</div>
-						
-					</nav>		
-				</div>
-			</div>
-		</div>
-	</div>
-<!-- /NAVBAR -->
-
 <!-- HEADER -->
 <header>
 
+  <div class="header-nav">
+    <a href="#" class="header__logo"><img src="images/it-me.svg" alt="logo"></a>
+
+    <ion-icon name="menu-outline" class="header__toggle" id="nav-toggle"></ion-icon>
+
+    <nav class="nav" id="nav-menu">
+        <div class="nav__content bd-grid">
+
+            <ion-icon name="close-outline" class="nav__close" id="nav-close"></ion-icon>
+
+            <a href="#" class="nav__logo"><img src="images/it-me.svg" alt="logo"></a>
+
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Tours</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">It's ME</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  </div>
   
   <div class="container">
 
