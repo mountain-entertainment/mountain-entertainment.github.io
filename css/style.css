@@ -706,6 +706,32 @@ header .mouse a i {
 /* ================================= */
 /* :::::::::::: 5. Team :::::::::::: */
 /* ================================= */
+.cta {
+  justify-items: center;
+}
+
+.cta h2, h5 {
+  letter-spacing: 0 !important;
+  color: white;
+}
+
+.cta-btn {
+  color: white;
+  background-color: var(--orange);
+  border: none;
+  padding: 10px 3rem;
+  margin: 20px 0 0 0;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 800;
+  transition: all 0.5s ease;
+}
+
+.cta-btn:hover {
+  color: var(--orange);
+  background-color: white;
+  padding: 10px 4rem;
+}
 
 .team {
   overflow: hidden;
@@ -728,21 +754,26 @@ header .mouse a i {
 
 .team .col-md-6.right-box {
   display: flex;
-  padding: 100px 80px;
-  align-items: center;
-  align-content: center;
+  align-self: center;
   justify-content: center;
-  background-position: center center;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  height: 500px;
+  position: relative;
 }
-.team .col-md-6.right-box img {
+
+.team .col-md-6.right-box .background-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  background-image: url(https://www.mountain-entertainment.de/cdn/uploads/bi-sommeraction-segway-10.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
 }
 
 .team .col-md-6.right-box .title-section h2 {
@@ -927,6 +958,10 @@ footer a:hover, footer a:focus {
  .section-services .row {
     flex-direction: column !important;
  }
+
+  .section-services .col-md-6.right-box {
+    padding: 100px 0 100px 0 !important;
+  }
  
  .section-services .col-md-6.right-box .col-md-6 {
   margin-bottom: 25px;
