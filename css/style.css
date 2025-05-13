@@ -497,10 +497,10 @@ header .mouse a i {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 70px;
+  padding-top: 100px;
 }
 
-.about-inner h4, .team .col-md-6.left-box h5 {
+.about-inner h4, .team .col-md-6.left-box h5, .tours .col-md-6.left-box h5 {
   padding: 0 0 20px 70px;
 }
 
@@ -510,7 +510,7 @@ header .mouse a i {
   text-align: justify;
 }
 
-.about-inner h4::before, .team .col-md-6.left-box h5::before {
+.about-inner h4::before, .team .col-md-6.left-box h5::before, .tours .col-md-6.left-box h5::before {
   display: block;
   position: relative;
   content: '';
@@ -636,6 +636,7 @@ header .mouse a i {
 .section-services .col-md-6.left-box {
   display: flex;
   padding: 150px 80px;
+  margin: 100px 0;
   align-items: center;
   align-content: center;
   justify-content: center;
@@ -710,7 +711,7 @@ header .mouse a i {
   justify-items: center;
 }
 
-.cta h2, h5 {
+.cta h2, .cta h5 {
   letter-spacing: 0 !important;
   color: white;
 }
@@ -720,17 +721,91 @@ header .mouse a i {
   background-color: var(--orange);
   border: none;
   padding: 10px 3rem;
-  margin: 20px 0 0 0;
+  margin: 16px 0 0 0;
   border-radius: 6px;
   font-size: 14px;
-  font-weight: 800;
-  transition: all 0.5s ease;
+  font-weight: 600;
+  transition: all 0.2s ease;
 }
 
 .cta-btn:hover {
   color: var(--orange);
   background-color: white;
   padding: 10px 4rem;
+}
+
+.tours {
+  overflow: hidden;
+}
+
+.tours .row {
+  margin: 10vh 0 20vh 0;
+}
+
+.tours .col-md-6.left-box {
+    display: flex;
+    align-self: center;
+    padding: 100px 80px;
+    gap: 25px;
+    width: 30%;
+    height: 100%;
+}
+
+.tours .col-md-6.left-box .col-md-6:nth-child(1), .section-team .col-md-6.left-box .col-md-6:nth-child(2) {
+  border-bottom: 1px solid #eeeeef;
+  margin-bottom: 35px;
+  padding-bottom: 25px;
+}
+
+.tours .col-md-6.right-box {
+  height: 500px;
+  position: relative;
+  width: 70%;
+}
+
+.tours .col-md-6.right-box .background-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://www.mountain-entertainment.de/cdn/uploads/bi-sommeraction-segway-10.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+
+.tours .col-md-6.right-box .title-section h2 {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #fff;
+  text-align: left;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+.tours .col-md-6.right-box .title-section h2:after {
+  content: "<--";
+  display: block;
+  margin: 15px auto;
+  font-size: 0.7em;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.tours .col-md-6.right-box .title-section i {
+  color: #fff;
+  font-size: 2.1em;
+  text-align: left;
+  display: block;
+}
+.tours .col-md-6.right-box .title-section p {
+  color: #fff;
+  text-align: left;
+  word-spacing: 1px;
+  line-height: 25px;
 }
 
 .team {
@@ -832,6 +907,7 @@ header .mouse a i {
   margin-top: -5px;
   color: #000;
 }
+
 .team-box .social-icons {
   display: flex;
   align-items: flex-end;
@@ -931,6 +1007,20 @@ footer a:hover, footer a:focus {
 
 @media only screen and  (max-width: 756px) {
 
+  .tours .row {
+    margin: 0 0 20vh 0;
+  }
+  
+   .tours .col-md-6.left-box {
+    text-align: center;
+    justify-content: center;
+    width: 100% !important;
+  }
+
+  .tours .col-md-6.right-box {
+    width: 100% !important;
+  }
+
   .team .col-md-6.left-box {
     padding: 20px 45px 70px 45px !important;
   }
@@ -942,6 +1032,18 @@ footer a:hover, footer a:focus {
   .team .row {
     flex-direction: column-reverse;
     margin-top: 70px;
+  }
+
+  .tours .col-md-6.left-box {
+    padding: 20px 45px 70px 45px !important;
+  }
+
+  .tours .col-md-6.right-box {
+    padding: 0 !important;
+  }
+
+  .tours .row {
+    flex-direction: column;
   }
 
   .section-about .col-md-6.right-box .col-md-3 {
@@ -958,6 +1060,10 @@ footer a:hover, footer a:focus {
  .section-services .row {
     flex-direction: column !important;
  }
+
+  .section-services .col-md-6.left-box {
+    margin: 0 !important;
+  }
 
   .section-services .col-md-6.right-box {
     padding: 100px 0 100px 0 !important;
@@ -1038,7 +1144,7 @@ header .logo img {
 }
 
 @media only screen and  (max-width: 540px) {
-
+  
   .about-inner h4  {
     padding-left: 0;
     width: 60%;
@@ -1049,6 +1155,20 @@ header .logo img {
   .about-inner p {
     max-width: 80%;
   }
+
+  .tours .col-md-6.left-box h5 {
+    padding-left: 0;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .tours .col-md-6.left-box h5::before {
+    right: -120px;
+    top: 50px;
+    transform: translate(-50%, 0);
+  }
+
+
 
   .team .col-md-6.left-box h5 {
     padding-left: 0;

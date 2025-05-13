@@ -15,6 +15,8 @@
     8. Wow
     9. Google map
 */
+
+
 const navMenu = document.getElementById('nav-menu'),
       toggleMenu = document.getElementById('nav-toggle'),
       closeMenu = document.getElementById('nav-close')
