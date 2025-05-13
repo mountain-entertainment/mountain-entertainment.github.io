@@ -108,7 +108,7 @@ p {
 }
 
 #page-loader {
-    background: #242830;
+    background: white;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -116,16 +116,16 @@ p {
 } 
 
 .loader-icon {
-    background: repeat #242830;
-    border-bottom: 4px solid rgba(19,19,19,.1);
-    border-left: 4px solid rgba(19,19,19,.1);
+    background: repeat white;
+    border-bottom: 4px solid white;
+    border-left: 4px solid white;
     border-radius: 100px;
     -moz-border-radius: 100px;
     -webkit-border-radius: 100px;
     -o-border-radius: 100px;
     -ms-border-radius: 100px;
-    border-right: 4px solid rgba(19,19,19,.1);
-    border-top: 4px solid rgba(19,19,19,.1);
+    border-right: 4px solid white;
+    border-top: 4px solid white;
     height: 60px;
     left: 50%;
     margin: -20px 0 0 -20px;
@@ -136,7 +136,7 @@ p {
 }
 
 .colored-border {
-   border-top-color: #2CC9B4;
+   border-top-color: var(--orange);
 }
 
 	.fa-spin {
@@ -1089,6 +1089,7 @@ footer a:hover, footer a:focus {
 }
 .section-services .col-md-6.right-box .col-md-6 h2, .section-services .col-md-6.right-box .col-md-6 p {
   text-align: center;
+  padding: 0 10px;;
 }
 .section-services .col-md-6.right-box .col-md-6 .info-box {
   margin-left: 0;
