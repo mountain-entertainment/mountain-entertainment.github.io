@@ -1158,6 +1158,7 @@ header .logo img {
     width: 60%;
     text-align: center;
     margin-bottom: 30px;
+
   }
 
   .about-inner p {
@@ -1182,23 +1183,25 @@ header .logo img {
     margin-bottom: 40px;
   }
 
-  .team .col-md-6.left-box h5::before {
+  /* .team .col-md-6.left-box h5::before {
     right: 0;
     top: 70px;
     transform: translate(-50%, 0);
     left: 50%;
-  }
+  } */
 
-  .about-inner h4{
-    padding-left: 0;
-    text-align: center;
-  }
-
-  .about-inner h4::before {
-    right: 0;
-    top: 90px;
+   h4::before, h5::before {
+    right: -50% !important;
+    top: 3.5rem !important;
     transform: translate(-50%, 0);
-    left: 50%;
+  }
+
+  .hl::before {
+    top: 5rem !important;
+  }
+
+  .hxl::before {
+    top: 7rem !important;
   }
 
   header {
@@ -1211,8 +1214,7 @@ header .logo img {
     margin-left: 0;
  }
   .social-icons {
-  width: 100%;
-   margin: 0 auto;
+    width: 100%;
    align-items: center;
    justify-content: center;
    top: 70px;

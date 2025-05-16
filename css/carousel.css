@@ -285,7 +285,12 @@ body { font-family: sans-serif; }
 }
 
 @media only screen and  (max-width: 540px) {
-  .card-content .text h3 {
+
+  .card-content {
+    height: 22vh;
+  }
+
+  .card-content .text p {
     display: none;
   }
 }
