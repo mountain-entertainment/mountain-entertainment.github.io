@@ -372,7 +372,7 @@ header .mouse a i {
 }
 
 .intro-inner h4 {
-  margin-left: 4rem;
+  margin: 0 0 20px 4rem;
   text-align: center;
 }
 
@@ -566,9 +566,13 @@ footer a:hover, footer a:focus {
   }
 
   .intro-inner h4::before {
-    right: -160px;
-    top: 70px;
+    right: -50%;
+    top: 3.5rem;
     transform: translate(-50%, 0);
+  }
+
+  .intro-inner .hl::before {
+    top: 5rem;
   }
 
   header {
