@@ -100,7 +100,7 @@ h6 {
 }
 
 h1, h2 {
-  letter-spacing: 2px;
+  /* letter-spacing: 2px; */
 }
 
 p {
@@ -227,7 +227,7 @@ p {
 
 header {
   text-align: left;
-  height: 50vh;
+  height: 60vh;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -236,6 +236,25 @@ header {
   align-items: center;
   justify-content: center;
   position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-storyteller {
+  background-image: url('https://www.mountain-entertainment.de/cdn/uploads/bi-landschaft-sommer-3.jpg');
+}
+
+.header-photo {
+  background-image: url('https://www.mountain-entertainment.de/cdn/uploads/berchtesgaden-mit-watzmann-im-sommer.jpg');
+}
+
+.header-rain {
+  background-image: url('https://www.mountain-entertainment.de/cdn/uploads/berchtesgaden-mit-watzmann-im-sommer.jpg');
+}
+
+.header-active {
+  background-image: url('https://www.mountain-entertainment.de/cdn/uploads/bi-sommeraction-segway-6.jpg');
 }
 
 header .typed {
@@ -342,6 +361,30 @@ header .mouse a {
 header .mouse a i {
     font-size: 1.3em;
     font-weight: 700;
+}
+
+.intro-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0px;
+}
+
+.intro-inner h4 {
+  margin-left: 4rem;
+  text-align: center;
+}
+
+.intro-inner h4::before {
+  display: block;
+  position: relative;
+  content: '';
+  right: 70px;
+  top: 10px;
+  height: 3px;
+  width: 4rem;
+  background-color: var(--orange);
 }
 
 .social-icons li {
@@ -513,6 +556,21 @@ footer a:hover, footer a:focus {
 
 @media only screen and  (max-width: 540px) {
 
+  .intro-inner {
+    padding: 50px 0;
+  }
+
+  .intro-inner h4 {
+    text-align: center;
+    margin: 0 20px 50px 20px;
+  }
+
+  .intro-inner h4::before {
+    right: -160px;
+    top: 70px;
+    transform: translate(-50%, 0);
+  }
+
   header {
     text-align: center;
  }
@@ -533,4 +591,149 @@ footer a:hover, footer a:focus {
   .social-icons li:last-child {
     margin-right: 0;
  }
+}
+
+@keyframes carousel-animate {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(200%) scale(0.7);
+  }
+  3%,
+  14.2857142857% {
+    visibility: visible;
+    opacity: 0.8;
+    transform: translateX(100%) scale(0.9);
+  }
+  17.2857142857%,
+  28.5714285714% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  31.5714285714%,
+  42.8571428571% {
+    visibility: visible;
+    opacity: 0.8;
+    transform: translateX(-100%) scale(0.9);
+  }
+  45.8571428571% {
+    visibility: visible;
+    opacity: 0;
+    transform: translateX(-200%) scale(0.9);
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-200%) scale(0.7);
+  }
+}
+
+:root {
+  --light: 0;
+  --max-width-post: 420px;
+
+  --primary: hsl(64, 77%, 79%);
+  --bg: hsl(284, 70%, 23%);
+  --text-primary: hsl(0, 0%, 97%);
+
+  --font-size-sm: clamp(0.7rem, 0.91vw + 0.47rem, 1.2rem);
+  --font-size-base: clamp(0.88rem, 1.14vw + 0.59rem, 1.5rem);
+  --font-size-md: clamp(1.09rem, 1.42vw + 0.74rem, 1.88rem);
+  --font-size-lg: clamp(1.37rem, 1.78vw + 0.92rem, 2.34rem);
+  --font-size-xl: clamp(1.71rem, 2.22vw + 1.15rem, 2.93rem);
+  --font-size-xxl: clamp(2.14rem, 2.77vw + 1.44rem, 3.66rem);
+  --font-size-xxxl: clamp(2.67rem, 3.47vw + 1.8rem, 4.58rem);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+@supports (height: 100dvh) {
+  body {
+    height: 100dvh;
+  }
+}
+
+.container-carousel {
+  --container-padding-horizontal: 32px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 55%;
+  margin-bottom: 10vh;
+}
+
+.carousel {
+  pointer-events: none;
+  padding-block-start: 67px;
+  padding-block-end: max(24px, calc(29px + var(--font-size-md)));
+  perspective: 100px;
+  width: 100%;
+}
+
+@media (max-width: 568px) {
+  .carousel {
+    padding-block-end: 52px;
+  }
+}
+
+.carousel__wrapper {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 61.2vh;
+}
+
+.carousel .item {
+  position: absolute;
+  max-width: 418px;
+  height: 100%;
+  margin-inline: var(--container-padding-horizontal);
+  opacity: 0;
+  will-change: transform, opacity;
+  animation: carousel-animate 27s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+}
+
+@media (max-width: 568px) {
+  .carousel .item {
+    margin-inline: calc(var(--container-padding-horizontal) + 1px);
+  }
+}
+
+/* Manually add delays for each of 7 items */
+.carousel .item:nth-child(1) {
+  animation-delay: calc(3.85714s * -1); /* slide -2 */
+}
+.carousel .item:nth-child(2) {
+  animation-delay: 0s;
+}
+.carousel .item:nth-child(3) {
+  animation-delay: 3.85714s;
+}
+.carousel .item:nth-child(4) {
+  animation-delay: 7.71429s;
+}
+.carousel .item:nth-child(5) {
+  animation-delay: 11.57143s;
+}
+.carousel .item:nth-child(6) {
+  animation-delay: 15.42857s;
+}
+.carousel .item:nth-child(7) {
+  animation-delay: 19.28571s;
+}
+
+.carousel .item:last-child {
+  animation-delay: calc(-3.85714s * 2);
+}
+
+.carousel img {
+  max-width: 100%;
+  object-fit: cover;
+  height: 100%;
 }

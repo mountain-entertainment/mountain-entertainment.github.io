@@ -15,6 +15,11 @@
     8. Wow
     9. Google map
 */
+let CHECKED = false;
+document.addEventListener("pointerdown", (e) => {
+	CHECKED = !CHECKED;
+	document.documentElement.style.setProperty("--light", CHECKED ? 1 : 0);
+});
 
 
 const navMenu = document.getElementById('nav-menu'),

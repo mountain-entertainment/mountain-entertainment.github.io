@@ -514,7 +514,6 @@ header .mouse a i {
   display: block;
   position: relative;
   content: '';
-  z-index: -1;
   right: 70px;
   top: 10px;
   height: 3px;
@@ -1168,8 +1167,6 @@ header .logo img {
     top: 50px;
     transform: translate(-50%, 0);
   }
-
-
 
   .team .col-md-6.left-box h5 {
     padding-left: 0;
