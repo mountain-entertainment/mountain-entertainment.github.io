@@ -707,7 +707,10 @@ header .mouse a i {
 /* :::::::::::: 5. Team :::::::::::: */
 /* ================================= */
 .cta {
-  justify-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
 }
 
 .cta h2, .cta h5 {
@@ -720,11 +723,11 @@ header .mouse a i {
   background-color: var(--orange);
   border: none;
   padding: 10px 3rem;
-  margin: 16px 0 0 0;
   border-radius: 6px;
   font-size: 14px;
   font-weight: 600;
   transition: all 0.2s ease;
+  margin-top: 20px;
 }
 
 .cta-btn:hover {
@@ -1144,6 +1147,11 @@ header .logo img {
 }
 
 @media only screen and  (max-width: 540px) {
+
+  .col-md-6.left-box .logo {
+    display: flex;
+    justify-content: center;
+  }
   
   .about-inner h4  {
     padding-left: 0;

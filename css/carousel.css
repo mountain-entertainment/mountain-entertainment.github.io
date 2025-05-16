@@ -262,6 +262,7 @@ body { font-family: sans-serif; }
   font-size: 14px;
   font-weight: 600;
   transition: all 0.2s ease;
+  text-align: center;
 }
 
 .card-btn:hover {
