@@ -585,12 +585,11 @@ footer a:hover, footer a:focus {
     margin-left: 0;
  }
   .social-icons {
-  width: 100%;
-   margin: 0 auto;
-   align-items: center;
-   justify-content: center;
-   top: 70px;
-   left: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    top: 70px;
+    left: 0;
  }
   .social-icons li:last-child {
     margin-right: 0;

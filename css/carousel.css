@@ -273,13 +273,19 @@ body { font-family: sans-serif; }
   padding: 10px 4rem;
 }
 
+@media only screen and  (max-width: 1036px) {
 
-@media only screen and  (max-width: 756px) {
   .card-content {
     padding: 20px 30px 15px 20px;
   }
 
   .card-bg h1 {
     padding: 0 0 5px 20px;
+  }
+}
+
+@media only screen and  (max-width: 540px) {
+  .card-content .text h3 {
+    display: none;
   }
 }
