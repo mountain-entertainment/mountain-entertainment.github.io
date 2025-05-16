@@ -62,7 +62,7 @@ https://flickity.metafizzy.co
 
 .flickity-button:focus {
   outline: none;
-  box-shadow: 0 0 0 5px var(--orange);
+  box-shadow: 0 0 0 5px var(--grey);
 }
 
 .flickity-button:active {
@@ -270,4 +270,15 @@ body { font-family: sans-serif; }
   background-color: white;
   border: 2px solid var(--orange);
   padding: 10px 4rem;
+}
+
+
+@media only screen and  (max-width: 756px) {
+  .card-content {
+    padding: 20px 30px 15px 20px;
+  }
+
+  .card-bg h1 {
+    padding: 0 0 5px 20px;
+  }
 }

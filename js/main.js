@@ -1,4 +1,4 @@
-﻿/*
+/*
     Woody - Creative Coming Soon HTML5 Template
     Version: 1.0.6
     Author: Mountain-Themes
