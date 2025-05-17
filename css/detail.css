@@ -242,19 +242,19 @@ header {
 }
 
 .header-storyteller {
-  background-image: url('https://www.mountain-entertainment.de/cdn/uploads/bi-landschaft-sommer-3.jpg');
+  background-image: url('../img/berchtesgaden-mit-watzmann-im-sommer.jpg');
 }
 
 .header-photo {
-  background-image: url('https://www.mountain-entertainment.de/cdn/uploads/berchtesgaden-mit-watzmann-im-sommer.jpg');
+  background-image: url('../img/berchtesgaden-mit-watzmann-im-sommer.jpg');
 }
 
 .header-rain {
-  background-image: url('https://www.mountain-entertainment.de/cdn/uploads/berchtesgaden-mit-watzmann-im-sommer.jpg');
+  background-image: url('../img/berchtesgaden-mit-watzmann-im-sommer.jpg');
 }
 
 .header-active {
-  background-image: url('https://www.mountain-entertainment.de/cdn/uploads/bi-sommeraction-segway-6.jpg');
+  background-image: url('../img/bi-sommeraction-segway-6.jpg');
 }
 
 header .typed {

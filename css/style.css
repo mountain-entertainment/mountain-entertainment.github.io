@@ -645,6 +645,7 @@ header .mouse a i {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-image: url('../img/bi-gin-tasting-4.jpg');
 }
 .section-services .col-md-6.left-box .title-section h2 {
   font-size: 1.2em;
@@ -765,22 +766,6 @@ header .mouse a i {
   width: 70%;
 }
 
-.tours .col-md-6.right-box .background-image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(https://www.mountain-entertainment.de/cdn/uploads/bi-sommeraction-segway-10.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 0;
-}
-
 .tours .col-md-6.right-box .title-section h2 {
   font-size: 1.2em;
   font-weight: 600;
@@ -846,7 +831,7 @@ header .mouse a i {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(https://www.mountain-entertainment.de/cdn/uploads/bi-sommeraction-segway-10.jpg);
+  background-image: url('../img/bi-sommeraction-segway-10.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

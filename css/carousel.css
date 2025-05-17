@@ -211,23 +211,23 @@ body { font-family: sans-serif; }
 }
 
 .card-bg-img1 {
-  background-image: url('https://www.mountain-entertainment.de/cdn/uploads/bi-landschaft-sommer-3.jpg');
+  background-image: url('../img/bi-landschaft-sommer-3.jpg');
 }
 
 .card-bg-img2 {
-  background-image: url('https://www.mountain-entertainment.de/cdn/uploads/berchtesgaden-mit-watzmann-im-sommer.jpg');
+  background-image: url('../img/berchtesgaden-mit-watzmann-im-sommer.jpg');
 }
 
 .card-bg-img3 {
-  background-image: url('https://www.mountain-entertainment.de/cdn/uploads/bi-sommeraction-segway-6.jpg');
+  background-image: url('../img/bi-sommeraction-segway-6.jpg');
 }
 
 .card-bg-img4 {
-  background-image: url('https://www.mountain-entertainment.de/cdn/uploads/berchtesgaden-mit-watzmann-im-sommer.jpg');
+  background-image: url('../img/berchtesgaden-mit-watzmann-im-sommer.jpg');
 }
 
 .card-bg-img5 {
-  background-image: url('https://www.mountain-entertainment.de/cdn/uploads/berchtesgaden-mit-watzmann-im-sommer.jpg');
+  background-image: url('../img/berchtesgaden-mit-watzmann-im-sommer.jpg');
 }
 
 .card-bg h1 {
@@ -273,7 +273,7 @@ body { font-family: sans-serif; }
   padding: 10px 4rem;
 }
 
-@media only screen and  (max-width: 1036px) {
+@media only screen and  (max-width: 1150px) {
 
   .card-content {
     padding: 20px 30px 15px 20px;
