@@ -183,7 +183,7 @@ body { font-family: sans-serif; }
 .gallery-cell {
   display: flex;
   width: 66%;
-  height: 60vh;
+  height: 75vh;
   margin-right: 10px;
   background: white;
   counter-increment: gallery-cell;
@@ -236,11 +236,11 @@ body { font-family: sans-serif; }
 }
 
 .card-content {
-  height: 28vh;
+  height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 30px 150px 40px 30px;
+  padding: 30px 80px 40px 30px;
 }
 
 .card-content .text {
@@ -256,7 +256,7 @@ body { font-family: sans-serif; }
   width: 190px;
   background-color: var(--orange);
   border: 2px solid transparent;
-  padding: 10px 3rem;
+  padding: 10px 2rem;
   margin: 16px 0 0 0;
   border-radius: 10px;
   font-size: 14px;
