@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://remote.mountain-entertainment.de:5001/?launchApp=SYNO.SDS.Drive.Application
+HostUrl=https://remote.mountain-entertainment.de:5001/webapi/entry.cgi/SYNO.SynologyDrive.Files/CB3C9F721F994D5A2EF3697E5B67600E.mp4?api=SYNO.SynologyDrive.Files&method=download&version=2&files=%5B%22id%3A885398615808319537%22%5D&force_download=true&json_error=true&download_type=%22download%22&c2_offload=%22allow%22&_dc=1748538267669&SynoToken=Hfem4DLeVi8s6

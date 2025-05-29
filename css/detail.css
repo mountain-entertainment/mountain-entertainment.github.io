@@ -239,6 +239,11 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-top: 6em;
+}
+
+.video {
+  height: 60vh;
 }
 
 .header-storyteller {
@@ -381,7 +386,7 @@ header .mouse a i {
   position: relative;
   content: '';
   right: 70px;
-  top: 10px;
+  top: 14px;
   height: 3px;
   width: 4rem;
   background-color: var(--orange);
