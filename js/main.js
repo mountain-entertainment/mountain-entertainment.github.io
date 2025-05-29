@@ -15,6 +15,25 @@
     8. Wow
     9. Google map
 */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const langEls = document.querySelectorAll('[language]');
+  const toggle = document.getElementById('language-toggle');
+
+  function showLanguage(language) {
+    langEls.forEach(el => {
+      el.style.display = el.getAttribute('language') === language ? '' : 'none';
+    });
+  }
+
+  showLanguage(toggle.checked ? 'en' : 'de');
+
+  toggle.addEventListener('change', function () {
+    showLanguage(this.checked ? 'en' : 'de');
+  });
+});
+
+
 let CHECKED = false;
 document.addEventListener("pointerdown", (e) => {
 	CHECKED = !CHECKED;

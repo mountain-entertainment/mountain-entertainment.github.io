@@ -20,6 +20,7 @@
 
 :root {
   --orange: #e74f00;
+  --orange-light: #ff7900;
   --grey: #363636;
 }
 
@@ -195,6 +196,8 @@ p {
   background-repeat: repeat;
   z-index: 1;
 }
+
+
 
 .rain-video {
   position: absolute;
@@ -443,6 +446,29 @@ header .mouse a i {
 		}
 	}
 
+.video-container {
+  position: absolute;
+  width: 100%;
+  height: 100vh; /* or any height you need */
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
+  pointer-events: none; /* allow clicks through overlay if needed */
+}
+
   header #effect-box, header .video-box, header .image-box {
     position: absolute!important;
     overflow: hidden;
@@ -498,6 +524,22 @@ header .mouse a i {
   align-items: center;
   justify-content: center;
   padding: 100px 0 30px 0;
+  width: 80vw;
+  font-size: medium;
+}
+
+.about-inner a {
+  color: var(--orange);
+  font-weight: 700;
+}
+
+.about-inner a:hover {
+  color: var(--orange-light);
+  font-weight: 700;
+}
+
+.about-inner li {
+  margin: 10px 0;
 }
 
 .about-inner h4, .team .col-md-6.left-box h5, .tours .col-md-6.left-box h5 {
@@ -506,8 +548,10 @@ header .mouse a i {
 
 .about-inner p {
   margin-top: 25px;
-  max-width: 70%;
-  text-align: justify;
+}
+
+.about-inner h1, .about-inner h2, .about-inner h3, .about-inner h5, .about-inner h6 {
+  text-align: center;
 }
 
 .about-inner h4::before, .team .col-md-6.left-box h5::before, .tours .col-md-6.left-box h5::before {
@@ -624,6 +668,29 @@ header .mouse a i {
 }
 
 
+.why {
+  display: flex;
+  justify-content: center;
+  background-color: var(--orange);
+  color: white;
+  padding: 50px 0;
+  margin-top: 40px;
+}
+
+.why-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 80vw;
+}
+
+.why h1 {
+  margin-bottom: 30px;
+}
+
+
 /* ================================= */
 /* :::::::::: 4. Services :::::::::: */
 /* ================================= */
@@ -720,8 +787,6 @@ header .mouse a i {
 }
 
 .cta-btn {
-  color: white;
-  background-color: var(--orange);
   border: none;
   padding: 10px 3rem;
   border-radius: 6px;
@@ -732,9 +797,27 @@ header .mouse a i {
 }
 
 .cta-btn:hover {
+  padding: 10px 4rem;
+}
+
+.cta-btn-o {
+  color: white;
+  background-color: var(--orange);
+}
+
+.cta-btn-o:hover {
   color: var(--orange);
   background-color: white;
-  padding: 10px 4rem;
+}
+
+.cta-btn-w {
+  color: var(--orange);
+  background-color: white;
+}
+
+.cta-btn-w:hover {
+  color: white;
+  background-color: var(--orange-light);
 }
 
 .tours {
@@ -947,7 +1030,7 @@ header .mouse a i {
 
 footer {
   z-index: 10;
-  padding: 30px;
+  padding-bottom: 50px;
   position: relative;
   color: #fff;
   background: var(--grey);
@@ -955,6 +1038,14 @@ footer {
   overflow: hidden;
 }
 
+.contact {
+  height: 200px;
+  background-image: url('../img/kontakt.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
 
 footer .copyright {
   font-size: 13px;
@@ -1128,7 +1219,6 @@ header .logo img {
   height: auto;
   margin: 10px;
 }
-
 }
 
 @media only screen and  (max-width: 540px) {
@@ -1144,10 +1234,6 @@ header .logo img {
     text-align: center;
     margin-bottom: 30px;
 
-  }
-
-  .about-inner p {
-    max-width: 80%;
   }
 
   .tours .col-md-6.left-box h5 {

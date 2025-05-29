@@ -49,7 +49,7 @@
 <header>
 
   <div class="header-nav">
-    <a href="/" class="header__logo"><img src="images/it-me.svg" alt="logo"></a>
+    <a href="./" class="header__logo"><img src="./images/it-me.svg" alt="logo"></a>
 
     <ion-icon name="menu-outline" class="header__toggle" id="nav-toggle"></ion-icon>
 
@@ -58,16 +58,31 @@
 
             <ion-icon name="close-outline" class="nav__close" id="nav-close"></ion-icon>
 
-            <a href="#" class="nav__logo"><img src="images/it-me.svg" alt="logo"></a>
+            <a href="./" class="nav__logo"><img src="./images/it-me.svg" alt="logo"></a>
 
             <div class="nav__menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#" class="nav__link active">Home</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="#tours" class="nav__link">Tours</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">it's ME</a></li>
+                <ul class="nav__list" language="en">
+                    <li class="nav__item"><a href="./" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="./#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="./#tours" class="nav__link">Tours</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">It's ME</a></li>
                     <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
                 </ul>
+                <ul class="nav__list" language="de">
+                    <li class="nav__item"><a href="./" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="./#about" class="nav__link">Über uns</a></li>
+                    <li class="nav__item"><a href="./#tours" class="nav__link">Touren</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">It's ME</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="lang-wrapper">
+            <div class="switch">
+                <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+                <label for="language-toggle"></label>
+                <span class="on"><img src="img/icons/germany.png"></span>
+                <span class="off"><img src="img/icons/united-kingdom.png"></span>
             </div>
         </div>
     </nav>
@@ -75,7 +90,7 @@
   
   <div class="container">
 
-      <div class="logo"><img src="images/logo-mountain-entertainment.svg" alt="logo"> </div>
+      <div class="logo"><img src="images/logo-mountain-entertainment copy.svg" alt="logo"> </div>
       <div class="typed">Our website is under construction.</div>
       <p>We are working very hard to give you the best experience with this one.<br>You will love Woody as much as we do. It will morph perfectly on your needs!</p> 
 
@@ -83,7 +98,7 @@
       <div class="mouse-wrapper">
       <div class="mouse">
         <a href="#about">
-          <span>skroll</span>
+          <span>scroll</span>
           <i class="fa fa-chevron-down"></i>
         </a>
       </div>
@@ -97,9 +112,12 @@
       <canvas id="rain"></canvas>
     </div>
 
-    <video class="rain-video" poster="media/video.jpg" autoplay loop muted>
-      <source src="media/file_example_MP4_1920_18MG.mp4" type="video/mp4">
+    <div class="video-container">
+      <video class="rain-video" poster="media/bgd-img.png" autoplay loop muted>
+      <source src="media/bgdd.mp4" type="video/mp4">
     </video>
+    <div class="video-overlay"></div>
+    </div>
 
     <script>
 
@@ -118,15 +136,52 @@
 
   <div class="about-inner">
     <div style="display: contents;">
-      <h4 class="hxl">the right partner for your exclusive event in Berchtesgaden</h4>
+      <h4 language="en" class="hxl">your personal mountain guide in Berchtesgaden!</h4>
+      <h4 language="de" class="hxl">Ihr persönlicher Bergguide in Berchtesgaden!</h4>
     </div>
-    <h1>Mountain Sights</h1>
-    <p> Discover the extraordinary with <strong>Mountain Sights</strong> – a premium experience crafted by the minds behind Mountain Entertainment. 
-  Whether you’re planning a private retreat, an executive offsite, or a bespoke alpine adventure, we provide seamless luxury, personal touches, and unforgettable impressions in the heart of the Alps.
-  Every detail is curated with care, ensuring that your time in Berchtesgaden is as exclusive as it is effortless.</p>
+    <h1 language="en">Welcome to Mountain Concierge</h1>
+    <h1 language="de">Willkommen bei Mountain Concierge</h1>
+    <p language="en">About us:</p>
+    <p language="de">Über uns:</p>
+    <p language="en"><strong>Mountain Concierge</strong> is a new type of agency that does not yet exist in mountain regions. We are at your side as your local guides to introduce you to the breathtaking nature and culture of the Berchtesgaden valley basin. Our tours are as individual as you are and offer you the opportunity to experience the beauty of the Alps in a private and stylish way..</p>
+    <p language="de"><strong>Mountain Concierge</strong> ist eine neuartige Agentur, die es in Bergregionen so noch nicht gibt. Wir stehen Ihnen als Ihre lokalen Guides zur Seite, um Ihnen die atemberaubende Natur und Kultur desTalkessels von Berchtesgaden näherzubringen. Unsere Touren sind so individuell wie Sie und bieten Ihnen die Möglichkeit, die Schönheit der Alpen auf private und stilvolle Art zu erleben.</p>
+    <h5 language="en" style="margin-top: 20px;">Our tours:</h5>
+    <h5 language="de" style="margin-top: 20px;">Unsere Touren:</h5>
+    <p language="en">Discover the variety of our tours, which are perfectly tailored to your wishes:</p>
+    <p language="de">Entdecken Sie die Vielfalt unserer Touren, die perfekt auf Ihre Wünsche abgestimmt sind:</p>
+    <ul language="en">
+      <li><a href="./storyteller">Storyteller Tour</a>: Let our local guides tell you stories and legends from the region while you explore the spectacular landscape.</li>
+      <li><a href="./storyteller">Insider Tour</a>: Experience hidden treasures and secret places that only locals know about.</li>
+      <li><a href="./photo">Fotostop Tour</a>: Halten Sie die schönsten Momente fest! Unsere Guides zeigen Ihnen die besten Fotospots in der Umgebung.</li>
+      <li><a href="./storyteller">Individuelle Tour</a>: Design your own tour according to your wishes - completely personal and exclusive.</li>
+    </ul>
+    <ul language="de">
+      <li><a href="./storyteller">Storyteller Tour</a>: Lassen Sie sich von unseren lokalen Guides Geschichten und Legenden aus der Region erzählen, während Sie die spektakuläre Landschaft erkunden.</li>
+      <li><a href="./storyteller">Insider Tour</a>: Erleben Sie verborgene Schätze und geheime Orte, die nur Einheimische kennen.</li>
+      <li><a href="./photo">Fotostop Tour</a>:  Capture the best moments! Our guides will show you the best photo spots in the area.</li>
+      <li><a href="./storyteller">Individuelle Tour</a>: Gestalten Sie Ihre eigene Tour ganz nach Ihren Wünschen – ganz persönlich und exklusiv.</li>
+    </ul>
+    <p language="en">...and many more!</p>
+    <p language="de">...und viele mehr!</p>
+    <p language="en">All private tours currently take place in the picturesque valley valley of Berchtesgaden. Our comfortable VW buses and the VW Amarok will take you to the most beautiful places in the region in style. We provide you with plenty of water on every tour to keep you refreshed.</p>
+    <p language="de">Alle privaten Touren finden aktuell im malerischen Talkessel von Berchtesgaden statt. Unsere komfortablen VW Busse und der VW Amarok bringen Sie stilvoll zu den schönsten Plätzen der Region. Auf jede Tour stellen wir Ihnen ausreichend Wasser zur Verfügung, damit Sie erfrischt bleiben.</p>
   </div>
 
 </section>
+
+<section class="why">
+  <div class="why-inner">
+    <h1 language="en">Why Mountain Concierge?</h1>
+    <h1 language="de">Warum Mountain Concierge?</h1>
+    <p language="en">We offer you the opportunity to discover the sights in and around Berchtesgaden privately and in peace, without the hustle and bustle of mass tourism. Benefit from our local expertise and experience the mountains from a whole new perspective.</p>
+    <p language="de">Wir bieten Ihnen die Möglichkeit, die Sehenswürdigkeiten in und um Berchtesgaden privat und in Ruhe zu entdecken, ohne den Trubel des Massentourismus. Profitieren Sie von unserer lokalen Expertise und erleben Sie die Berge von einer ganz neuen Seite.</p>
+    <p language="en">Book your tour today!</p>
+    <p language="de">Buchen Sie noch heute Ihre Tour!</p>
+    <a language="en" class="cta-btn cta-btn-w" href="https://www.mountain-entertainment.de/">Contact us</a>
+    <a language="de" class="cta-btn cta-btn-w" href="https://www.mountain-entertainment.de/">zum Kontakt</a>
+  </div>
+</section>
+
 
 <!-- Section Team -->
 <section class="team" id="team">
@@ -149,7 +204,7 @@
         <div class="cta">
           <h5>"Enjoy yourself, we'll do the rest!"</h5>
           <h2>it's ME event agency</h2>
-          <a class="cta-btn" href="https://www.mountain-entertainment.de/">Visit our site</a>
+          <a class="cta-btn cta-btn-o" href="https://www.mountain-entertainment.de/">Visit our site</a>
         </div>
       </div>
     </div>
@@ -249,10 +304,10 @@
             </div>
            <div class="card-content">
               <div class="text">
-                <h3>The stories of the mountains and our homeland</h3>
+                <h3>The stories of the mountains</h3>
                 <p>Let your guide take you on a personal journey through Berchtesgaden’s rich history, legends, and hidden gems known only to locals.</p>
               </div>
-              <a class="card-btn" href="./storyteller">Read more</a>
+              <a class="card-btn" href="./storyteller">See tour details</a>
             </div>
           </div>
         </div>
@@ -266,7 +321,7 @@
                 <h3>The best places for your photos</h3>
                 <p>Discover the most photogenic spots in the region — from dramatic mountain backdrops to tranquil lakeside reflections, all guided by a pro.</p>
               </div>
-              <a class="card-btn" href="./photo">Read more</a>
+              <a class="card-btn" href="./photo">See tour details</a>
             </div>
           </div>
         </div>
@@ -280,7 +335,7 @@
                 <h3>Let go off some steam!</h3>
                 <p>Push your limits with guided hikes, e-bike routes, or climbing tours — tailored to your level and interests, always with VIP support.</p>
               </div>
-              <a class="card-btn" href="./active">Read more</a>
+              <a class="card-btn" href="./active">See tour details</a>
             </div>
           </div>
         </div>
@@ -294,21 +349,21 @@
                 <h3>The rain reveals hidden treasures</h3>
                 <p>Even rainy days shine with us. Explore historic salt mines, relax in luxury spas, or enjoy a fireside gin tasting — Berchtesgaden, reimagined.</p>
               </div>
-              <a class="card-btn" href="./rain">Read more</a>
+              <a class="card-btn" href="./rain">See tour details</a>
             </div>
           </div>
         </div>
         <div class="gallery-cell">
              <div>
             <div class="card-bg card-bg-img5">
-              <h1>Storyteller Tour</h1>
+              <h1>Sightseeing Tour</h1>
             </div>
            <div class="card-content">
               <div class="text">
                 <h3>Spruch</h3>
                 <p>hello</p>
               </div>
-              <a class="card-btn" href="./storyteller">Read more</a>
+              <a class="card-btn" href="./sightseeing">See tour details</a>
             </div>
           </div>
         </div>
@@ -321,6 +376,9 @@
 
 <!-- FOOTER -->
 <footer>
+  <div class="contact">
+
+  </div>
   <div class="container">
 
      <!-- Social Icons -->

@@ -218,6 +218,7 @@ img {
   }
   .nav {
     width: 100%;
+    justify-content: space-between;
   }
   .nav__content {
     -ms-grid-columns: (max-content)[3];
@@ -285,4 +286,149 @@ img {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+.lang-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.switch > span {
+  position: absolute;
+  top: 17px;
+  pointer-events: none;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .06);
+  width: 50%;
+  text-align: center;
+  transform: translateY(-50%) translateX(0%);
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.switch > span.on,
+.switch > span.off {
+  pointer-events: none;
+  z-index: 0;
+}
+
+.on img, .off img {
+  width: 25px;
+  pointer-events: none;
+}
+
+/* Default state — show .on */
+input.check-toggle-round-flat ~ .on {
+  transform: translateY(-50%) translateX(0%);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+input.check-toggle-round-flat ~ .off {
+  transform: translateY(-50%) translateX(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Checked state — show .off */
+input.check-toggle-round-flat:checked ~ .on {
+  transform: translateY(-50%) translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+input.check-toggle-round-flat:checked ~ .off {
+  transform: translateY(-50%) translateX(0%);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.switch > span.on {
+  left: 1.5px;
+  padding-left: 2px;
+}
+
+.switch > span.off {
+  right: 0.3px;
+  padding-right: 4px;
+}
+
+.check-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+.check-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input.check-toggle-round-flat + label {
+  position: relative;
+  z-index: 10; /* put label on top */
+  cursor: pointer;
+  padding: 2px;
+  width: 70px;
+  height: 35px;
+  /* background-color: var(--orange); */
+  border: 3px solid var(--orange);
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  border-radius: 60px;
+}
+
+input.check-toggle-round-flat + label:before, input.check-toggle-round-flat + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+
+input.check-toggle-round-flat + label:before {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  /* background-color: var(--orange); */
+  -webkit--moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  border-radius: 60px;
+}
+
+input.check-toggle-round-flat + label:after {
+  top: 4px;
+  left: 6px;
+  bottom: 4px;
+  width: 28px;
+  /* background-color: var(--orange); */
+  -webkit-border-radius: 52px;
+  -moz-border-radius: 52px;
+  -ms-border-radius: 52px;
+  -o-border-radius: 52px;
+  border-radius: 52px;
+  -webkit-transition: margin 0.2s;
+  -moz-transition: margin 0.2s;
+  -o-transition: margin 0.2s;
+  transition: margin 0.2s;
+}
+
+input.check-toggle-round-flat:checked + label:after {
+  margin-left: 30px;
 }
