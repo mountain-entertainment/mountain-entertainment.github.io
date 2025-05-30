@@ -108,6 +108,7 @@ img {
   cursor: pointer;
 }
 
+
 /*===== NAV =====*/
 @media screen and (max-width: 768px) {
   .nav {
@@ -123,6 +124,10 @@ img {
     -webkit-transition: .5s;
     transition: .5s;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  .nav__menu {
+    width: 100px;
   }
 }
 
@@ -173,6 +178,8 @@ img {
       -ms-grid-row-align: center;
       align-self: center;
   font-size: 15px;
+  text-align: left;
+  padding-right: 15px;
 }
 
 .nav__item {
