@@ -1,0 +1,93 @@
+.contact h5::before {
+  display: block;
+  position: relative;
+  content: '';
+  right: 70px;
+  top: 10px;
+  height: 3px;
+  width: 4rem;
+  background-color: var(--orange);
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  background-image: url('../img/kontakt.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+
+.contact-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  padding: 8vh 0;
+}
+
+.contact-inner h1{
+  margin-top: 40px;
+}
+
+.contact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin: 30px 0 0 0;
+}
+
+.contact-card {
+  display: flex;
+  height: auto;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+}
+
+.contact-card a {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-card a:hover .contact-icon {
+  background-color: white;
+}
+
+.contact-card a:hover .contact-icon i {
+  color: var(--orange);
+}
+
+.contact-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--orange);
+  border: 2px solid var(--orange);
+  border-radius: 50%;
+  min-width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  transition: color 0.7s ease;
+}
+
+.contact-icon i {
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  color: var(--grey);
+  text-align: start;
+}
+
+.contact-text p {
+  font-size: 14px;
+  margin-bottom: 0 !important;
+}

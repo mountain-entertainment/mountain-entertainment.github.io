@@ -20,6 +20,7 @@
 
 :root {
   --orange: #e74f00;
+  --orange-light: #ff7900;
   --grey: #363636;
 }
 
@@ -404,7 +405,7 @@ header .mouse a i {
     padding: 100px 0px;
 }
 
-.intro-inner h4 {
+.intro-inner h4, .contact-inner h5 {
   margin: 0 0 20px 4rem;
   text-align: center;
 }
@@ -418,6 +419,27 @@ header .mouse a i {
   height: 3px;
   width: 4rem;
   background-color: var(--orange);
+}
+
+.detail {
+  display: flex;
+  justify-content: center;
+}
+
+.detail-inner {
+  display: flex;
+  flex-direction: column;
+  max-width: 80vw;
+  text-align: center;
+}
+
+.detail-inner ul {
+  font-size: 16px;
+  text-align: left;
+}
+
+.detail-inner p, .detail-inner ul {
+  margin: 20px 0;
 }
 
 .social-icons li {
@@ -527,13 +549,88 @@ header .mouse a i {
     top: 0;
 }
 
+.why {
+  display: flex;
+  justify-content: center;
+  background-color: var(--orange);
+  color: white;
+  padding: 50px 0;
+  margin-top: 40px;
+}
+
+.why-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 80vw;
+}
+
+.why h1 {
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  border: none;
+  padding: 10px 3rem;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  margin-top: 20px;
+}
+
+.cta-btn:hover {
+  padding: 10px 4rem;
+}
+
+.cta-btn-o {
+  color: white;
+  background-color: var(--orange);
+}
+
+.cta-btn-o:hover {
+  color: var(--orange);
+  background-color: white;
+}
+
+.cta-btn-w {
+  color: var(--orange);
+  background-color: white;
+}
+
+.cta-btn-w:hover {
+  color: white;
+  background-color: var(--orange-light);
+}
+
+
+.addons-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.addon {
+  width: 20vw;
+  height: 50vh;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.addon-icon {
+  height: 20vh;
+}
+
 /* ================================= */
 /* ::::::::: 11. Footer :::::::::::: */
 /* ================================= */
 
 footer {
   z-index: 10;
-  padding: 30px;
+  padding-bottom: 50px;
   position: relative;
   color: #fff;
   background: var(--grey);
@@ -541,6 +638,9 @@ footer {
   overflow: hidden;
 }
 
+footer .container {
+  padding-top: 50px;
+}
 
 footer .copyright {
   font-size: 13px;

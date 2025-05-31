@@ -562,7 +562,7 @@ header .mouse a i {
   margin: 10px 0;
 }
 
-.about-inner h4, .team .col-md-6.left-box h5, .tours .col-md-6.left-box h5 {
+.about-inner h4, .team .col-md-6.left-box h5, .tours .col-md-6.left-box h5, .contact h5 {
   padding: 0 0 20px 70px;
 }
 
@@ -1060,44 +1060,6 @@ footer {
 
 footer .container {
   padding-top: 50px;
-}
-
-.contact {
-  display: flex;
-  justify-content: center;
-  background-image: url('../img/kontakt.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 0;
-}
-
-.contact-inner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 80vw;
-  padding: 5vh 0;
-}
-
-.contact-inner h1{
-  margin-top: 40px;
-}
-
-.contact-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-  margin: 30px 0 0 0;
-}
-
-.contact-card {
-  height: 100px;
-  width: 300px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 16px;
 }
 
 footer .copyright {

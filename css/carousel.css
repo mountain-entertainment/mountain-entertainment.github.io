@@ -172,8 +172,6 @@ https://flickity.metafizzy.co
   box-sizing: border-box;
 }
 
-body { font-family: sans-serif; }
-
 .gallery {
   background: linear-gradient(rgba(225, 231, 235, 0.2), rgba(176, 183, 189, 0.2));
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
