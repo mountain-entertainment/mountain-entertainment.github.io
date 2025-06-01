@@ -16,6 +16,8 @@
     9. Google map
 */
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const langEls = document.querySelectorAll('[language]');
   const toggle = document.getElementById('language-toggle');
