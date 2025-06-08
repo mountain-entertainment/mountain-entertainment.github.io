@@ -16,59 +16,118 @@
     9. Google map
 */
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
-  const langEls = document.querySelectorAll('[language]');
+  const images = document.querySelectorAll('.carousel .item img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
   const toggle = document.getElementById('language-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  const toggleMenu = document.getElementById('nav-toggle');
+  const closeMenu = document.getElementById('nav-close');
+  const navLink = document.querySelectorAll('.nav__link');
+  const langEls = document.querySelectorAll('[language]');
+  
+  let currentIndex = 0;
 
-  function showLanguage(language) {
-    langEls.forEach(el => {
-      el.style.display = el.getAttribute('language') === language ? '' : 'none';
+  // Open lightbox
+  if (images.length && lightbox && lightboxImg) {
+    images.forEach((img, index) => {
+      img.addEventListener('click', function (e) {
+        e.stopPropagation();
+        currentIndex = index;
+        showImage();
+        lightbox.style.display = 'flex';
+      });
     });
   }
 
-  showLanguage(toggle.checked ? 'en' : 'de');
+  // Show current image in lightbox
+  function showImage() {
+    if (!lightboxImg || !images[currentIndex]) return;
 
-  toggle.addEventListener('change', function () {
-    showLanguage(this.checked ? 'en' : 'de');
+    lightboxImg.classList.add('fade-out');
+
+    setTimeout(() => {
+      lightboxImg.src = images[currentIndex].src + '?t=' + new Date().getTime();
+      lightboxImg.onload = () => {
+        lightboxImg.classList.remove('fade-out');
+      };
+    }, 150);
+  }
+
+  // Navigation
+  if (prevBtn && nextBtn) {
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage();
+    });
+
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage();
+    });
+  }
+
+  // Close lightbox
+  window.closeLightbox = function (e) {
+    e?.stopPropagation();
+    if (lightbox && lightboxImg) {
+      lightbox.style.display = 'none';
+      lightboxImg.src = '';
+    }
+  };
+
+  // Language toggle
+  function showLanguage(language) {
+    langEls.forEach(el => {
+      if (el.getAttribute('language') === language) {
+        el.style.display = '';
+      } else {
+        el.style.display = 'none';
+      }
+    });
+  }
+
+  if (toggle) {
+    showLanguage(toggle.checked ? 'en' : 'de');
+    toggle.addEventListener('change', function () {
+      showLanguage(this.checked ? 'en' : 'de');
+    });
+  }
+
+  // Theme toggle
+  let CHECKED = false;
+  document.addEventListener("pointerdown", () => {
+    CHECKED = !CHECKED;
+    document.documentElement.style.setProperty("--light", CHECKED ? 1 : 0);
   });
+
+  // Nav menu toggling
+  if (toggleMenu && navMenu) {
+    toggleMenu.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+  }
+
+  if (closeMenu && navMenu) {
+    closeMenu.addEventListener('click', () => {
+      navMenu.classList.remove('show');
+    });
+  }
+
+  // Nav link activation
+  function linkAction() {
+    navLink.forEach(n => n.classList.remove('active'));
+    this.classList.add('active');
+    if (navMenu) navMenu.classList.remove('show');
+  }
+
+  navLink.forEach(n => n.addEventListener('click', linkAction));
 });
-
-
-let CHECKED = false;
-document.addEventListener("pointerdown", (e) => {
-	CHECKED = !CHECKED;
-	document.documentElement.style.setProperty("--light", CHECKED ? 1 : 0);
-});
-
-
-const navMenu = document.getElementById('nav-menu'),
-      toggleMenu = document.getElementById('nav-toggle'),
-      closeMenu = document.getElementById('nav-close')
-
-/*SHOW*/ 
-toggleMenu.addEventListener('click', ()=>{
-    navMenu.classList.toggle('show')
-})
-
-/*HIDDEN*/
-closeMenu.addEventListener('click', ()=>{
-    navMenu.classList.remove('show')
-})
-
-/*===== ACTIVE AND REMOVE MENU =====*/
-const navLink = document.querySelectorAll('.nav__link');   
-
-function linkAction(){
-  /*Active link*/
-  navLink.forEach(n => n.classList.remove('active'));
-  this.classList.add('active');
-  
-  /*Remove menu mobile*/
-  navMenu.classList.remove('show')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction));
 
 jQuery.noConflict()(function($) {
 

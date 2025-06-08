@@ -58,7 +58,7 @@
 <!-- /LOADER TEMPLATE -->
 
 <!-- HEADER -->
-<header class="header-photo">
+<header>
 
   <div class="header-nav">
     <a href="./" class="header__logo"><img src="./images/it-me.svg" alt="logo"></a>
@@ -99,6 +99,15 @@
         </div>
     </nav>
   </div>
+  <div class="video-outer" style="background-image: url('img/video-thumbnails/hintersee2.jpg'); background-size: cover; background-position: center;">
+  <div class="video-inner">
+    <iframe 
+      src="https://player.vimeo.com/video/1091595510?h=1ed1ed053d&autoplay=1&muted=1&background=1&loop=1&title=0&byline=0&portrait=0"
+      frameborder="0"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
 
 </header>
 <!-- END HEADER -->
@@ -121,7 +130,7 @@
         <img src="img/photo/watzmann.jpeg" alt="" width="418" height="418">
       </div>
       <div class="item" id="slide-2">
-        <img src="img/photo/kirche" alt="" width="418" height="418">
+        <img src="img/photo/kirche.jpeg" alt="" width="418" height="418">
       </div>
       <div class="item" id="slide-3">
         <img src="img/photo/Königssee2.jpeg" alt="" width="418" height="418">
@@ -130,13 +139,20 @@
         <img src="img/photo/kehlsteinhaus.jpeg" alt="" width="418" height="418">
       </div>
       <div class="item" id="slide-5">
-        <img src="https://placehold.co/400x600" alt="" width="418" height="418">
+        <img src="img/storyteller/DO01000169.jpeg" alt="" width="418" height="418">
       </div>
       <div class="item" id="slide-6">
-        <img src="https://placehold.co/400x600" alt="" width="418" height="418">
+        <img src="img/storyteller/IMG_9656.JPEG" alt="" width="418" height="418">
       </div>
     </div>
   </aside>
+</div>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <span class="nav-btn left" id="prevBtn"><i class="fas fa-chevron-left fa-lg"></i></span>
+  <img id="lightbox-img" src="" alt="Expanded View">
+  <span class="close-btn" onclick="closeLightbox(event)">&times;</span>
+  <span class="nav-btn right" id="nextBtn"><i class="fas fa-chevron-right fa-lg"></i></span>
 </div>
 
 <section class="detail">
