@@ -846,7 +846,7 @@ header .mouse a i {
 }
 
 .tours .row {
-  margin: 10vh 0 28vh 0;
+  margin: 10vh 0 35vh 0;
 }
 
 .tours .col-md-6.left-box {
@@ -1102,7 +1102,7 @@ footer a:hover, footer a:focus {
 @media only screen and  (max-width: 756px) {
 
   .tours .row {
-    margin: 0 0 28vh 0;
+    margin: 0 0 35vh 0;
   }
   
    .tours .col-md-6.left-box {
@@ -1244,7 +1244,7 @@ header .logo img {
 @media only screen and  (max-width: 540px) {
 
   .tours .row {
-    margin: 0 0 16vh 0;
+    margin: 0 0 20vh 0;
   }
 
   .col-md-6.left-box .logo {

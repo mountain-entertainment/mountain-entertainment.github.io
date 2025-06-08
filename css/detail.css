@@ -639,8 +639,8 @@ header .mouse a i {
 .addon {
   border-radius: 24px;
   flex: 1 1 200px;
-  max-width: 250px;
-  height: 60vh;
+  max-width: 350px;
+  height: 45vh;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
@@ -648,13 +648,12 @@ header .mouse a i {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 25vh;
+  height: 50%;
 }
-
 
 .addon-text {
   padding: 0 10px 0 20px;
-  height: 50%;
+  height: 40%;
 }
 
 .dots {

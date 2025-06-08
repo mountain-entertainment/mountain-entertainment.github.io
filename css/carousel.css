@@ -180,15 +180,24 @@ https://flickity.metafizzy.co
 
 .gallery-cell {
   display: flex;
+  flex-direction: column;
+  height: auto; /* allow height to be defined by children */
   width: 66%;
-  height: 75vh;
   margin-right: 10px;
   background: white;
-  counter-increment: gallery-cell;
-  justify-content: center;
-  align-items: stretch;
   border-radius: 14px;
   color: var(--grey);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.gallery-cell.is-selected {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  pointer-events: auto;
 }
 
 .gallery-cell > div {
@@ -199,12 +208,14 @@ https://flickity.metafizzy.co
 }
 
 .card-bg {
-  flex: 1;
+  flex-grow: 1; /* Take remaining space */
+  min-height: 400px; /* Optional: ensure it doesn't shrink too much */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 14px 14px 0 0;
-  align-content: end;
+  display: flex;
+  align-items: flex-end;
   color: white;
 }
 
@@ -234,7 +245,6 @@ https://flickity.metafizzy.co
 }
 
 .card-content {
-  height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
