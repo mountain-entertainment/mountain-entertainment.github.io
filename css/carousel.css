@@ -13,7 +13,7 @@ https://flickity.metafizzy.co
 .flickity-enabled:focus { outline: none; }
 
 .flickity-viewport {
-  /* overflow: hidden; */
+  overflow: hidden;
   position: relative;
   height: 100%;
 }
@@ -249,7 +249,7 @@ https://flickity.metafizzy.co
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 30px 80px 40px 30px;
+  padding: 30px 60px 40px 30px;
 }
 
 .card-content .text {

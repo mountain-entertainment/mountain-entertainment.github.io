@@ -434,9 +434,22 @@ header .mouse a i {
   text-align: center;
 }
 
-.detail-inner ul {
+.ul-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ul-list ul {
   font-size: 16px;
   text-align: left;
+  list-style: disc;
+  padding-left: 1.5em;
+  margin: 0 auto;
+}
+
+.detail-inner li {
+  list-style: disc;
 }
 
 .detail-inner p, .detail-inner ul {
@@ -631,7 +644,6 @@ header .mouse a i {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   max-width: 1200px;
   gap: 20px;
 }
@@ -639,8 +651,10 @@ header .mouse a i {
 .addon {
   border-radius: 24px;
   flex: 1 1 200px;
-  max-width: 350px;
-  height: 45vh;
+  width: 350px;
+  min-width: 350px;
+  max-width: 250px;
+  height: auto;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
@@ -648,18 +662,22 @@ header .mouse a i {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50%;
+  min-height: 275px;
+}
+
+.addon-icon img {
+  height: 90px;
 }
 
 .addon-text {
-  padding: 0 10px 0 20px;
+  padding: 0 20px 40px 20px;
   height: 40%;
 }
 
 .dots {
   display: flex;
   gap: 8px;
-  padding: 0 0 0 20px;
+  padding: 0 0 30px 20px;
 }
 
 .dot-active {
