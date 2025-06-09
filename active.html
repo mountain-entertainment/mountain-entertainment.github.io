@@ -32,6 +32,7 @@
       <link rel="stylesheet" type="text/css" href="./css/detail.css">
       <link rel="stylesheet" href="./css/style copy.css">
       <link rel="stylesheet" href="./css/carousel.css">
+      <link rel="stylesheet" href="css/contact.css">
 
       <!-- Favicons -->
       <link rel="shortcut icon" href="./images/favicon.ico">
@@ -54,7 +55,7 @@
 <!-- /LOADER TEMPLATE -->
 
 <!-- HEADER -->
-<header class="header-active">
+<header>
 
   <div class="header-nav">
     <a href="./" class="header__logo"><img src="./images/it-me.svg" alt="logo"></a>
@@ -96,13 +97,26 @@
     </nav>
   </div>
 
+<div class="video-outer" style="background-image: url('img/video-thumbnails/segway.jpg'); background-size: cover; background-position: center;">
+  <div class="video-inner">
+    <iframe 
+      src="https://player.vimeo.com/video/1091773835?h=4a2cb0871e&autoplay=1&muted=1&background=1&loop=1&title=0&byline=0&portrait=0"
+      frameborder="0"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
 </header>
 <!-- END HEADER -->
 
 <section class="intro">
   <div class="intro-inner">
-    <h4>let go off some steam!</h4>
-    <h1>Active Tour</h1>
+    <h4 language="en">let go off some steam!</h4>
+    <h4 language="de">Lassen Sie etwas Dampf ab!</h4>
+    <h1 language="en">Active Tour</h1>
+    <h1 language="de">Aktiv Tour</h1>
   </div>
 </section>
 
@@ -110,33 +124,171 @@
   <aside class="carousel">
     <div class="carousel__wrapper">
       <div class="item" id="slide-0">
-        <img src="https://placehold.co/400x600" alt="" width="418" height="418">
+        <img src="img/active/DSC_0044.jpeg" alt="" width="418" height="418" style="object-position: left;">
       </div>
       <div class="item" id="slide-1">
-        <img src="https://placehold.co/400x600" alt="" width="418" height="418">
+        <img src="img/active/klettersteig.jpg" alt="" width="418" height="418">
       </div>
       <div class="item" id="slide-2">
-        <img src="https://placehold.co/400x600" alt="" width="418" height="418">
+        <img src="img/active/DSC_0254.jpeg" alt="" width="418" height="418">
       </div>
       <div class="item" id="slide-3">
-        <img src="https://placehold.co/400x600" alt="" width="418" height="418">
+        <img src="img/active/IMG_7975.jpeg" alt="" width="418" height="418">
       </div>
       <div class="item" id="slide-4">
-        <img src="https://placehold.co/400x600" alt="" width="418" height="418">
+        <img src="img/active/Jenner TourII.jpeg" alt="" width="418" height="418" style="object-position: left;">
       </div>
       <div class="item" id="slide-5">
-        <img src="https://placehold.co/400x600" alt="" width="418" height="418">
+        <img src="img/active/DSC_0120.jpeg" alt="" width="418" height="418">
       </div>
       <div class="item" id="slide-6">
-        <img src="https://placehold.co/400x600" alt="" width="418" height="418">
+        <img src="img/active/IMG_0504.jpeg" alt="" width="418" height="418">
       </div>
     </div>
   </aside>
 </div>
 
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <span class="nav-btn left" id="prevBtn"><i class="fas fa-chevron-left fa-lg"></i></span>
+  <img id="lightbox-img" src="" alt="Expanded View">
+  <span class="close-btn" onclick="closeLightbox(event)">&times;</span>
+  <span class="nav-btn right" id="nextBtn"><i class="fas fa-chevron-right fa-lg"></i></span>
+</div>
+
+
+<section class="detail">
+  <div class="detail-inner">
+    <h1 language="en">Thrill meets nature: Discover the Berchtesgaden Alps on the adrenaline-filled Active Tour from Mountain Concierge!</h1>
+    <h1 language="de">Adrenalin trifft Natur: Entdecken Sie die Berchtesgadener Alpen auf der actiongeladenen Aktiv-Tour von Mountain Concierge!</h1>
+    <p language="en">Ready for your next adventure? On the Active Tour, you’ll experience the spectacular landscapes of the Alps like never before – climbing airy via ferratas, rafting down wild mountain streams, or soaring through the skies while paragliding. Your experienced guide will tailor the tour to your individual preferences and skill level – for a personalized mix of action, nature, and unforgettable moments.</p>
+    <p language="de">Bereit für das nächste Abenteuer? Auf der Aktiv-Tour erleben Sie die spektakulären Landschaften der Alpen auf völlig neue Weise – beim Klettersteiggehen in luftiger Höhe, beim Rafting auf wilden Gebirgsflüssen oder beim Paragliding hoch über dem Tal. Ihr erfahrener Guide stellt die Tour ganz nach Ihren Wünschen und Ihrem Können zusammen – für eine individuelle Mischung aus Action, Natur und unvergesslichen Momenten.</p>
+    <p language="en">Explore the legendary bobsleigh track, glide through alpine meadows on a Segway or conquer panoramic peaks with helmet and harness – this is adventure in its most exclusive form. At the same time, enjoy the comfort of our premium service, including flexible planning, professional equipment, and culinary energy boosts in between.</p>
+    <p language="de">Entdecken Sie die legendäre Bobbahn, gleiten Sie mit dem Segway durch alpine Wiesen oder erklimmen Sie mit Helm und Klettergurt atemberaubende Gipfel – das ist Abenteuer in seiner exklusivsten Form. Gleichzeitig genießen Sie den Komfort unseres Premium-Services: mit flexibler Planung, professioneller Ausrüstung und kulinarischen Energieboosts zwischendurch.</p>
+    <h3 language="en">Your benefits at a glance</h3>
+    <h3 language="de">Ihre Vorteile auf einen Blick</h3>
+    <div class="ul-list">
+      <ul language="en">
+        <li>Tailor-made adventure program with flexible activity choices</li>
+        <li>Professional guidance and safety equipment included</li>
+        <li>Exclusive experiences off the beaten path</li>
+        <li>Delicious alpine snacks and energizing refreshments</li>
+        <li>Comfortable transfers in the Multivan – relax between adventures</li>
+      </ul>
+      <ul language="de">
+        <li>Individuell abgestimmtes Abenteuerprogramm mit flexibler Aktivitätswahl</li>
+        <li>Professionelle Betreuung und Sicherheitsausrüstung inklusive</li>
+        <li>Exklusive Erlebnisse abseits der bekannten Pfade</li>
+        <li>Köstliche Alpensnacks und erfrischende Energiepausen</li>
+        <li>Bequeme Transfers im Multivan – entspannen zwischen den Abenteuern</li>
+      </ul>
+    </div>
+    <p language="en">Whether you’re scaling rocks, flying high, racing down a bobsled track or gliding silently through alpine scenery – the Active Tour is your ticket to an extraordinary alpine experience that gets your pulse racing while keeping you in safe, experienced hands.</p>
+    <p language="de">Ob Sie Felsen erklimmen, durch die Lüfte gleiten, die Bobbahn hinunterrasen oder lautlos durch die Alpenlandschaft rollen – die Aktiv-Tour ist Ihr Schlüssel zu einem außergewöhnlichen Bergerlebnis, das den Puls in die Höhe treibt – mit Sicherheit und Erfahrung an Ihrer Seite.</p>
+  </div>
+</section>
+
+<!-- <section class="addons">
+  <div class="addons-intro">
+    <h1>Add-ons</h1>
+    <p language="en">give your tour that little bit extra! With our versatile add-ons, you can make your experience even more personal and unique. Choose from various additional services and make your day something very special.</p>
+    <p language="de">Verleihen Sie Ihrer Tour das gewisse Extra! Mit unseren vielseitigen Add-ons gestalten Sie Ihr Erlebnis noch persönlicher und einzigartiger. Wählen Sie aus verschiedenen Zusatzleistungen und machen Sie Ihren Tag zu etwas ganz Besonderem.</p>
+  </div>
+  <div class="addons-inner">
+    <div class="addon">
+      <div class="addon-icon">
+        <img src="img/icons/camera.png" alt="icon">
+      </div>
+      <div class="addon-text">
+        <h3 language="en">Photoguide</h3>
+        <h3 language="de">Fotoguide</h3>
+        <p language="en">A guide with local knowledge can show you the best perspectives.</p>
+        <p language="de">Ein Guide mit Ortskenntnis kann Ihnen die besten Perspektiven zeigen.</p>
+      </div>
+      <div class="dots">
+        <div class="dot-active"></div>
+        <div class="dot-inactive"></div>
+      </div>
+    </div>
+    <div class="addon">
+      <div class="addon-icon">
+        <img src="img/icons/picnic-basket.png" alt="icon">
+      </div>
+      <div class="addon-text">
+        <h3 language="en">Picnic break</h3>
+        <h3 language="de">Picknickpause</h3>
+        <p language="en">On request with regional specialties by the lake or in the mountains.</p>
+        <p language="de">Auf Wunsch mit regionalen Spezialitäten am See oder im Gebirge.</p>
+      </div>
+      <div class="dots">
+        <div class="dot-inactive"></div>
+        <div class="dot-active"></div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section class="why">
+  <div class="why-inner">
+    <h1 language="en">Why Mountain Concierge?</h1>
+    <h1 language="de">Warum Mountain Concierge?</h1>
+    <p language="en">We offer you the opportunity to discover the sights in and around Berchtesgaden privately and in peace, without the hustle and bustle of mass tourism. Benefit from our local expertise and experience the mountains from a whole new perspective.</p>
+    <p language="de">Wir bieten Ihnen die Möglichkeit, die Sehenswürdigkeiten in und um Berchtesgaden privat und in Ruhe zu entdecken, ohne den Trubel des Massentourismus. Profitieren Sie von unserer lokalen Expertise und erleben Sie die Berge von einer ganz neuen Seite.</p>
+    <p language="en">Book your tour today!</p>
+    <p language="de">Buchen Sie noch heute Ihre Tour!</p>
+    <a language="en" class="cta-btn cta-btn-w" href="#contact">Contact us</a>
+    <a language="de" class="cta-btn cta-btn-w" href="#contact">zum Kontakt</a>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
+   <div id="contact" class="contact">
+    <div class="contact-inner">
+      <h5 language="en">Contact us</h5>
+      <h5 language="de">Kontaktieren Sie uns</h5>
+      <h1 language="en">A personal talk is the beginning of everything!</h1>
+      <h1 language="de">Ein persönliches Gespräch ist der Anfang von allem!</h1>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <a href="https://g.page/MountainEntertainment?share">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-text">
+              <h6 language="en">Mountain Entertainment Event Agency</h6>
+              <h6 language="de">Mountain Entertainment Eventagentur</h6>
+              <p>Bahnhofspl. 2, 83471 Berchtesgaden</p>
+            </div>
+          </a>
+        </div>
+        <div class="contact-card">
+          <a href="tel:+49 8652 655813">
+            <div class="contact-icon">
+              <i class="fas fa-phone-volume"></i>
+            </div>
+            <div class="contact-text">
+              <h6 language="en">Telephone</h6>
+              <h6 language="de">Telefon</h6>
+              <p>+49 8652 655813</p>
+            </div>
+          </a>
+        </div>
+        <div class="contact-card">
+          <a href="mailto:kontakt@mountain-entertainment.de">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-text">
+              <h6>E-Mail</h6>
+              <p>kontakt@mountain-entertainment.de</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="container">
+
 
      <!-- Social Icons -->
      <div class="social-icons">

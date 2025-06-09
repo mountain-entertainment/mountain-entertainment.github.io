@@ -649,13 +649,17 @@ header .mouse a i {
 }
 
 .addon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* makes space for dots */
   border-radius: 24px;
   flex: 1 1 200px;
   width: 350px;
   min-width: 350px;
-  max-width: 250px;
+  max-width: 350px; /* corrected max-width to match width */
   height: auto;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  overflow: hidden; /* optional, in case content spills */
 }
 
 .addon-icon {
@@ -671,7 +675,7 @@ header .mouse a i {
 
 .addon-text {
   padding: 0 20px 40px 20px;
-  height: 40%;
+  /* height: 40%; */
 }
 
 .dots {
@@ -763,8 +767,14 @@ footer a:hover, footer a:focus {
     flex-direction: column;
   }
 
+  .nav-btn {
+    top: auto;
+    bottom: 80px;
+    transform: none;
+  }
+
   .nav-btn.right {
-    margin-top: 50px;
+    /* top: 270px; */
     margin-left: 0 !important;
   }
 
@@ -974,6 +984,13 @@ footer a:hover, footer a:focus {
 }
 
 .lightbox {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   display: none;
   position: fixed;
   inset: 0;
@@ -981,6 +998,7 @@ footer a:hover, footer a:focus {
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  /* position: relative; */
 }
 
 #lightbox-img {
@@ -1024,16 +1042,18 @@ footer a:hover, footer a:focus {
   min-width: 44px;
   height: 44px;
   border-radius: 50%;
+  position: absolute;
+  top: 50%;
   transform: translateY(-50%);
   z-index: 10;
 }
 
 .nav-btn.right {
-  margin-left: 10px;
+  right: 20px;
 }
 
 .nav-btn.left {
-  margin-right: 10px;
+  left: 20px;
 }
 
 .nav-btn i {
