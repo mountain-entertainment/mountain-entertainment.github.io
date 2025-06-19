@@ -816,6 +816,26 @@ header .mouse a i {
   margin-top: 20px;
 }
 
+.liq {
+  margin-top: 20px;
+  box-shadow: 0 6px 6px #00000033, 0 6px 20px #0000001a;
+}
+
+.liq .cta-btn-o{
+   background-color: transparent;
+   border: 2px solid rgba(255, 255, 255, 0.349);
+}
+
+.liq .cta-btn {
+  padding: 14px 3rem;
+  backdrop-filter: blur(3px);
+  filter: url(#glass-distortion);
+}
+
+.liq .cta-btn:hover {
+  padding: 14px 4rem;
+}
+
 .cta-btn:hover {
   padding: 10px 4rem;
 }

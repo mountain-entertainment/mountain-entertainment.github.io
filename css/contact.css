@@ -25,7 +25,7 @@
   justify-content: center;
   align-items: center;
   width: 80vw;
-  padding: 8vh 0;
+  padding: 10vh 0;
 }
 
 .contact-inner h1{
@@ -44,14 +44,19 @@
   display: flex;
   height: auto;
   width: 300px;
-  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.349);
   border-radius: 16px;
+  box-shadow: 0 6px 6px #00000033, 0 6px 20px #0000001a;
 }
 
 .contact-card a {
   padding: 20px;
+  border-radius: 16px;
+  width: 100%;
   display: flex;
   align-items: center;
+  backdrop-filter: blur(3px);
+  filter: url(#glass-distortion);
 }
 
 .contact-card a:hover .contact-icon {
@@ -83,7 +88,7 @@
 .contact-text {
   display: flex;
   flex-direction: column;
-  color: var(--grey);
+  color: white;
   text-align: start;
 }
 
