@@ -871,6 +871,7 @@ header .mouse a i {
   margin: 10vh 0 35vh 0;
 }
 
+
 .tours .col-md-6.left-box {
     display: flex;
     align-self: center;
@@ -975,6 +976,11 @@ header .mouse a i {
   height: 100%;
   z-index: 0;
 }
+
+.row-gin {
+  margin-bottom: 90px;
+}
+
 
 .background-image-gin-img {
   width: 100%;
@@ -1149,6 +1155,11 @@ footer a:hover, footer a:focus {
   .tours .row {
     margin: 0 0 35vh 0;
   }
+
+  .row-gin {
+    margin-bottom: 0;
+  }
+
   
    .tours .col-md-6.left-box {
     text-align: center;
