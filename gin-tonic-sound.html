@@ -32,11 +32,12 @@
       <link rel="stylesheet" type="text/css" href="./css/detail.css">
       <link rel="stylesheet" href="./css/style copy.css">
       <link rel="stylesheet" href="./css/carousel.css">
+      <link rel="stylesheet" href="css/contact.css">
 
       <!-- Favicons -->
       <link rel="shortcut icon" href="./images/favicon.ico">
 
-       <style>
+      <style>
         /* Basic styles to help visualize the layout */
         .container-carousel { display: flex; }
         .carousel__wrapper { display: flex; }
@@ -57,9 +58,9 @@
 <!-- /LOADER TEMPLATE -->
 
 <!-- HEADER -->
-<header class="header-storyteller">
+<header>
 
- <div class="header-nav">
+  <div class="header-nav">
     <a href="./" class="header__logo"><img src="./images/it-me.svg" alt="logo"></a>
 
     <ion-icon name="menu-outline" class="header__toggle" id="nav-toggle"></ion-icon>
@@ -77,14 +78,14 @@
                     <li class="nav__item"><a href="./#about" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="./#tours" class="nav__link">Tours</a></li>
                     <li class="nav__item"><a href="#" class="nav__link">It's ME</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                 </ul>
                 <ul class="nav__list" language="de">
                     <li class="nav__item"><a href="./" class="nav__link active">Home</a></li>
                     <li class="nav__item"><a href="./#about" class="nav__link">Über uns</a></li>
                     <li class="nav__item"><a href="./#tours" class="nav__link">Touren</a></li>
                     <li class="nav__item"><a href="#" class="nav__link">It's ME</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Kontakt</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Kontakt</a></li>
                 </ul>
             </div>
         </div>
@@ -98,14 +99,24 @@
         </div>
     </nav>
   </div>
+  <div class="video-outer" style="background-image: url('img/video-thumbnails/fluss.jpg'); background-size: cover; background-position: center;">
+  <div class="video-inner">
+    <iframe 
+      src="https://player.vimeo.com/video/1097308488?h=489e5b5de1&autoplay=1&muted=1&background=1&loop=1&title=0&byline=0&portrait=0"
+      frameborder="0"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
 
 </header>
 <!-- END HEADER -->
 
 <section class="intro">
   <div class="intro-inner">
-    <h4 class="hl">the stories of the mountains and our homeland</h4>
-    <h1>Story Teller Tour</h1>
+    <h4 language="en">Gin: the true spirit of life in the mountains</h4>
+    <h4 language="de">Der Gin des Lebens liegt in den Bergen</h4>
+    <h1>Gin-Tonic-Sound</h1>
   </div>
 </section>
 
@@ -113,25 +124,25 @@
   <aside class="carousel">
     <div class="carousel__wrapper">
       <div class="item" id="slide-0">
-        <img src="https://placehold.co/400x600" alt="" width="418" height="418">
+        <img src="img/bi-gin-tasting-4.jpg" alt="" width="418" height="418">
       </div>
       <div class="item" id="slide-1">
-        <img src="https://placehold.co/400x600" alt="" width="418" height="418">
+        <img src="img/gin-tonic.jpg" alt="" width="418" height="418">
       </div>
       <div class="item" id="slide-2">
-        <img src="https://placehold.co/400x600" alt="" width="418" height="418">
+        <img src="img/lounge.jpeg" alt="" width="418" height="418">
       </div>
       <div class="item" id="slide-3">
-        <img src="https://placehold.co/400x600" alt="" width="418" height="418">
+        <img src="img/tonic.jpeg" alt="" width="418" height="418">
       </div>
       <div class="item" id="slide-4">
-        <img src="https://placehold.co/400x600" alt="" width="418" height="418">
+        <img src="img/butterfly.jpg" alt="" width="418" height="418">
       </div>
       <div class="item" id="slide-5">
-        <img src="https://placehold.co/400x600" alt="" width="418" height="418">
+        <img src="img/berchtesgaden-mit-watzmann-im-sommer.jpg" alt="" width="418" height="418">
       </div>
       <div class="item" id="slide-6">
-        <img src="https://placehold.co/400x600" alt="" width="418" height="418">
+        <img src="img/kornspeicher.jpg" alt="" width="418" height="418">
       </div>
     </div>
   </aside>
@@ -144,8 +155,155 @@
   <span class="nav-btn right" id="nextBtn"><i class="fas fa-chevron-right fa-lg"></i></span>
 </div>
 
+<section class="detail">
+  <div class="detail-inner">
+    <h1 language="en">Private Gin Tonic & Sound Tasting Experience – Your Exclusive Event in Berchtesgaden</h1>
+    <h1 language="de">Private Gin-Tonic & Sound Tasting Experience – Ihr exklusives Event in Berchtesgaden</h1>
+    <p language="en">Imagine: You’re sipping exquisite gin tonics in the heart of the Berchtesgaden Alps, surrounded by breathtaking mountain views, while atmospheric music sets the mood. Our private Gin Tonic & Sound Tasting Experience combines nature, enjoyment, and art – for unforgettable moments with friends, colleagues, or family.</p>
+    <p language="de">Stellen Sie sich vor: Sie genießen feinste Gin Tonics inmitten der Berchtesgadener Alpen – umgeben von atemberaubender Bergkulisse und begleitet von stimmungsvoller Musik. Unsere private Gin-Tonic & Sound Tasting Experience verbindet Natur, Genuss und Kunst – für unvergessliche Momente mit Freunden, Kollegen oder Familie.</p>
+    <h3 language="en">Unique Locations – From Alpine Chalet to Lakeside Lounge</h3>
+    <h3 language="de">Außergewöhnliche Locations – vom Alpenchalet bis zur Seelounge</h3>
+    <div class="ul-list">
+      <ul language="en">
+        <li><strong>Alpine Chalet with Terrace:</strong> Cosy wooden chalet or luxury lodge with panoramic views, open-air gin tasting, live acoustic music or DJ, and a crackling fire pit.</li>
+        <li><strong>Mountain Meadow or Alpine Pasture:</strong> Picnic-style setup with blankets and lanterns, “gin hike” with tasting stations and ambient soundscapes, ending with sunset views.</li>
+        <li><strong>Private Boat on Lake Königssee:</strong> Lounge on a private boat or raft, gin tasting with pure lake water as a tonic, accompanied by live hang-drum or ambient music.</li>
+        <li><strong>Luxury Hotel Fireplace Room:</strong> Elegant setting with regional gins, alpine snacks, and chill-out or jazz music by the fire.</li>
+        <li><strong>Historic Villa or Salt Mine:</strong> Unique ambiance with themed gins and immersive sound design for a sensory journey.</li>
+        <li><strong>Private Spa Retreat:</strong> Gin tasting with herbal notes, sound healing, and relaxation in an exclusive wellness area.</li>
+      </ul>
+      <ul language="de">
+        <li><strong>Alpenchalet mit Terrasse:</strong> Gemütliche Holzhütte oder luxuriöses Chalet mit Panoramablick, Open-Air-Gin-Tasting, Live-Musik oder DJ und knisternder Feuerschale.</li>
+        <li><strong>Bergwiese oder Alm:</strong> Picknick-Setup mit Decken und Lichtern, “Gin-Wanderung” mit Verkostungsstationen und sphärischen Soundscapes, Sonnenuntergang inklusive.</li>
+        <li><strong>Privatboot am Königssee:</strong> Lounge-Atmosphäre auf Boot oder Floß, Gin-Tasting mit Seewasser als Tonic, begleitet von Hang-Drum oder Ambient-Musik.</li>
+        <li><strong>Luxushotel-Kaminzimmer:</strong> Stilvolles Ambiente mit regionalen Gins, alpinen Snacks und Chill-Out- oder Jazzmusik am Kamin.</li>
+        <li><strong>Historische Villa oder Salzbergwerk:</strong> Einzigartiges Flair mit thematischen Gins und Sound-Design für eine sinnliche Reise.</li>
+        <li><strong>Privates SPA-Retreat:</strong> Gin-Tasting mit Kräuternoten, Sound-Healing und Entspannung im exklusiven Wellnessbereich.</li>
+      </ul>
+    </div>
+    <h3 language="en">Your Experience – Enjoyment, Music & Personal Touch</h3>
+    <h3 language="de">Ihr Erlebnis – Genuss, Musik & persönliche Note</h3>
+    <p language="en">Your event begins with a welcome signature gin, followed by a guided tasting of 3–5 gins with matching tonics and background stories. Between tastings, enjoy live music or sound meditation. End the evening with your personal favorite mix and a unique souvenir – like a personalized gin label or engraved stainless steel straw. Our gin expert or bartender is always at your side for tips and mixology tricks.</p>
+    <p language="de">Ihr Event startet mit einem Signature-Gin zur Begrüßung, gefolgt von einer geführten Verkostung von 3–5 Gins mit passenden Tonics und spannenden Hintergrundgeschichten. Zwischen den Tastings sorgen Live-Musik oder Klangmeditationen für besondere Momente. Zum Ausklang kreieren Sie Ihre Lieblingsmischung und nehmen ein individuelles Andenken mit – etwa ein personalisiertes Gin-Label oder einen gravierten Edelstahl-Strohhalm. Unser Gin-Experte oder Barkeeper steht Ihnen jederzeit mit Tipps und Mix-Tricks zur Seite.</p>
+    <p language="en">Whether for company events or private celebrations – this tasting tour is a unique fusion of taste, nature, and music. Let us create your unforgettable Berchtesgaden moment!</p>
+    <p language="de">Ob Firmenevent oder private Feier – diese Tasting-Tour ist eine einzigartige Verbindung aus Genuss, Natur und Musik. Lassen Sie uns Ihren unvergesslichen Berchtesgaden-Moment gestalten!</p>
+  </div>
+</section>
+
+<section class="why">
+  <div class="why-inner">
+    <h1 language="en">Why Mountain Concierge?</h1>
+    <h1 language="de">Warum Mountain Concierge?</h1>
+    <p language="en">We offer you the opportunity to discover the sights in and around Berchtesgaden privately and in peace, without the hustle and bustle of mass tourism. Benefit from our local expertise and experience the mountains from a whole new perspective.</p>
+    <p language="de">Wir bieten Ihnen die Möglichkeit, die Sehenswürdigkeiten in und um Berchtesgaden privat und in Ruhe zu entdecken, ohne den Trubel des Massentourismus. Profitieren Sie von unserer lokalen Expertise und erleben Sie die Berge von einer ganz neuen Seite.</p>
+    <p language="en">Book your tour today!</p>
+    <p language="de">Buchen Sie noch heute Ihre Tour!</p>
+    <a language="en" class="cta-btn cta-btn-w" href="#contact">Contact us</a>
+    <a language="de" class="cta-btn cta-btn-w" href="#contact">zum Kontakt</a>
+  </div>
+</section>
+
+<section class="addons">
+  <div class="addons-intro">
+    <h1>Add-ons</h1>
+    <p language="en">give your tour that little bit extra! With our versatile add-ons, you can make your experience even more personal and unique. Choose from various additional services and make your day something very special.</p>
+    <p language="de">Verleihen Sie Ihrer Tour das gewisse Extra! Mit unseren vielseitigen Add-ons gestalten Sie Ihr Erlebnis noch persönlicher und einzigartiger. Wählen Sie aus verschiedenen Zusatzleistungen und machen Sie Ihren Tag zu etwas ganz Besonderem.</p>
+  </div>
+  <div class="addons-inner">
+    <div class="addon">
+      <div class="addon-icon">
+        <i class="fa-solid fa-ribbon fa-5x"></i>
+      </div>
+      <div class="addon-text">
+        <h3>Gin-Label</h3>
+        <p language="en"> Personalized gin label with guest names.</p>
+        <p language="de">Personalisiertes Gin-Label mit Gästennamen.</p>
+      </div>
+      <div class="dots">
+        <div class="dot-active"></div>
+        <div class="dot-inactive"></div>
+      </div>
+    </div>
+    <div class="addon">
+      <div class="addon-icon">
+        <i class="fa-solid fa-music fa-5x"></i>
+      </div>
+      <div class="addon-text">
+        <h3 language="en">Alpine Soundtracking</h3>
+        <h3 language="de">Alpines Soundtracking</h3>
+        <p language="en">Nature sounds (glacier noise, birdsong) as background music.</p>
+        <p language="de">Naturgeräusche (Gletscherrauschen, Vogelstimmen) als Untermalung.</p>
+      </div>
+      <div class="dots">
+        <div class="dot-inactive"></div>
+        <div class="dot-active"></div>
+      </div>
+    </div>
+    <div class="addon">
+      <div class="addon-icon">
+        <i class="fa-solid fa-martini-glass-citrus fa-5x"></i>
+      </div>
+      <div class="addon-text">
+        <h3 language="en">Gin-Expert</h3>
+        <h3 language="de">Gin-Experte</h3>
+        <p language="en">Gin expert or bartender for mixing tips.</p>
+        <p language="de">Gin-Experte oder Barkeeper für Mix-Tipps.</p>
+      </div>
+      <div class="dots">
+        <div class="dot-inactive"></div>
+        <div class="dot-active"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
+   <div id="contact" class="contact">
+    <div class="contact-inner">
+      <h5 language="en">Contact us</h5>
+      <h5 language="de">Kontaktieren Sie uns</h5>
+      <h1 language="en">A personal talk is the beginning of everything!</h1>
+      <h1 language="de">Ein persönliches Gespräch ist der Anfang von allem!</h1>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <a href="https://g.page/MountainEntertainment?share">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-text">
+              <h6 language="en">Mountain Entertainment Event Agency</h6>
+              <h6 language="de">Mountain Entertainment Eventagentur</h6>
+              <p>Bahnhofspl. 2, 83471 Berchtesgaden</p>
+            </div>
+          </a>
+        </div>
+        <div class="contact-card">
+          <a href="tel:+49 8652 655813">
+            <div class="contact-icon">
+              <i class="fas fa-phone-volume"></i>
+            </div>
+            <div class="contact-text">
+              <h6 language="en">Telephone</h6>
+              <h6 language="de">Telefon</h6>
+              <p>+49 8652 655813</p>
+            </div>
+          </a>
+        </div>
+        <div class="contact-card">
+          <a href="mailto:kontakt@mountain-entertainment.de">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-text">
+              <h6>E-Mail</h6>
+              <p>kontakt@mountain-entertainment.de</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="container">
 
      <!-- Social Icons -->
