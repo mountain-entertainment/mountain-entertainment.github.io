@@ -563,6 +563,11 @@ header .mouse a i {
     top: 0;
 }
 
+.why::selection {
+  background-color: var(--grey);
+  color: white;
+}
+
 .why {
   display: flex;
   justify-content: center;

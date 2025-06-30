@@ -869,65 +869,6 @@ header .mouse a i {
   background-color: var(--orange);
 }
 
-.tours {
-  overflow: hidden;
-}
-
-.tours .row {
-  margin: 10vh 0 35vh 0;
-}
-
-
-.tours .col-md-6.left-box {
-    display: flex;
-    align-self: center;
-    padding: 100px 80px;
-    gap: 25px;
-    width: 30%;
-    height: 100%;
-}
-
-.tours .col-md-6.left-box .col-md-6:nth-child(1), .section-team .col-md-6.left-box .col-md-6:nth-child(2) {
-  border-bottom: 1px solid #eeeeef;
-  margin-bottom: 35px;
-  padding-bottom: 25px;
-}
-
-.tours .col-md-6.right-box {
-  height: 500px;
-  position: relative;
-  width: 70%;
-}
-
-.tours .col-md-6.right-box .title-section h2 {
-  font-size: 1.2em;
-  font-weight: 600;
-  color: #fff;
-  text-align: left;
-  text-transform: uppercase;
-  margin-top: 15px;
-}
-.tours .col-md-6.right-box .title-section h2:after {
-  content: "<--";
-  display: block;
-  margin: 15px auto;
-  font-size: 0.7em;
-  color: #fff;
-  letter-spacing: 1px;
-}
-.tours .col-md-6.right-box .title-section i {
-  color: #fff;
-  font-size: 2.1em;
-  text-align: left;
-  display: block;
-}
-.tours .col-md-6.right-box .title-section p {
-  color: #fff;
-  text-align: left;
-  word-spacing: 1px;
-  line-height: 25px;
-}
-
 .team {
   overflow: hidden;
 }
@@ -1163,19 +1104,6 @@ footer a:hover, footer a:focus {
 
 @media only screen and  (max-width: 756px) {
 
-  .tours .row {
-    margin: 0 0 35vh 0;
-  }
-  
-   .tours .col-md-6.left-box {
-    text-align: center;
-    justify-content: center;
-    width: 100% !important;
-  }
-
-  .tours .col-md-6.right-box {
-    width: 100% !important;
-  }
 
   .team .col-md-6.left-box {
     padding: 20px 45px 70px 45px !important;
@@ -1192,18 +1120,6 @@ footer a:hover, footer a:focus {
 
   .row-gin {
     flex-direction: column !important;
-  }
-
-  .tours .col-md-6.left-box {
-    padding: 20px 45px 30px 45px !important;
-  }
-
-  .tours .col-md-6.right-box {
-    padding: 0 !important;
-  }
-
-  .tours .row {
-    flex-direction: column;
   }
 
   .section-about .col-md-6.right-box .col-md-3 {
@@ -1309,10 +1225,6 @@ header .logo img {
 
 @media only screen and  (max-width: 540px) {
 
-  .tours .row {
-    margin: 0 0 20vh 0;
-  }
-
   .col-md-6.left-box .logo {
     display: flex;
     justify-content: center;
@@ -1324,18 +1236,6 @@ header .logo img {
     text-align: center;
     margin-bottom: 30px;
 
-  }
-
-  .tours .col-md-6.left-box h5 {
-    padding-left: 0;
-    text-align: center;
-    margin-bottom: 40px;
-  }
-
-  .tours .col-md-6.left-box h5::before {
-    right: -120px;
-    top: 50px;
-    transform: translate(-50%, 0);
   }
 
   .team .col-md-6.left-box h5 {
