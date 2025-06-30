@@ -322,6 +322,24 @@ https://flickity.metafizzy.co
 
 @media only screen and  (max-width: 540px) {
 
+  .flickity-viewport {
+    height: 430px !important;
+  }
+
+  .card-bg {
+    height: 250px;
+    min-height: 250px;
+  }
+
+  .card-img-wrapper {
+    height: 2500px;
+  }
+
+  .card-bg img {
+    height: 250px;
+    min-height: 250px;
+}
+
   .card-content .text p {
     display: none;
   }
