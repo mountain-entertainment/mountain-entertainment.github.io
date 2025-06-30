@@ -784,7 +784,8 @@ footer a:hover, footer a:focus {
   }
 
   .intro-inner {
-    padding: 50px 0;
+    padding-top: 50px;
+    padding-bottom: 70px;
   }
 
   .intro-inner h4 {
@@ -915,6 +916,14 @@ footer a:hover, footer a:focus {
   .carousel {
     padding-block-end: 52px;
   }
+
+  .carousel__wrapper {
+    height: 60vh !important;
+  }
+
+  .container-carousel {
+    margin-bottom: 10vh !important;
+  }
 }
 
 .carousel__wrapper {
@@ -922,7 +931,7 @@ footer a:hover, footer a:focus {
   position: relative;
   display: flex;
   justify-content: center;
-  height: 61.2vh;
+  height: 70vh;
 }
 
 .carousel .item {

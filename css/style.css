@@ -721,20 +721,25 @@ header .mouse a i {
   overflow: hidden;
 }
 .section-services .col-md-6.left-box {
+  position: relative;
   display: flex;
   padding: 150px 80px;
   margin: 100px 0;
   align-items: center;
   align-content: center;
   justify-content: center;
-  background-position: center center;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-image: url('../img/bi-gin-tasting-4.jpg');
 }
+
+.services-image {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.7);
+  z-index: 0;
+}
+
 .section-services .col-md-6.left-box .title-section h2 {
   font-size: 1.2em;
   font-weight: 600;
@@ -754,6 +759,7 @@ header .mouse a i {
   text-align: right;
   word-spacing: 1px;
   line-height: 25px;
+  text-shadow: 2px 2px 4px rgb(20 13 13 / 99%);
 }
 .section-services .col-md-6.right-box {
   padding: 150px 80px 150px 80px;
@@ -978,9 +984,9 @@ header .mouse a i {
 }
 
 .row-gin {
+  margin-top: 60px;
   margin-bottom: 90px;
 }
-
 
 .background-image-gin-img {
   width: 100%;
@@ -1148,6 +1154,11 @@ footer a:hover, footer a:focus {
   .mouse-wrapper {
 		display: none!important;
   }
+
+  .row-gin {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 @media only screen and  (max-width: 756px) {
@@ -1155,11 +1166,6 @@ footer a:hover, footer a:focus {
   .tours .row {
     margin: 0 0 35vh 0;
   }
-
-  .row-gin {
-    margin-bottom: 0;
-  }
-
   
    .tours .col-md-6.left-box {
     text-align: center;
@@ -1182,6 +1188,10 @@ footer a:hover, footer a:focus {
   .team .row {
     flex-direction: column-reverse;
     margin-top: 70px;
+  }
+
+  .row-gin {
+    flex-direction: column !important;
   }
 
   .tours .col-md-6.left-box {
