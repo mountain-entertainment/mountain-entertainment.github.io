@@ -66,14 +66,24 @@
                 <ul class="nav__list" language="en">
                     <li class="nav__item"><a href="./" class="nav__link active">Home</a></li>
                     <li class="nav__item"><a href="./#about" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="./#tours" class="nav__link">Tours</a></li>
+                    <li class="nav__item"><a class="nav__link_dropdown">Tours</a><i class="fas fa fa-chevron-down"></i>
+                      <div class="nav_dropdown">
+                        <a href="#tours" class="nav__link">Summer</a>
+                        <a href="#tours-winter" class="nav__link">Winter</a>
+                      </div>
+                    </li>
                     <li class="nav__item"><a href="#" class="nav__link">It's ME</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                 </ul>
                 <ul class="nav__list" language="de">
                     <li class="nav__item"><a href="./" class="nav__link active">Home</a></li>
                     <li class="nav__item"><a href="./#about" class="nav__link">Über uns</a></li>
-                    <li class="nav__item"><a href="./#tours" class="nav__link">Touren</a></li>
+                    <li class="nav__item"><a class="nav__link_dropdown">Touren</a><i class="fas fa fa-chevron-down"></i>
+                      <div class="nav_dropdown">
+                        <a href="#tours" class="nav__link">Sommer</a>
+                        <a href="#tours-winter" class="nav__link">Winter</a>
+                      </div>
+                    </li>
                     <li class="nav__item"><a href="#" class="nav__link">It's ME</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Kontakt</a></li>
                 </ul>
@@ -475,6 +485,50 @@
 <div id="temperature">Loading weather...</div>
 <div id="humidity">Loading weather...</div> -->
 
+<section class="tours" id="tours-winter">
+
+  <div class="row">
+
+    <div class="col-md-6 left-box">
+      <div>
+        <h5 language="en">Tailored for the discerning traveler</h5>
+        <h5 language="de" class="hl">Maßgeschneidert für Reisende mit hohen Ansprüchen</h5>
+      <h1 language="en">Winter Tours</h1>
+      <h1 language="de">Winter Touren</h1>
+      <p language="en">Our curated selection of private tours offer more than sightseeing — they offer a story, a connection, a moment that becomes a memory.</p>
+      <p language="de">Unsere ausgewählte Auswahl an privaten Touren bietet mehr als nur Sightseeing - sie bieten eine Geschichte, eine Verbindung, einen Moment, der zur Erinnerung wird.</p>
+      </div>
+    </div>
+
+    <div class="col-md-6 right-box">
+      <div class="gallery js-flickity"
+        data-flickity-options='{ "wrapAround": true }'>
+        <div class="gallery-cell">
+             <div>
+            <div class="card-bg">
+              <div class="card-img-wrapper">
+                <img src="./img/winter/IMG_6942.jpeg" alt="Winter Sightseeing">
+              </div>
+              <h1>Winter Sightseeing</h1>
+            </div>
+           <div class="card-content">
+              <div class="text">
+                <h3 language="en">Explore Berchtesgaden’s winter wonders</h3>
+                <h3 language="de">Entdecken Sie Berchtesgadens Winterzauber</h3>
+                <p language="en">Experience snowy landscapes and cozy villages on a private Multivan tour—discover Berchtesgaden’s winter highlights in comfort.</p>
+                <p language="de">Erleben Sie verschneite Landschaften und gemütliche Dörfer auf einer privaten Multivan-Tour – entdecken Sie Berchtesgadens Winterhöhepunkte entspannt und komfortabel.</p>
+              </div>
+              <a language="en" class="card-btn" href="./winter/sightseeing">See tour details</a>
+              <a language="de" class="card-btn" href="./winter/sightseeing">Tourdetails sehen</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+</section>
 
 <!-- FOOTER -->
 <footer>

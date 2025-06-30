@@ -1,8 +1,4 @@
 
-.hxl::before {
-top: 5.5rem !important;
-}
-
 .tours .col-md-6.left-box h5 {
   padding: 0 0 20px 70px;
 }
@@ -94,7 +90,7 @@ top: 5.5rem !important;
 @media only screen and  (max-width: 756px) {
 
   .tours .row {
-    margin: 0 0 35vh 0;
+    margin: 5vh 0 35vh 0;
   }
   
    .tours .col-md-6.left-box {
@@ -146,9 +142,5 @@ top: 5.5rem !important;
 
   .hl::before {
     top: 5rem !important;
-  }
-
-  .hxl::before {
-    top: 5.5rem !important;
   }
 }
