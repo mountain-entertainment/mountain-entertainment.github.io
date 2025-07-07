@@ -1,346 +1,309 @@
-/*! Flickity v2.3.0
-https://flickity.metafizzy.co
----------------------------------------------- */
-:root {
-  --orange: #e74f00;
-  --grey: #363636;
+/*! Flickity v2.3.0 https://flickity.metafizzy.co ---------------------------------------------- */
+ :root {
+     --orange: #e74f00;
+     --grey: #363636;
 }
-
-.flickity-enabled {
-  position: relative;
+ .flickity-enabled {
+     position: relative;
 }
-
-.flickity-enabled:focus { outline: none; }
-
-.flickity-viewport {
-  overflow: hidden;
-  position: relative;
-  /* height: 100%; */
-  height: 700px !important;
+ .flickity-enabled:focus {
+     outline: none;
 }
-
-.flickity-slider {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+ .flickity-viewport {
+     overflow: hidden;
+     position: relative;
+    /* height: 100%;
+     */
+     height: 700px !important;
 }
-
+ .flickity-slider {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+}
 /* draggable */
-
-.flickity-enabled.is-draggable {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-user-select: none;
+ .flickity-enabled.is-draggable {
+     -webkit-tap-highlight-color: transparent;
+     -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+     -ms-user-select: none;
+     user-select: none;
 }
-
-.flickity-enabled.is-draggable .flickity-viewport {
-  cursor: move;
-  cursor: -webkit-grab;
-  cursor: grab;
+ .flickity-enabled.is-draggable .flickity-viewport {
+     cursor: move;
+     cursor: -webkit-grab;
+     cursor: grab;
 }
-
-.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
+ .flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+     cursor: -webkit-grabbing;
+     cursor: grabbing;
 }
-
 /* ---- flickity-button ---- */
-
-.flickity-button {
-  background-color: white !important;
-  background-image: none !important;
-  position: absolute;
-  border: none;
-  transition: all 0.2s ease-in-out;
+ .flickity-button {
+     background-color: white !important;
+     background-image: none !important;
+     position: absolute;
+     border: none;
+     transition: all 0.2s ease-in-out;
 }
-
-.flickity-button:hover {
-  cursor: pointer;
-  background-color: var(--orange) !important;
+ .flickity-button:hover {
+     cursor: pointer;
+     background-color: var(--orange) !important;
 }
-
-.flickity-button:focus {
-  outline: none;
-  box-shadow: 0 0 0 5px var(--grey);
+ .flickity-button:focus {
+     outline: none;
+     box-shadow: 0 0 0 5px var(--grey);
 }
-
-.flickity-button:active {
-  opacity: 0.6;
+ .flickity-button:active {
+     opacity: 0.6;
 }
-
-.flickity-button:disabled {
-  opacity: 0.3;
-  cursor: auto;
-  pointer-events: none;
+ .flickity-button:disabled {
+     opacity: 0.3;
+     cursor: auto;
+     pointer-events: none;
 }
-
-.flickity-button-icon {
-  fill: currentColor;
+ .flickity-button-icon {
+     fill: currentColor;
 }
-
 /* ---- previous/next buttons ---- */
-
-.flickity-prev-next-button {
-  top: 50%;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  transition: all 0.2s ease-in-out;
+ .flickity-prev-next-button {
+     top: 50%;
+     width: 44px;
+     height: 44px;
+     border-radius: 50%;
+     transform: translateY(-50%);
+     z-index: 10;
+     transition: all 0.2s ease-in-out;
 }
-
-.flickity-prev-next-button .flickity-button-icon {
-  display: none; /* hide default SVG */
+ .flickity-prev-next-button .flickity-button-icon {
+     display: none;
+    /* hide default SVG */
 }
-
-.flickity-prev-next-button.previous { left: 10px; }
-.flickity-prev-next-button.next { right: 10px; }
-
-.flickity-rtl .flickity-prev-next-button.previous {
-  left: auto;
-  right: 10px;
+ .flickity-prev-next-button.previous {
+     left: 10px;
 }
-.flickity-rtl .flickity-prev-next-button.next {
-  right: auto;
-  left: 10px;
+ .flickity-prev-next-button.next {
+     right: 10px;
 }
-
-.flickity-prev-next-button.previous::before,
-.flickity-prev-next-button.next::before {
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  font-size: 20px;
-  color: var(--orange);
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-  line-height: 44px;
-  transition: color 0.1s ease-in-out;
+ .flickity-rtl .flickity-prev-next-button.previous {
+     left: auto;
+     right: 10px;
 }
-
-.flickity-prev-next-button.previous:hover::before,
-.flickity-prev-next-button.next:hover::before {
-  color: white;
+ .flickity-rtl .flickity-prev-next-button.next {
+     right: auto;
+     left: 10px;
 }
-
-.flickity-prev-next-button.previous::before {
-  content: "\f104"; /* fa-chevron-left */
+ .flickity-prev-next-button.previous::before, .flickity-prev-next-button.next::before {
+     font-family: "Font Awesome 6 Free";
+     font-weight: 900;
+     font-size: 20px;
+     color: var(--orange);
+     display: inline-block;
+     width: 100%;
+     text-align: center;
+     line-height: 44px;
+     transition: color 0.1s ease-in-out;
 }
-
-.flickity-prev-next-button.next::before {
-  content: "\f105"; /* fa-chevron-right */
+ .flickity-prev-next-button.previous:hover::before, .flickity-prev-next-button.next:hover::before {
+     color: white;
 }
-
+ .flickity-prev-next-button.previous::before {
+     content: "\f104";
+    /* fa-chevron-left */
+}
+ .flickity-prev-next-button.next::before {
+     content: "\f105";
+    /* fa-chevron-right */
+}
 /* ---- page dots ---- */
-
-.flickity-page-dots {
-  position: absolute;
-  width: 100%;
-  bottom: -50px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  text-align: center;
-  line-height: 1;
+ .flickity-page-dots {
+     position: absolute;
+     width: 100%;
+     bottom: -50px;
+     padding: 0;
+     margin: 0;
+     list-style: none;
+     text-align: center;
+     line-height: 1;
 }
-
-.flickity-rtl .flickity-page-dots { 
-	direction: rtl;
- }
-
-.flickity-page-dots .dot {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin: 0 6px;
-  background: var(--orange);
-  border-radius: 50%;
-  opacity: 0.25;
-  cursor: pointer;
+ .flickity-rtl .flickity-page-dots {
+     direction: rtl;
 }
-
-.flickity-page-dots .dot.is-selected {
-  opacity: 1;
+ .flickity-page-dots .dot {
+     display: inline-block;
+     width: 8px;
+     height: 8px;
+     margin: 0 6px;
+     background: var(--orange);
+     border-radius: 50%;
+     opacity: 0.25;
+     cursor: pointer;
 }
-
+ .flickity-page-dots .dot.is-selected {
+     opacity: 1;
+}
 /* external css: flickity.css */
-
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+ * {
+     -webkit-box-sizing: border-box;
+     box-sizing: border-box;
 }
-
-.gallery {
-  /* background: linear-gradient(rgba(225, 231, 235, 0.2), rgba(176, 183, 189, 0.2));
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
-  margin-top: 80pxpx;
+ .gallery {
+    /* background: linear-gradient(rgba(225, 231, 235, 0.2), rgba(176, 183, 189, 0.2));
+     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+     */
+     margin-top: 80pxpx;
 }
-
-.gallery-cell {
-  display: flex;
-  flex-direction: column;
-  height: auto; /* allow height to be defined by children */
-  width: 66%;
-  margin-right: 10px;
-  background: white;
-  border-radius: 14px;
-  color: var(--grey);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+ .gallery-cell {
+     display: flex;
+     flex-direction: column;
+     height: auto;
+    /* allow height to be defined by children */
+     width: 66%;
+     margin-right: 10px;
+     background: white;
+     border-radius: 14px;
+     color: var(--grey);
+     opacity: 0;
+     visibility: hidden;
+     pointer-events: none;
+     box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-
-.gallery-cell.is-selected {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  pointer-events: auto;
+ .gallery-cell.is-selected {
+     opacity: 1;
+     visibility: visible;
+     pointer-events: auto;
+     pointer-events: auto;
 }
-
-.gallery-cell > div {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
+ .gallery-cell > div {
+     display: flex;
+     flex-direction: column;
+     height: 100%;
+     width: 100%;
 }
-
-.card-bg {
-  flex-grow: 1; /* Take remaining space */
-  height: 400px;
-  min-height: 400px; /* Optional: ensure it doesn't shrink too much */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 14px 14px 0 0;
-  display: flex;
-  align-items: flex-end;
-  color: white;
-  overflow: hidden;
+ .card-bg {
+     flex-grow: 1;
+    /* Take remaining space */
+     height: 400px;
+     min-height: 400px;
+    /* Optional: ensure it doesn't shrink too much */
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     border-radius: 14px 14px 0 0;
+     display: flex;
+     align-items: flex-end;
+     color: white;
+     overflow: hidden;
 }
-
-.card-bg-img1 {
-  background-image: url('../img/bi-landschaft-sommer-3.jpg');
+ .card-bg-img1 {
+     background-image: url('../img/bi-landschaft-sommer-3.jpg');
 }
-
-.card-bg-img2 {
-  background-image: url('../img/berchtesgaden-mit-watzmann-im-sommer.jpg');
+ .card-bg-img2 {
+     background-image: url('../img/berchtesgaden-mit-watzmann-im-sommer.jpg');
 }
-
-.card-bg-img3 {
-  background-image: url('../img/bi-sommeraction-segway-6.jpg');
+ .card-bg-img3 {
+     background-image: url('../img/bi-sommeraction-segway-6.jpg');
 }
-
-.card-bg-img4 {
-  background-image: url('../img/storyteller/IMG_2841.jpeg');
+ .card-bg-img4 {
+     background-image: url('../img/storyteller/IMG_2841.jpeg');
 }
-
-.card-bg-img5 {
-  background-image: url('../img/berchtesgaden-mit-watzmann-im-sommer.jpg');
+ .card-bg-img5 {
+     background-image: url('../img/berchtesgaden-mit-watzmann-im-sommer.jpg');
 }
-
 /* .card-bg-img6 {
-  background-image: url('../img/gin-tonic.jpg');
-} */
-
-
-.card-img-wrapper {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  width: 100%; height: 400px;
-  border-radius: 14px 14px 0 0;
-  overflow: hidden;
-  z-index: 1;
+     background-image: url('../img/gin-tonic.jpg');
 }
-
-.card-bg img {
-  width: 100%;
-  height: 400px;
-  min-height: 400px;
-  object-fit: cover;
-  display: block;
-  filter: brightness(0.8);
+ */
+ .card-img-wrapper {
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     width: 100%;
+     height: 400px;
+     border-radius: 14px 14px 0 0;
+     overflow: hidden;
+     z-index: 1;
 }
-
-.card-bg h1 {
-  padding: 0 0 5px 30px;
-  letter-spacing: 0 !important;
-  z-index: 2;
+ .card-bg img {
+     width: 100%;
+     height: 400px;
+     min-height: 400px;
+     object-fit: cover;
+     display: block;
+     filter: brightness(0.8);
 }
-
-.card-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 30px 60px 40px 30px;
+ .card-bg h1 {
+     padding: 0 0 5px 30px;
+     letter-spacing: 0 !important;
+     z-index: 2;
 }
-
-.card-content .text {
-  flex-shrink: 1;
+ .card-content {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     padding: 30px 60px 40px 30px;
 }
-
-.card-content .text * {
-  letter-spacing: 0;
+ .card-content .text {
+     flex-shrink: 1;
 }
-
-.card-btn {
-  color: white;
-  width: 190px;
-  background-color: var(--orange);
-  border: 2px solid transparent;
-  padding: 10px 2rem;
-  margin: 16px 0 0 0;
-  border-radius: 10px;
-  font-size: 14px;
-  font-weight: 600;
-  transition: all 0.2s ease;
-  text-align: center;
+ .card-content .text * {
+     letter-spacing: 0;
 }
-
-.card-btn:hover {
-  color: var(--orange);
-  width: 200px;
-  background-color: white;
-  border: 2px solid var(--orange);
-  padding: 10px 3rem;
+ .card-btn {
+     color: white;
+     width: 190px;
+     background-color: var(--orange);
+     border: 2px solid transparent;
+     padding: 10px 2rem;
+     margin: 16px 0 0 0;
+     border-radius: 10px;
+     font-size: 14px;
+     font-weight: 600;
+     transition: all 0.2s ease;
+     text-align: center;
 }
-
-@media only screen and  (max-width: 1150px) {
-
-  .card-content {
-    padding: 20px 30px 15px 20px;
-  }
-
-  .card-bg h1 {
-    padding: 0 0 5px 20px;
-  }
+ .card-btn:hover {
+     color: var(--orange);
+     width: 200px;
+     background-color: white;
+     border: 2px solid var(--orange);
+     padding: 10px 3rem;
 }
-
-@media only screen and  (max-width: 540px) {
-
-  .flickity-viewport {
-    height: 430px !important;
-  }
-
-  .card-bg {
-    height: 250px;
-    min-height: 250px;
-  }
-
-  .card-img-wrapper {
-    height: 2500px;
-  }
-
-  .card-bg img {
-    height: 250px;
-    min-height: 250px;
+ @media only screen and (max-width: 1150px) {
+     .card-content {
+         padding: 20px 30px 15px 20px;
+    }
+     .card-bg h1 {
+         padding: 0 0 5px 20px;
+    }
 }
-
-  .card-content .text p {
-    display: none;
-  }
+ @media only screen and (max-width: 540px) {
+     .flickity-viewport {
+         height: 430px !important;
+    }
+     .card-bg {
+         height: 250px;
+         min-height: 250px;
+    }
+     .card-img-wrapper {
+         height: 250px;
+    }
+     .card-bg img {
+         height: 250px;
+         min-height: 250px;
+    }
+}
+ @media only screen and (max-width: 768px) {
+     .tours .row {
+         margin: 10vh 0 20vh 0 !important;
+    }
+     .flickity-viewport {
+         height: 570px !important;
+    }
+     .card-content .text p {
+         display: none;
+    }
 }
