@@ -14,7 +14,7 @@
      position: relative;
     /* height: 100%;
      */
-     height: 700px !important;
+     height: 700px;
 }
  .flickity-slider {
      position: absolute;
@@ -281,10 +281,10 @@
 }
  @media only screen and (max-width: 768px) {
      .tours .row {
-         margin: 10vh 0 20vh 0 !important;
+         margin: 5vh 0 20vh 0 !important;
     }
      .flickity-viewport {
-         height: 570px !important;
+         height: 570px;
     }
      .card-content .text p {
          display: none;

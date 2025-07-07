@@ -8,13 +8,15 @@
      font-family: "Kozuka";
      font-style: normal;
      font-weight: 400;
-     src: url('../fonts/webfonts/KozGoPr6N-Regular.otf') format('opentype') 
+     src: url('../fonts/webfonts/KozGoPr6N-Regular.otf') format('opentype') ;
+     font-display: swap;
 }
  @font-face {
      font-family: "Kozuka";
      font-style: normal;
      font-weight: 700;
-     src: url('../fonts/webfonts/KozGoPr6N-Bold.otf') format('opentype') 
+     src: url('../fonts/webfonts/KozGoPr6N-Bold.otf') format('opentype');
+     font-display: swap;
 }
 /* ================================= */
 /* :::::::::: 1. General ::::::::::: */
@@ -778,7 +780,7 @@
      display: flex;
      align-self: center;
      justify-content: center;
-     height: 500px;
+     height: 600px;
      position: relative;
 }
  .team .col-md-6.right-box .background-image {
@@ -982,7 +984,6 @@
     }
      .team .row {
          flex-direction: column-reverse;
-         margin-top: 70px;
     }
      .row-gin {
          flex-direction: column !important;
