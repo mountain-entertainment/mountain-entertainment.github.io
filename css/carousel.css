@@ -196,25 +196,6 @@
      color: white;
      overflow: hidden;
 }
- .card-bg-img1 {
-     background-image: url('../img/bi-landschaft-sommer-3.jpg');
-}
- .card-bg-img2 {
-     background-image: url('../img/berchtesgaden-mit-watzmann-im-sommer.jpg');
-}
- .card-bg-img3 {
-     background-image: url('../img/bi-sommeraction-segway-6.jpg');
-}
- .card-bg-img4 {
-     background-image: url('../img/storyteller/IMG_2841.jpeg');
-}
- .card-bg-img5 {
-     background-image: url('../img/berchtesgaden-mit-watzmann-im-sommer.jpg');
-}
-/* .card-bg-img6 {
-     background-image: url('../img/gin-tonic.jpg');
-}
- */
  .card-img-wrapper {
      position: absolute;
      top: 0;
@@ -233,7 +214,9 @@
      min-height: 400px;
      object-fit: cover;
      display: block;
-     filter: brightness(0.8);
+}
+  .card-darken img {
+    filter: brightness(0.8);
 }
  .card-bg h1 {
      padding: 0 0 5px 30px;
