@@ -14,7 +14,7 @@
      position: relative;
     /* height: 100%;
      */
-     height: 700px;
+     /* height: 700px !important; */
 }
  .flickity-slider {
      position: absolute;
@@ -264,9 +264,9 @@
     }
 }
  @media only screen and (max-width: 540px) {
-     .flickity-viewport {
-         height: 430px !important;
-    }
+     /* .flickity-viewport {
+         height: 450px !important;
+    } */
      .card-bg {
          height: 250px;
          min-height: 250px;
@@ -281,12 +281,27 @@
 }
  @media only screen and (max-width: 768px) {
      .tours .row {
-         margin: 5vh 0 20vh 0 !important;
+         margin: 5vh 0 15vh 0 !important;
     }
-     .flickity-viewport {
-         height: 570px;
-    }
+     /* .flickity-viewport {
+         height: 585px !important;
+    } */
      .card-content .text p {
          display: none;
+    }
+}
+
+.flickity-viewport {
+    height: 450px;
+}
+
+ @media only screen and (min-width: 540px) {
+     .flickity-viewport {
+         height: 585px;
+}
+
+ @media only screen and (min-width: 768px) {
+     .flickity-viewport {
+     height: 700px !important;
     }
 }
