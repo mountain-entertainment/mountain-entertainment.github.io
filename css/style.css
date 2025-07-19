@@ -969,6 +969,10 @@ footer .row {
     display: flex;
     gap: 30px;
 }
+
+.footer-links a {
+    color: var(--grey);
+}
  footer .container2 li {
     cursor: pointer;
 }
