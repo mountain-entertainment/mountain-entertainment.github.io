@@ -857,140 +857,6 @@
      color: #dd4b39;
 }
 /* ================================= */
-/* ::::::::: 11. Footer :::::::::::: */
-/* ================================= */
-
-.social-icons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0;
-    width: auto;
-}
-
-
- .social-icons li i {
-     color: var(--grey);
-     display:block;
-     width: 40px;
-     height: 40px;
-     font-size: 16px;
-     outline: none;
-     line-height: 37px;
-     border: 2px solid var(--grey);
-     border-radius: 50%;
-     -o-border-radius: 50%;
-     -moz-border-radius: 50%;
-     -webkit-border-radius: 50%;
-     transition: all 0.5s ease 0s;
-     -moz-transition: all 0.5s ease 0s;
-     -webkit-transition: all 0.5s ease 0s;
-     -o-transition: all 0.5s ease 0s;
-     -ms-transition: all 0.5s ease 0s;
-}
- .social-icons li i:hover {
-     color: var(--orange);
-     background: none;
-     text-shadow: none;
-     border: 2px solid var(--orange);
-     border-radius: 50%;
-     -o-border-radius: 50%;
-     -moz-border-radius: 50%;
-     -webkit-border-radius: 50%;
-}
- .social-icons li a {
-     display :block;
-     background: rgba(255, 255, 255, 0);
-     text-decoration: none;
-     border-radius: 50%;
-     -o-border-radius: 50%;
-     -moz-border-radius: 50%;
-     -webkit-border-radius: 50%;
-     color: #346C8D;
-     transition: all 0.5s ease 0s;
-     -moz-transition: all 0.5s ease 0s;
-     -webkit-transition: all 0.5s ease 0s;
-     -o-transition: all 0.5s ease 0s;
-     -ms-transition: all 0.5s ease 0s;
-}
- .social-icons li a:hover {
-     background: #fff;
-}
- .social-icons {
-     text-align: center;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     z-index: 2;
-     top: 120px;
-}
- .social-icons ul {
-     display: flex !important;
-     gap: 15px;
-     line-height: 0px;
-     position: relative;
-     display: inline-block;
-     margin: 0;
-     padding-left: 0;
-}
-
- footer {
-     z-index: 10;
-     position: relative;
-     color: #fff;
-     text-align: center;
-     overflow: hidden;
-}
-
-footer .row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    gap: 40px;
-}
- footer .container {
-     padding-top: 50px;
-     padding-bottom: 50px;
-     background: var(--grey);
-     max-width: 100%;
-}
- footer .container2 {
-    color: var(--grey);
-     padding-top: 50px;
-     padding-bottom: 50px;
-     max-width: 100%;
-}
- footer .container2 .footer-links {
-    width: auto;
-    display: flex;
-    gap: 30px;
-}
-
-.footer-links a {
-    color: var(--grey);
-}
- footer .container2 li {
-    cursor: pointer;
-}
- footer .copyright {
-     font-size: 13px;
-}
- footer a {
-     transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-     -webkit-transition: all 0.5s ease;
-     -o-transition: all 0.5s ease;
-     color: #FFFFFF;
-}
- footer a:hover, footer a:focus {
-     color: rgba(255, 255, 255, 0.71);
-     text-decoration: none;
-}
-/* ================================= */
 /* :::::: 12. Responsive CSS ::::::: */
 /* ================================= */
  @media only screen and (max-width: 1300px) {
@@ -1014,23 +880,10 @@ footer .row {
     }
 }
  @media only screen and (max-width: 756px) {
-    footer .row {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer-links {
-        justify-content: center;
-    }
-
-    .social-icons {
-        margin-top: 20px;
-    }
-
+    
     .team {
         padding: 0 !important;
-    }]
+    }
 
      .team .col-md-6.left-box {
          padding: 20px 45px 70px 45px !important;
@@ -1139,6 +992,7 @@ footer .row {
          margin: 10px;
     }
 }
+
  @media only screen and (max-width: 540px) {
      .col-md-6.left-box .logo {
          display: flex;
@@ -1183,9 +1037,7 @@ footer .row {
      header {
          text-align: center;
     }
-     footer {
-         text-align: center;
-    }
+    
      header .countdown {
          margin-left: 0;
     }

@@ -456,82 +456,8 @@ header .mouse a i {
   margin: 20px 0;
 }
 
-.social-icons li {
-  list-style:none;
-  font-size: 18px;
-  float: left;
-  margin: 0 10px 0 0;
-}
-
-.social-icons li i {
-  color: #FFFFFF;
-  display:block;
-  width: 40px;
-  height: 40px;
-  font-size: 16px;
-  outline: none;
-  line-height: 37px;
-  border: 2px solid #FFFFFF;
-  border-radius: 50%;
-  -o-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  transition: all 0.5s ease 0s;
-  -moz-transition: all 0.5s ease 0s;
-  -webkit-transition: all 0.5s ease 0s;
-  -o-transition: all 0.5s ease 0s;
-  -ms-transition: all 0.5s ease 0s;
-}
-
-.social-icons li i:hover {
-  color: #000000;
-  background: none;
-  text-shadow: none;
-  border: 2px solid #FFFFFF;
-  border-radius: 50%;
-  -o-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-}
-
-.social-icons li a {
-  display :block;
-  background: rgba(255, 255, 255, 0);
-  text-decoration: none;
-  border-radius: 50%;
-  -o-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  color: #346C8D;
-  transition: all 0.5s ease 0s;
-  -moz-transition: all 0.5s ease 0s;
-  -webkit-transition: all 0.5s ease 0s;
-  -o-transition: all 0.5s ease 0s;
-  -ms-transition: all 0.5s ease 0s;
-}
-
-.social-icons li a:hover {
-  background: #fff;
-}
 
 
-.social-icons {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-  top: 120px;
-  margin: 20px 0 30px 0;
-}
-
-.social-icons ul {
-  line-height: 0px;
-  position: relative;
-  display: inline-block;
-  margin: 0;
-  padding-left: 0;
-}
 
 
 
@@ -705,41 +631,6 @@ header .mouse a i {
 }
 
 /* ================================= */
-/* ::::::::: 11. Footer :::::::::::: */
-/* ================================= */
-
-footer {
-  z-index: 10;
-  padding-bottom: 50px;
-  position: relative;
-  color: #fff;
-  background: var(--grey);
-  text-align: center;
-  overflow: hidden;
-}
-
-footer .container {
-  padding-top: 50px;
-}
-
-footer .copyright {
-  font-size: 13px;
-}
-
-footer a {
-  transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  color: #FFFFFF;
-}
-
-footer a:hover, footer a:focus {
-  color: rgba(255, 255, 255, 0.71);
-  text-decoration: none;
-}
-
-/* ================================= */
 /* :::::: 12. Responsive CSS ::::::: */
 /* ================================= */
 
@@ -817,16 +708,7 @@ footer a:hover, footer a:focus {
   header .countdown {
     margin-left: 0;
  }
-  .social-icons {
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    top: 70px;
-    left: 0;
- }
-  .social-icons li:last-child {
-    margin-right: 0;
- }
+
 }
 
 @keyframes carousel-animate {
