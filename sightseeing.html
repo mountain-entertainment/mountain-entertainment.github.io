@@ -3,13 +3,13 @@
 
   <head>
       <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable=no">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <meta name="HandheldFriendly" content="True">
       <meta name="apple-mobile-web-app-status-bar-style" content="black">
-      <meta name="description" content="Woody - Creative Coming Soon HTML5 Template">
-      <meta name="keywords" content="Woody, coming soon page, html5, responsive">
-      <meta name="author" content="Mountain-Entertainment">
+      <meta name="description" content="Explore the highlights of Berchtesgaden with Mountain Concierge’s exclusive sightseeing tours—luxury, comfort, and local expertise.">
+      <meta name="keywords" content="Mountain Concierge, sightseeing tours, Berchtesgaden highlights, private sightseeing, luxury tours, guided sightseeing, local guides, exclusive tours, Berchtesgaden VIP, mountain concierge sightseeing">
+      <meta name="author" content="Mountain Concierge, Mountain Entertainment">
     
       <title>Sightseeing Tour | Mountain Concierge</title>
       
@@ -34,6 +34,7 @@
       <link rel="stylesheet" href="./css/carousel.css">
       <link rel="stylesheet" href="css/contact.css">
       <link rel="stylesheet" href="css/tour-carousel.css">
+      <link rel="stylesheet" href="css/fa.css">
 
       <!-- Favicons -->
       <link rel="shortcut icon" href="./images/favicon.ico">
@@ -83,7 +84,7 @@
                         <a href="./#tours-winter" class="nav__link">Winter</a>
                       </div>
                     </li>
-                    <li class="nav__item"><a href="#" class="nav__link">It's ME</a></li>
+                    <li class="nav__item"><a href="./#it's ME" class="nav__link">It's ME</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                 </ul>
                 <ul class="nav__list" language="de">
@@ -95,7 +96,7 @@
                         <a href="./#tours-winter" class="nav__link">Winter</a>
                       </div>
                     </li>
-                    <li class="nav__item"><a href="#" class="nav__link">It's ME</a></li>
+                    <li class="nav__item"><a href="./#it's ME" class="nav__link">It's ME</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Kontakt</a></li>
                 </ul>
             </div>
@@ -241,9 +242,10 @@
   </div>
 </section> -->
 
+<!-- Section Tours -->
 <section class="tours" id="tours">
 
-  <div class="row">
+  <div class="row row-detail">
 
     <div class="col-md-6 left-box">
       <div>
@@ -260,13 +262,16 @@
       <div class="gallery js-flickity"
         data-flickity-options='{ "wrapAround": true }'>
         <div class="gallery-cell">
-          <div>
-            <div class="card-bg card-bg-img1">
+             <div>
+            <div class="card-bg">
+              <div class="card-img-wrapper">
+                <img src="img/bi-landschaft-sommer-3.jpg" alt="Storyteller Tour" loading="lazy">
+              </div>
               <h1>Story Teller Tour</h1>
             </div>
            <div class="card-content">
               <div class="text">
-                <h3 language="en">The stories of the mountains</h3>
+                 <h3 language="en">The stories of the mountains</h3>
                 <h3 language="de">Die Geschichten der Berge</h3>
                 <p language="en">Let your guide take you on a personal journey through Berchtesgaden’s rich history, legends, and hidden gems known only to locals.</p>
                 <p language="de">Lassen Sie sich von Ihrem Guide auf eine persönliche Reise durch Berchtesgadens reiche Geschichte, Legenden und versteckte Kleinode mitnehmen, die nur Einheimischen bekannt sind.</p>
@@ -278,9 +283,12 @@
         </div>
         <div class="gallery-cell">
            <div>
-            <div class="card-bg card-bg-img2">
+            <div class="card-bg">
+              <div class="card-img-wrapper">
+                <img src="img/berchtesgaden-mit-watzmann-im-sommer.jpg" alt="Photostop Tour" loading="lazy">
+              </div>
               <h1 language="de">Fotostop Tour</h1>
-              <h1 language="en">Photostop Tour</h1>
+              <h1 language="en">Photostop Tour</h1>              
             </div>
            <div class="card-content">
               <div class="text">
@@ -296,10 +304,13 @@
         </div>
         <div class="gallery-cell">
            <div>
-            <div class="card-bg card-bg-img3">
-              <h1 language="en">Active Tour</h1>
+            <div class="card-bg">
+              <div class="card-img-wrapper">
+                <img src="img/bi-sommeraction-segway-6.jpg" alt="Active Tour" loading="lazy">
+              </div>
+               <h1 language="en">Active Tour</h1>
               <h1 language="de">Aktiv Tour</h1>
-            </div>
+            </div>             
            <div class="card-content">
               <div class="text">
                 <h3 language="en">Let go off some steam!</h3>
@@ -315,10 +326,13 @@
         </div>
         <div class="gallery-cell">
            <div>
-            <div class="card-bg card-bg-img4">
-              <h1 language="en">Rain Tour</h1>
-              <h1 language="de">Regen Tour</h1>
-            </div>
+            <div class="card-bg">
+              <div class="card-img-wrapper">
+                <img src="img/storyteller/waterdrops.jpg" alt="Rain Tour" loading="lazy">
+              </div>
+                <h1 language="en">Rain Tour</h1>
+                <h1 language="de">Regen Tour</h1>
+            </div>  
            <div class="card-content">
               <div class="text">
                 <h3 language="en">The rain reveals hidden treasures</h3>
@@ -333,9 +347,9 @@
         </div>
         <div class="gallery-cell">
              <div>
-            <div class="card-bg">
+            <div class="card-bg card-darken">
               <div class="card-img-wrapper">
-                <img src="img/gin-tonic.jpg" alt="Gin-Tonic-Sound">
+                <img src="img/gin-tonic-small.jpg" alt="Gin-Tonic-Sound" loading="lazy">
               </div>
               <h1>Gin-Tonic-Sound</h1>
             </div>
@@ -360,7 +374,7 @@
 
 <!-- FOOTER -->
 <footer>
-   <div id="contact" class="contact">
+  <div id="contact" class="contact">
     <div class="contact-inner">
       <h5 language="en">Contact us</h5>
       <h5 language="de">Kontaktieren Sie uns</h5>
@@ -392,22 +406,32 @@
           </a>
         </div>
         <div class="contact-card">
-          <a href="mailto:kontakt@mountain-entertainment.de">
+          <a href="mailto:info@mountain-entertainment.de">
             <div class="contact-icon">
               <i class="fas fa-envelope"></i>
             </div>
             <div class="contact-text">
               <h6>E-Mail</h6>
-              <p>kontakt@mountain-entertainment.de</p>
+              <p>info@mountain-entertainment.de</p>
             </div>
           </a>
         </div>
       </div>
     </div>
   </div>
-  <div class="container">
-
-     <!-- Social Icons -->
+  <div class="container2">
+     <div class="row">
+      <ul language="en" class="footer-links">
+        <li><a>Imprint</a></li>
+        <li><a>Privacy Policy</a></li>
+        <li><a href="./agb">Legal</a></li>
+      </ul>
+      <ul language="de" class="footer-links">
+        <li><a>Impressum</a></li>
+        <li><a>Datenschutz</a></li>
+        <li><a href="./agb">AGB</a></li>
+      </ul>
+      <!-- Social Icons -->
      <div class="social-icons">
       <ul>
         <li><a href="https://www.youtube.com/" target="_blank" title="YouTube"><i aria-hidden="true" class="fa-brands fa-youtube"></i></a></li>
@@ -418,6 +442,11 @@
       </ul>
       </div>
       <!-- /Social Icons -->
+     </div>
+  </div>
+  <div class="container">
+
+     
 
      <div class="row">
 

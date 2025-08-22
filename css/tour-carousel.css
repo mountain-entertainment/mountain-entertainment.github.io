@@ -1,146 +1,136 @@
-
-.tours .col-md-6.left-box h5 {
-  padding: 0 0 20px 70px;
+ .tours .col-md-6.left-box h5 {
+     padding: 0 0 20px 70px;
 }
-
-.tours .col-md-6.left-box h5.hxl::before {
-  display: block;
-  position: relative;
-  content: '';
-  right: 70px;
-  top: 10px;
-  height: 3px;
-  width: 4rem;
-  background-color: var(--orange);
+ .tours .col-md-6.left-box h5.hxl::before {
+     display: block;
+     position: relative;
+     content: '';
+     right: 70px;
+     top: 10px;
+     height: 3px;
+     width: 4rem;
+     background-color: var(--orange);
 }
-
-.tours .col-md-6.left-box h5::before {
-    display: block;
-    position: relative;
-    content: '';
-    right: 70px;
-    top: 10px;
-    height: 3px;
-    width: 4rem;
-    background-color: var(--orange);
+ .tours .col-md-6.left-box h5::before {
+     display: block;
+     position: relative;
+     content: '';
+     right: 70px;
+     top: 10px;
+     height: 3px;
+     width: 4rem;
+     background-color: var(--orange);
 }
-
-.tours {
-  overflow: hidden;
+ .tours {
+     overflow: hidden;
 }
-
-.tours .row {
-  margin: 10vh 0 35vh 0;
+ .row-detail {
+     margin: 10vh 0 31vh 0 !important;
 }
-
-.tours .col-md-6.left-box {
-    display: flex;
-    align-self: center;
-    padding: 100px 80px;
-    gap: 25px;
-    width: 30%;
-    height: 100%;
+ .tours .row {
+     margin: 10vh 0 25vh 0;
 }
-
-.tours .col-md-6.left-box h1 {
-    margin-bottom: 2rem;
+/* #tours-winter .row {
+     margin: 10vh 0 18vh 0;
 }
-
-.tours .col-md-6.left-box .col-md-6:nth-child(1), .section-team .col-md-6.left-box .col-md-6:nth-child(2) {
-  border-bottom: 1px solid #eeeeef;
-  margin-bottom: 35px;
-  padding-bottom: 25px;
+ */
+ .tours .col-md-6.left-box {
+     display: flex;
+     align-self: center;
+     padding: 100px 80px;
+     gap: 25px;
+     width: 30%;
+     height: 100%;
 }
-
-.tours .col-md-6.right-box {
-  height: 500px;
-  position: relative;
-  width: 70%;
+ .tours .col-md-6.left-box h1 {
+     margin-bottom: 2rem;
 }
-
-.tours .col-md-6.right-box .title-section h2 {
-  font-size: 1.2em;
-  font-weight: 600;
-  color: #fff;
-  text-align: left;
-  text-transform: uppercase;
-  margin-top: 15px;
+ .tours .col-md-6.left-box .col-md-6:nth-child(1), .section-team .col-md-6.left-box .col-md-6:nth-child(2) {
+     border-bottom: 1px solid #eeeeef;
+     margin-bottom: 35px;
+     padding-bottom: 25px;
 }
-.tours .col-md-6.right-box .title-section h2:after {
-  content: "<--";
-  display: block;
-  margin: 15px auto;
-  font-size: 0.7em;
-  color: #fff;
-  letter-spacing: 1px;
+ .tours .col-md-6.right-box {
+     height: 500px;
+     position: relative;
+     width: 70%;
 }
-.tours .col-md-6.right-box .title-section i {
-  color: #fff;
-  font-size: 2.1em;
-  text-align: left;
-  display: block;
+ .tours .col-md-6.right-box .title-section h2 {
+     font-size: 1.2em;
+     font-weight: 600;
+     color: #fff;
+     text-align: left;
+     text-transform: uppercase;
+     margin-top: 15px;
 }
-.tours .col-md-6.right-box .title-section p {
-  color: #fff;
-  text-align: left;
-  word-spacing: 1px;
-  line-height: 25px;
+ .tours .col-md-6.right-box .title-section h2:after {
+     content: "<--";
+     display: block;
+     margin: 15px auto;
+     font-size: 0.7em;
+     color: #fff;
+     letter-spacing: 1px;
 }
-
-@media only screen and  (max-width: 756px) {
-
-  .tours .row {
-    margin: 5vh 0 35vh 0;
-  }
-  
-   .tours .col-md-6.left-box {
-    text-align: center;
-    justify-content: center;
-    width: 100% !important;
-  }
-
-  .tours .col-md-6.right-box {
-    width: 100% !important;
-  }
-
-  .tours .col-md-6.left-box {
-    padding: 20px 45px 30px 45px !important;
-  }
-
-  .tours .col-md-6.right-box {
-    padding: 0 !important;
-  }
-
-  .tours .row {
-    flex-direction: column;
-  }
+ .tours .col-md-6.right-box .title-section i {
+     color: #fff;
+     font-size: 2.1em;
+     text-align: left;
+     display: block;
 }
-
-@media only screen and  (max-width: 540px) {
-
-  .tours .row {
-    margin: 5vh 0 0vh 0;
-  }
-
-  .tours .col-md-6.left-box h5 {
-    padding-left: 0;
-    text-align: center;
-    margin-bottom: 40px;
-  }
-
-  .tours .col-md-6.left-box h5::before {
-    right: -120px;
-    top: 50px;
-    transform: translate(-50%, 0);
-  }
-
-  h4::before, h5::before {
-    right: -50% !important;
-    top: 3.5rem !important;
-    transform: translate(-50%, 0);
-  }
-
-  .hl::before {
-    top: 5rem !important;
-  }
+ .tours .col-md-6.right-box .title-section p {
+     color: #fff;
+     text-align: left;
+     word-spacing: 1px;
+     line-height: 25px;
+}
+ @media only screen and (max-width: 756px) {
+     .tours .row {
+         margin: 5vh 0 35vh 0;
+    }
+     .tours .col-md-6.left-box {
+         text-align: center;
+         justify-content: center;
+         width: 100% !important;
+    }
+     .tours .col-md-6.right-box {
+         width: 100% !important;
+    }
+     .tours .col-md-6.left-box {
+         padding: 20px 45px 30px 45px !important;
+    }
+     .tours .col-md-6.right-box {
+         padding: 0 !important;
+    }
+     .tours .row {
+         flex-direction: column;
+    }
+     #tours-winter .row {
+         margin: 10vh 0 25vh 0;
+    }
+}
+ @media only screen and (max-width: 540px) {
+     .tours .row {
+         margin: 5vh 0 0vh 0;
+    }
+     #tours-winter .row {
+         margin: 10vh 0 5vh 0;
+    }
+     .tours .col-md-6.left-box h5 {
+         padding-left: 0;
+         text-align: center;
+         margin-bottom: 40px;
+    }
+     .tours .col-md-6.left-box h5::before {
+         right: -120px;
+         top: 50px;
+         transform: translate(-50%, 0);
+    }
+     h4::before, h5::before {
+         right: -50% !important;
+         top: 3.5rem !important;
+         transform: translate(-50%, 0);
+    }
+     .hl::before {
+         top: 5rem !important;
+    }
 }
