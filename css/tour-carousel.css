@@ -27,9 +27,24 @@
  .row-detail {
      margin: 10vh 0 31vh 0 !important;
 }
- .tours .row {
-     margin: 10vh 0 30vh 0;
+
+
+.tours .row {
+     margin: 5vh 0 5vh 0;
 }
+
+@media only screen and (min-width: 540px) {
+    .tours .row {
+        margin: 5vh 0 20vh 0;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .tours .row {
+        margin: 5vh 0 25vh 0;
+    }
+}
+
 /* #tours-winter .row {
      margin: 10vh 0 18vh 0;
 }
@@ -83,10 +98,8 @@
      word-spacing: 1px;
      line-height: 25px;
 }
- @media only screen and (max-width: 756px) {
-     .tours .row {
-         margin: 5vh 0 35vh 0;
-    }
+ @media only screen and (max-width: 768px) {
+
      .tours .col-md-6.left-box {
          text-align: center;
          justify-content: center;
@@ -109,9 +122,7 @@
     }
 }
  @media only screen and (max-width: 540px) {
-     .tours .row {
-         margin: 5vh 0 0vh 0;
-    }
+
      #tours-winter .row {
          margin: 10vh 0 5vh 0;
     }

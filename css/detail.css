@@ -649,7 +649,7 @@ header .mouse a i {
     }
 }
 
-@media only screen and  (max-width: 756px) {
+@media only screen and  (max-width: 768px) {
 
     header .logo img {
     height: auto;
@@ -789,6 +789,7 @@ header .mouse a i {
   place-items: center;
   height: 55%;
   margin-bottom: 15vh;
+  margin-top: 5vh;
 }
 
 .carousel {
@@ -809,6 +810,7 @@ header .mouse a i {
   }
 
   .container-carousel {
+    margin-top: 0 !important;
     margin-bottom: 10vh !important;
   }
 }
