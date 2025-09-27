@@ -457,6 +457,7 @@ header .mouse a i {
 }
 
 .ul-list ol li {
+  list-style: auto;
   margin-top: 10px;
 }
 
