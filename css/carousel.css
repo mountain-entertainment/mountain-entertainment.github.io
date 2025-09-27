@@ -170,6 +170,58 @@
      box-shadow: rgba(149, 157, 165, 0.4) 0px 1px 24px;
      transition: opacity 0.3s ease, visibility 0.3s ease;
 }
+
+.gallery-cell-custom {
+     display: flex;
+     flex-direction: column;
+     height: auto;
+    /* allow height to be defined by children */
+     width: 80%;
+     margin-top: 30px;
+     margin-right: 10px;
+     background: white;
+     border-radius: 14px;
+     text-align: left;
+     color: var(--grey);
+     box-shadow: rgba(149, 157, 165, 0.4) 0px 1px 24px;
+     transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.gallery-cell-custom .card-bg {
+    position: relative;
+    height: 300px;
+    min-height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 14px 14px 0 0;
+    align-items: flex-end;
+    color: white;
+    overflow: hidden;
+}
+
+.gallery-cell-custom .card-bg img {
+    width: 100%;
+    height: 300px;
+    min-height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+
+.gallery-cell-custom .card-bg .card-img-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    border-radius: 14px 14px 0 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+
  .gallery-cell.is-selected {
      opacity: 1;
      visibility: visible;
@@ -271,7 +323,7 @@
          min-height: 250px;
     }
      .card-img-wrapper {
-         height: 250px;
+         /* height: 250px; */
     }
      .card-bg img {
          height: 250px;

@@ -448,7 +448,24 @@ header .mouse a i {
   margin: 0 auto;
 }
 
-.detail-inner li {
+.ul-list ol {
+  font-size: 16px;
+  text-align: left;
+  list-style: none;
+  padding-left: 1.5em;
+  margin: 0 auto;
+}
+
+.ul-list ol li {
+  margin-top: 10px;
+}
+
+.ul-list ol li p {
+  margin-top: 5px;
+}
+
+.detail-inner ul li {
+  margin: 10px 0;
   list-style: disc;
 }
 
