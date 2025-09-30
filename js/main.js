@@ -16,6 +16,72 @@
     9. Google map
 */
 
+(function(){
+  const viewportMargin = 50; // Abstand zum Viewport-Rand in px (anpassen)
+  const containers = document.querySelectorAll('.tooltip-container');
+
+  function positionTooltip(container, tooltip) {
+    if (!tooltip) return;
+
+    // Sicherstellen, dass Tooltip eine max-width bekommt (für sehr schmale Viewports)
+    tooltip.style.maxWidth = `calc(100vw - ${viewportMargin * 2}px)`;
+    tooltip.style.boxSizing = 'border-box';
+
+    const containerRect = container.getBoundingClientRect();
+    const anchor = container.querySelector('a') || container; 
+    const anchorRect = anchor.getBoundingClientRect();
+
+    // Breite des Tooltips (funktioniert auch wenn aktuell visibility:hidden ist)
+    const tooltipWidth = tooltip.offsetWidth || tooltip.getBoundingClientRect().width;
+    const anchorCenter = anchorRect.left + anchorRect.width / 2;
+
+    // gewünschte linke Position im Viewport (zentriert auf das Wort)
+    let leftInViewport = anchorCenter - tooltipWidth / 2;
+
+    // einklemmen an die Ränder mit viewportMargin
+    const minLeft = viewportMargin;
+    const maxLeft = window.innerWidth - viewportMargin - tooltipWidth;
+    leftInViewport = Math.min(Math.max(leftInViewport, minLeft), Math.max(minLeft, maxLeft));
+
+    // in Container-Koordinaten umrechnen (Tooltip ist absolut relativ zum Container)
+    const leftInContainer = leftInViewport - containerRect.left;
+
+    // Setzen und transform entfernen (sonst verschiebt translateX noch)
+    tooltip.style.left = `${leftInContainer}px`;
+    tooltip.style.transform = 'translateX(0)';
+    tooltip.style.right = 'auto';
+  }
+
+  function resetTooltip(tooltip) {
+    tooltip.style.left = '';
+    tooltip.style.transform = '';
+    tooltip.style.maxWidth = '';
+    tooltip.style.boxSizing = '';
+    tooltip.style.right = '';
+  }
+
+  containers.forEach(container => {
+    const tooltip = container.querySelector('.tooltip');
+    if (!tooltip) return;
+
+    const open = () => positionTooltip(container, tooltip);
+    const close = () => resetTooltip(tooltip);
+
+    container.addEventListener('mouseenter', open);
+    container.addEventListener('focusin', open);
+    container.addEventListener('touchstart', open, {passive:true}); // mobile tap
+    container.addEventListener('mouseleave', close);
+    container.addEventListener('focusout', close);
+
+    // Während Resize/Scroll neu positionieren, falls sichtbar
+    const repositionIfVisible = () => {
+      if (getComputedStyle(tooltip).visibility === 'visible') positionTooltip(container, tooltip);
+    };
+    window.addEventListener('resize', repositionIfVisible);
+    window.addEventListener('scroll', repositionIfVisible, true);
+  });
+})();
+
 document.addEventListener("DOMContentLoaded", function () {
   const images = document.querySelectorAll('.carousel .item img');
   const lightbox = document.getElementById('lightbox');

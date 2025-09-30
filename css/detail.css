@@ -244,6 +244,10 @@ header {
   margin-top: 6em;
 }
 
+.header-highlights {
+  height: 0vh;
+}
+
 .video-outer {
   width: 100%;
   height: 60vh;
@@ -440,6 +444,15 @@ header .mouse a i {
   align-items: center;
 }
 
+.ul-list li a {
+  color: var(--orange);
+  font-weight: bold;
+}
+
+.ul-list li a:hover {
+  color: var(--orange-light);
+}
+
 .ul-list ul {
   font-size: 16px;
   text-align: left;
@@ -474,9 +487,118 @@ header .mouse a i {
   margin: 20px 0;
 }
 
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
 
+.tooltip-container::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  height: 20px;
+}
 
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  width: max-content;
+  background-color: white;
+  color: var(--grey);
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: rgba(149, 157, 165, 0.623) 0px 1px 24px;
 
+  display: flex;
+  
+  position: absolute;
+  bottom: 125%; 
+  left: 50%;
+  transform: translateX(-50%);
+  
+  transition: opacity 0.3s;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.tooltip img {
+  width: 200px;
+  height: auto;
+  border-radius: 15px 0 0 15px;
+  object-fit: cover;
+}
+
+.tooltip-text {
+  width: min-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  font-family: 'Kozuka';
+  padding: 10px 20px;
+  font-size: medium;
+}
+
+.tooltip-text strong {
+  margin: 10px 0;
+}
+
+.tooltip-text a {
+    color: white !important;
+    width: 190px;
+    background-color: var(--orange);
+    border: 2px solid transparent;
+    padding: 10px 2rem;
+    margin: 16px 0 10px 0;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.tooltip-text a:hover {
+  color: var(--orange) !important;
+  background-color: white;
+  border: 2px solid var(--orange);
+}
+
+.tooltip-container:hover .tooltip,
+.tooltip:hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media only screen and  (max-width: 540px) {
+  .tooltip {
+    flex-direction: column; 
+    margin: 0 10vw;
+  }
+
+  .tooltip img {
+    border-radius: 15px 15px 0 0;
+    width: auto;
+    height: 150px;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .tooltip-container:focus-within .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  /* Link deaktivieren, solange Tooltip offen ist */
+  .tooltip-container > a {
+    pointer-events: none;
+  }
+  
+  .tooltip-text a {
+    pointer-events: auto;
+  }
+}
 
 
 	@keyframes wobbleArrow {
@@ -989,4 +1111,25 @@ header .mouse a i {
 .nav-btn:focus {
   outline: none;
   box-shadow: 0 0 0 5px var(--grey);
+}
+
+.highlight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.highlight-img {
+  width: 50vw;
+  height: 70vh;
+}
+
+.highlight-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.highlight-text {
+  padding: 5vh 5vw;
 }
