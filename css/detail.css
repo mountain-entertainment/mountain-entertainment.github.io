@@ -752,7 +752,6 @@ header .mouse a i {
 .dots {
   /* display: flex; */
   display: none;
-  gap: 8px;
   padding: 0 0 30px 20px;
 }
 
