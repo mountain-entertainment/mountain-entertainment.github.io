@@ -94,6 +94,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeMenu = document.getElementById('nav-close');
   const navLink = document.querySelectorAll('.nav__link');
   const langEls = document.querySelectorAll('[language]');
+  const seasonToggle = document.getElementById('season-toggle');
+  const cards = document.querySelectorAll('.sojourn-card');
   
   let currentIndex = 0;
 
@@ -162,6 +164,21 @@ document.addEventListener("DOMContentLoaded", function () {
     showLanguage(toggle.checked ? 'en' : 'de');
     toggle.addEventListener('change', function () {
       showLanguage(this.checked ? 'en' : 'de');
+    });
+  }
+
+  // Season toggle
+  function showCardsForSeason(season) {
+    cards.forEach(card => {
+      card.style.display = (card.getAttribute('data-season') === season) ? '' : 'none';
+    });
+  }
+
+  if (seasonToggle) {
+    showCardsForSeason(seasonToggle.checked ? 'winter' : 'summer');
+
+    seasonToggle.addEventListener('change', function () {
+      showCardsForSeason(this.checked ? 'winter' : 'summer');
     });
   }
 

@@ -1,0 +1,102 @@
+:root {
+    --card-img-height: 240px;
+    --card-img-height-mobile: 200px;
+}
+
+header {
+    height: 0;
+}
+
+.intro-inner {
+    padding-bottom: 20px;
+}
+
+.season-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.season-wrapper .switch > span.on, .season-wrapper .switch > span.off {
+    top: 20px;
+}
+
+.collection {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.sojourn-card {
+    position: relative;
+    width: 350px;
+    box-shadow: rgba(149, 157, 165, 0.4) 0px 1px 24px;
+    border-radius: 14px;
+}
+
+.card-content {
+    padding: 20px 30px 15px 20px;
+}
+
+.card-bg {
+    height: var(--card-img-height);
+    min-height: var(--card-img-height);
+}
+
+.card-img-wrapper {
+    height: var(--card-img-height);
+}
+
+.card-bg img {
+    height: var(--card-img-height);
+    min-height: var(--card-img-height);
+}
+
+.card-bg h1 {
+    padding: 0 20px 5px 20px;
+    font-size:x-large;
+}
+
+.shadow {
+    text-shadow: 2px 2px 4px rgb(20 13 13 / 90%);
+}
+
+.card-btn {
+    display: block;
+}
+
+.on i {
+    font-size: 24px;
+    color: var(--orange);
+}
+
+.off i {
+    font-size: 24px;
+    color: #0098E7;
+}
+
+@media only screen and (max-width: 768px) {
+    .sojourn-card {
+        max-width: 230px;
+    }
+    .card-btn {
+        margin: 0;
+    }
+
+    .card-bg {
+        height: var(--card-img-height-mobile);
+        min-height: var(--card-img-height-mobile);
+    }
+
+    .card-img-wrapper {
+        height: var(--card-img-height-mobile);
+    }
+
+    .card-bg img {
+        height: var(--card-img-height-mobile);
+    }
+    
+}

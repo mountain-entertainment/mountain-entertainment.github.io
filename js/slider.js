@@ -16,16 +16,13 @@ prev.onclick = function(){
 }
 let refreshInterval = setInterval(()=> {next.click()}, 3000);
 function reloadSlider(){
-    slider.style.left = -items[active].offsetLeft + 'px';
-    // 
+    slider.style.transform = `translateX(${-items[active].offsetLeft}px)`;
     let last_active_dot = document.querySelector('.slideshow .dots li.active');
     last_active_dot.classList.remove('active');
     dots[active].classList.add('active');
 
     clearInterval(refreshInterval);
-    refreshInterval = setInterval(()=> {next.click()}, 3000);
-
-    
+    refreshInterval = setInterval(()=> {next.click()}, 5000);
 }
 
 dots.forEach((li, key) => {

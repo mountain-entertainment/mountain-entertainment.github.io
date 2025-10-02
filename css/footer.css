@@ -89,7 +89,7 @@ footer .row {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     width: 100%;
     gap: 40px;
@@ -102,9 +102,8 @@ footer .row {
 }
  footer .container2 {
     color: var(--grey);
-     padding-top: 50px;
-     padding-bottom: 50px;
-     max-width: 100%;
+    padding: 50px 0;
+    max-width: 100%;
 }
  footer .container2 .footer-links {
     width: auto;
@@ -150,7 +149,24 @@ footer .row {
 }
 
  @media only screen and (max-width: 540px) {
-     footer {
-         text-align: center;
+    footer {
+        text-align: center;
+    }
+
+    footer .row {
+        gap: 0px;
+    }
+
+    footer .container2 {
+        color: var(--grey);
+        padding: 30px 0;
+        max-width: 100%;
+    }
+
+    .social-icons li i {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+        line-height: 26px;
     }
  }
