@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const navLink = document.querySelectorAll('.nav__link');
   const langEls = document.querySelectorAll('[language]');
   const seasonToggle = document.getElementById('season-toggle');
-  const cards = document.querySelectorAll('.sojourn-card');
+  const cards = document.querySelectorAll('.sojourn-card[data-season]');
   
   let currentIndex = 0;
 
