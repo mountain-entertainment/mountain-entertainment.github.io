@@ -444,12 +444,12 @@ header .mouse a i {
   align-items: center;
 }
 
-.ul-list li a {
+.tooltip-container a {
   color: var(--orange);
   font-weight: bold;
 }
 
-.ul-list li a:hover {
+.tooltip-container a:hover {
   color: var(--orange-light);
 }
 
