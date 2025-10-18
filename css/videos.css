@@ -116,12 +116,16 @@ header {
 }
 
 .video-thumb {
-  max-width: 120px;
+  width: 120px;
   height: 67.5px;
   border-radius: 10px;
   margin-right: 15px;
   background-color: #ccc;
   object-fit: cover;
+}
+
+.video-title {
+  letter-spacing: 0;
 }
 
 @media screen and (max-width: 1370px) {
