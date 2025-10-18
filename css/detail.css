@@ -277,7 +277,6 @@ header {
   min-height: 56.25vw; /* 100vw * (9/16) */
   transform: translate(-50%, -50%);
   border: 0;
-  pointer-events: none; /* Remove if you want user interaction */
 }
 
 .header-storyteller {

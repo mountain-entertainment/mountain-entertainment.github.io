@@ -2,7 +2,6 @@ const videos = [
   { type: "youtube", id: "VIDEO_ID_1" },
   { type: "vimeo", id: "VIDEO_ID_2" }
 ];
-
 function setVideo(index) {
   const video = videos[index];
   let src = "";
@@ -13,3 +12,12 @@ function setVideo(index) {
   }
   document.getElementById("video-frame").src = src;
 }
+
+const switchers = document.querySelectorAll(".season-switch");
+
+switchers.forEach((switcher) => {
+  console.log(switcher);
+  switcher.addEventListener("click", (e) => {
+    switcher.classList.toggle("active");
+  });
+});

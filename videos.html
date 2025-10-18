@@ -104,20 +104,46 @@
   </div>
 </section>
 
-<section class="player">
+<div class="video-search">
+  <div class="season-switch" id="spring">
+    <p language="en"><strong>Spring</strong></p>
+    <p language="de"><strong>Frühling</strong></p>
+  </div>
+  <div class="season-switch" id="summer">
+    <p language="en"><strong>Summer</strong></p>
+    <p language="de"><strong>Sommer</strong></p>
+  </div>
+  <div class="season-switch" id="fall">
+    <p language="en"><strong>Autumn</strong></p>
+    <p language="de"><strong>Herbst</strong></p>
+  </div>
+  <div class="season-switch" id="winter">
+    <p><strong>Winter</strong></p>
+  </div>
+</div>
+<section class="video-player">
   <div class="current-video">
     <div class="video-wrapper">
-      <iframe id="video-frame"
-        src="https://www.youtube.com/embed/yxNWfRANT6o?si=5cjljTz_atfyxqoO&amp;autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=yxNWfRANT6o&amp;end=30"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <!-- <iframe 
+        src="https://www.youtube.com/embed/yxNWfRANT6o?si=5cjljTz_atfyxqoO&autoplay=1&mute=1&loop=1&playlist=yxNWfRANT6o&end=30"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen>
+      </iframe> -->
+      <iframe 
+        src="https://player.vimeo.com/video/1127267638?h=7732c0008a&autoplay=1&muted=1&background=1&loop=1&title=0&byline=0&portrait=0"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen>
+      </iframe>
     </div>
   </div>
   <div class="video-list">
-    <div class="video-search">
-      
-    </div>
     <div class="list">
-
+      <div class="video">
+        <img class="video-thumb" src="./img/video-thumbnails/herbst.jpg">
+        <h3 class="video-title">Title</h3>
+      </div>
     </div>
   </div>
 </section>
