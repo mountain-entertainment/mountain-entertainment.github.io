@@ -174,13 +174,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  function getSeasonFromHash() {
+    return window.location.hash === '#winter' ? 'winter' : 'summer';
+  }
+
+  const initialSeason = getSeasonFromHash();
+  showCardsForSeason(initialSeason);
+
   if (seasonToggle) {
-    showCardsForSeason(seasonToggle.checked ? 'winter' : 'summer');
+    seasonToggle.checked = (initialSeason === 'winter');
 
     seasonToggle.addEventListener('change', function () {
-      showCardsForSeason(this.checked ? 'winter' : 'summer');
+      const selectedSeason = this.checked ? 'winter' : 'summer';
+      showCardsForSeason(selectedSeason);
+      window.location.hash = `#${selectedSeason}`;
     });
   }
+
 
   // Theme toggle
   let CHECKED = false;

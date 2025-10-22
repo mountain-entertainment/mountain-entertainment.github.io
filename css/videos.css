@@ -163,8 +163,8 @@ header {
   }
 
   .video-list {
+    justify-content: flex-start;
     width: 90%;
-    height: 300px;
   }
 
   .video-search {
@@ -172,6 +172,10 @@ header {
   }
 
   .list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: fit-content;
     border-radius: 0 0 15px 15px;
   }
   
@@ -189,6 +193,10 @@ header {
 }
 
 @media screen and (max-width: 540px) {
+  .intro-inner {
+    padding: 40px 0 30px 0;
+  }
+
   .season-switch {
     width: 80px;
     padding: 8px;
