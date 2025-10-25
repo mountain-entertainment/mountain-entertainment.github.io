@@ -1,5 +1,8 @@
 RewriteEngine On
-# Serve .html files without showing .html in the URL
+
+RewriteCond %{HTTP_HOST} ^217\.154\.172\.247$
+RewriteRule ^(.*)$ https://mountain-concierge.de/$1 [L,R=301]
+
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html [NC,L]
