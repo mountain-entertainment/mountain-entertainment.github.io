@@ -279,6 +279,22 @@ header {
   border: 0;
 }
 
+.video-inner video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 177.78vh;
+  height: 100vh;
+  min-width: 100vw;
+  min-height: 56.25vw;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  border: 0;
+  pointer-events: none;
+  background: transparent;
+  z-index: 0;
+}
+
 .header-storyteller {
   background-image: url('../img/berchtesgaden-mit-watzmann-im-sommer.jpg');
 }
