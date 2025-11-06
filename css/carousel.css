@@ -287,6 +287,8 @@
 }
  .card-content .text * {
      letter-spacing: 0;
+     height: 50px;
+     align-content: center;
 }
  .card-btn {
      color: white;
