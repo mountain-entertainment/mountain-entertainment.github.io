@@ -1,0 +1,535 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="HandheldFriendly" content="True">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <meta name="description" content="Experience Gin-Tonic-Tasting with Mountain Concierge—an exclusive event blending alpine ambiance, premium gin, and live music in Berchtesgaden.">
+      <meta name="keywords" content="Mountain Concierge, Gin-Tonic-Tasting, Berchtesgaden events, exclusive gin tasting, live music, alpine events, luxury experiences, private events, Berchtesgaden nightlife, unique mountain events">
+      <meta name="author" content="Mountain Concierge, Mountain Entertainment">
+    
+      <title>Gin-Tonic-Tasting | Mountain Concierge</title>
+      
+      <!-- ============ GOOGLE FONTS ============ -->
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600' rel='stylesheet' type='text/css'>
+      <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css' rel='stylesheet'>
+
+      <!-- CSS -->
+      <!-- Animate css -->
+      <link rel="stylesheet" type="text/css" href="./css/animate.css">
+      <!-- Font-Awesome 6 PRO-->
+      <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+      <!-- Bootstrap 5 -->
+      <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+      <!-- AOS -->
+      <link rel="stylesheet" type="text/css" href="./css/aos.min.css">
+      <!-- Custom styles CSS -->
+      <link rel="stylesheet" type="text/css" href="./css/detail.css">
+      <link rel="stylesheet" href="./css/footer.css">
+      <link rel="stylesheet" href="./css/style copy.css">
+      <link rel="stylesheet" href="./css/carousel.css">
+      <link rel="stylesheet" href="css/contact.css">
+      <link rel="stylesheet" href="css/tour-carousel.css">
+      <link rel="stylesheet" href="css/fa.css">
+
+      <!-- Favicons -->
+      <link rel="shortcut icon" href="./images/favicon.ico">
+      <link rel="icon" href="./images/favicon.ico">
+
+      <!-- iOS icon -->
+      <link rel="apple-touch-icon" href="./images/favicon-png.png">
+
+      <!-- Android/Chrome -->
+      <link rel="manifest" href="/manifest.json">
+
+      <style>
+        /* Basic styles to help visualize the layout */
+        .container-carousel { display: flex; }
+        .carousel__wrapper { display: flex; }
+        .item img { margin-bottom: 10px; }
+        .instagram__header, .instagram__buttons { display: flex; align-items: center; }
+        .instagram__buttons .left, .instagram__buttons .right { display: flex; gap: 10px; }
+        .instagram__buttons .right { margin-left: auto; }
+      </style>
+
+  </head>
+
+  <body>
+
+<!-- LOADER TEMPLATE -->
+<div id="page-loader">
+  <div class="loader-icon fa fa-spin colored-border"></div>
+</div>
+<!-- /LOADER TEMPLATE -->
+
+<!-- HEADER -->
+<header>
+
+  <div class="header-nav">
+    <a href="./" class="header__logo"><img src="./images/it-me.svg" alt="logo"></a>
+
+    <ion-icon name="menu-outline" class="header__toggle" id="nav-toggle"></ion-icon>
+
+    <nav class="nav" id="nav-menu">
+        <div class="nav__content bd-grid">
+
+            <ion-icon name="close-outline" class="nav__close" id="nav-close"></ion-icon>
+
+            <a href="./" class="nav__logo"><img src="./images/it-me.svg" alt="logo"></a>
+
+            <div class="nav__menu">
+                <ul class="nav__list" language="en">
+                    <li class="nav__item"><a href="./#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a class="nav__link_dropdown">Tours</a><i class="fas fa fa-chevron-down"></i>
+                      <div class="nav_dropdown">
+                        <a href="#tours" class="nav__link">Summer</a>
+                        <a href="./#tours-winter" class="nav__link">Winter</a>
+                        <a href="./sojourns" class="nav__link">All</a>
+                      </div>
+                    </li>
+                    <li class="nav__item"><a href="./videos" class="nav__link">Videos</a></li>
+                    <li class="nav__item"><a href="./#it's ME" class="nav__link">It's ME</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+                <ul class="nav__list" language="de">
+                    <li class="nav__item"><a href="./#about" class="nav__link">Über uns</a></li>
+                    <li class="nav__item"><a class="nav__link_dropdown">Touren</a><i class="fas fa fa-chevron-down"></i>
+                      <div class="nav_dropdown">
+                        <a href="#tours" class="nav__link">Sommer</a>
+                        <a href="./#tours-winter" class="nav__link">Winter</a>
+                        <a href="./sojourns" class="nav__link">Alle</a>
+                      </div>
+                    </li>
+                    <li class="nav__item"><a href="./videos" class="nav__link">Videos</a></li>
+                    <li class="nav__item"><a href="./#it's ME" class="nav__link">It's ME</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="lang-wrapper">
+            <div class="switch">
+                <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+                <label for="language-toggle"></label>
+                <span class="on"><img src="img/icons/germany.png"></span>
+                <span class="off"><img src="img/icons/united-kingdom.png"></span>
+            </div>
+        </div>
+    </nav>
+  </div>
+  <div class="video-outer" style="background-image: url('img/video-thumbnails/gin-tonic-hintersee.jpg'); background-size: cover; background-position: center;">
+  <div class="video-inner">
+    <video autoplay muted loop playsinline>
+      <source src="./videos-folder/gin-tonic.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+
+</header>
+<!-- END HEADER -->
+
+<section class="intro">
+  <div class="intro-inner">
+    <h4 language="en" class="hl">Gin: the true spirit of life in the mountains</h4>
+    <h4 language="de" class="hl">Der Gin des Lebens liegt in den Bergen</h4>
+    <h1>Gin-Tonic-Tasting</h1>
+  </div>
+</section>
+
+<div class="container-carousel">
+  <aside class="carousel">
+    <div class="carousel__wrapper">
+      <div class="item" id="slide-0">
+        <img src="img/bi-gin-tasting-4.jpg" alt="" width="418" height="418">
+      </div>
+      <div class="item" id="slide-1">
+        <img src="img/gin-tonic.jpg" alt="" width="418" height="418">
+      </div>
+      <div class="item" id="slide-2">
+        <img src="img/lounge.jpeg" alt="" width="418" height="418">
+      </div>
+      <div class="item" id="slide-3">
+        <img src="img/tonic.jpeg" alt="" width="418" height="418">
+      </div>
+      <div class="item" id="slide-4">
+        <img src="img/butterfly.jpg" alt="" width="418" height="418">
+      </div>
+      <div class="item" id="slide-5">
+        <img src="img/berchtesgaden-mit-watzmann-im-sommer.jpg" alt="" width="418" height="418">
+      </div>
+      <div class="item" id="slide-6">
+        <img src="img/kornspeicher.jpg" alt="" width="418" height="418">
+      </div>
+    </div>
+  </aside>
+</div>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <span class="nav-btn left" id="prevBtn"><i class="fas fa-chevron-left fa-lg"></i></span>
+  <img id="lightbox-img" src="" alt="Expanded View">
+  <span class="close-btn" onclick="closeLightbox(event)">&times;</span>
+  <span class="nav-btn right" id="nextBtn"><i class="fas fa-chevron-right fa-lg"></i></span>
+</div>
+
+<section class="detail">
+  <div class="detail-inner">
+    <h1 language="en">Private Gin Tonic Tasting Experience – Your Exclusive Event in Berchtesgaden</h1>
+    <h1 language="de">Private Gin-Tonic-Tasting Experience – Ihr exklusives Event in Berchtesgaden</h1>
+
+    <p language="en">Discover the spirit of the Alps in a glass: Our private Gin Tonic Tasting Experience invites you to explore the unique aromas of alpine herbs, berries, and roots – transformed into exquisite gins and refreshing tonics. In the heart of the Berchtesgaden Alps, enjoy fine gin creations, inspiring stories, and a relaxed atmosphere with friends, colleagues, or family.</p>
+
+    <p language="de">Entdecken Sie den Geist der Alpen im Glas: Unsere private Gin-Tonic-Tasting Experience lädt Sie ein, die einzigartigen Aromen alpiner Kräuter, Beeren und Wurzeln zu erleben – veredelt zu erlesenen Gins und erfrischenden Tonics. Inmitten der Berchtesgadener Alpen genießen Sie feine Gin-Kreationen, spannende Geschichten und ein entspanntes Ambiente – ideal für Freunde, Kollegen oder Familie.</p>
+
+    <h3 language="en">Unique Locations – From Alpine Chalet to Lakeside Lounge</h3>
+    <h3 language="de">Außergewöhnliche Locations – vom Alpenchalet bis zur Seelounge</h3>
+
+    <div class="ul-list">
+      <ul language="en">
+        <li><strong>Alpine Chalet with Terrace:</strong> Enjoy a cozy atmosphere with panoramic views and guided gin tasting by the fire.</li>
+        <li><strong>Mountain Meadow or Alpine Pasture:</strong> Experience a picnic-style gin tasting surrounded by alpine herbs and pure nature.</li>
+        <li><strong>Private Boat on Lake Königssee:</strong> Taste selected gins on crystal-clear waters with breathtaking mountain views.</li>
+        <li><strong>Luxury Hotel Fireplace Room:</strong> Elegant ambiance, regional gins, and the comfort of a warm fire – perfect for winter tastings.</li>
+        <li><strong>Historic Villa or Salt Mine:</strong> A unique tasting atmosphere full of character and history.</li>
+      </ul>
+
+      <ul language="de">
+        <li><strong>Alpenchalet mit Terrasse:</strong> Gemütliches Ambiente mit Panoramablick und geführtem Gin-Tasting am Kamin oder an der Feuerschale.</li>
+        <li><strong>Bergwiese oder Alm:</strong> Picknick-Atmosphäre mit alpinen Kräutern, frischer Luft und einem Gin-Erlebnis mitten in der Natur.</li>
+        <li><strong>Privatboot am Königssee:</strong> Gin-Tasting auf dem glasklaren See – umgeben von beeindruckender Bergkulisse.</li>
+        <li><strong>Luxushotel-Kaminzimmer:</strong> Stilvolles Umfeld mit regionalen Gins, alpinen Snacks und behaglicher Atmosphäre – auch perfekt im Winter.</li>
+        <li><strong>Historische Villa oder Salzbergwerk:</strong> Einzigartige Location mit Charakter und Geschichte für ein unvergessliches Gin-Erlebnis.</li>
+      </ul>
+    </div>
+
+    <h3 language="en">Your Experience – Taste, Nature & Stories</h3>
+    <h3 language="de">Ihr Erlebnis – Genuss, Natur & Geschichten</h3>
+
+    <p language="en">Your tasting starts with a welcome signature gin, followed by a guided tasting of 3–5 regional gins paired with selected tonics. Learn about local botanicals such as gentian, juniper, and licorice, and hear fascinating stories about gin and its alpine origins. In winter, enjoy a special treat – the warm “Glüh-Gin.”</p>
+
+    <p language="de">Ihr Tasting beginnt mit einem Signature-Gin zur Begrüßung, gefolgt von einer geführten Verkostung von 3–5 regionalen Gins mit passenden Tonics. Erfahren Sie Spannendes über alpine Botanicals wie Enzian, Wacholder und Süßholz – und genießen Sie Geschichten rund um den Gin und seine alpine Herkunft. Im Winter erwartet Sie ein besonderes Highlight: der warme „Glüh-Gin“.</p>
+
+    <p language="en">Whether for company events or private celebrations – this tasting is a unique fusion of taste, nature, and alpine spirit. Let us create your unforgettable Berchtesgaden moment!</p>
+
+    <p language="de">Ob Firmenevent oder private Feier – dieses Tasting ist eine einzigartige Verbindung aus Genuss, Natur und alpinem Flair. Lassen Sie uns Ihren unvergesslichen Berchtesgaden-Moment gestalten!</p>
+  </div>
+</section>
+
+
+<section class="why">
+  <div class="why-inner">
+    <h1 language="en">Why Mountain Concierge?</h1>
+    <h1 language="de">Warum Mountain Concierge?</h1>
+    <p language="en">We offer you the opportunity to discover the sights in and around Berchtesgaden privately and in peace, without the hustle and bustle of mass tourism. Benefit from our local expertise and experience the mountains from a whole new perspective.</p>
+    <p language="de">Wir bieten Ihnen die Möglichkeit, die Sehenswürdigkeiten in und um Berchtesgaden privat und in Ruhe zu entdecken, ohne den Trubel des Massentourismus. Profitieren Sie von unserer lokalen Expertise und erleben Sie die Berge von einer ganz neuen Seite.</p>
+    <p language="en">Book your tour today!</p>
+    <p language="de">Buchen Sie noch heute Ihre Tour!</p>
+    <a language="en" class="cta-btn cta-btn-w" href="#contact">Contact us</a>
+    <a language="de" class="cta-btn cta-btn-w" href="#contact">zum Kontakt</a>
+  </div>
+</section>
+
+<!-- <section class="addons">
+  <div class="addons-intro">
+    <h1>Add-ons</h1>
+    <p language="en">give your tour that little bit extra! With our versatile add-ons, you can make your experience even more personal and unique. Choose from various additional services and make your day something very special.</p>
+    <p language="de">Verleihen Sie Ihrer Tour das gewisse Extra! Mit unseren vielseitigen Add-ons gestalten Sie Ihr Erlebnis noch persönlicher und einzigartiger. Wählen Sie aus verschiedenen Zusatzleistungen und machen Sie Ihren Tag zu etwas ganz Besonderem.</p>
+  </div>
+  <div class="addons-inner"> -->
+    <!-- <div class="addon">
+      <div class="addon-icon">
+        <i class="fa-solid fa-ribbon fa-5x"></i>
+      </div>
+      <div class="addon-text">
+        <h3>Gin-Label</h3>
+        <p language="en"> Personalized gin label with guest names.</p>
+        <p language="de">Personalisiertes Gin-Label mit Gästennamen.</p>
+      </div>
+      <div class="dots">
+        <div class="dot-active"></div>
+        <div class="dot-inactive"></div>
+      </div>
+    </div> -->
+    <!-- <div class="addon">
+      <div class="addon-icon">
+        <i class="fa-solid fa-music fa-5x"></i>
+      </div>
+      <div class="addon-text">
+        <h3 language="en">Alpine Soundtracking</h3>
+        <h3 language="de">Alpines Soundtracking</h3>
+        <p language="en">Nature sounds (glacier noise, birdsong) as background music.</p>
+        <p language="de">Naturgeräusche (Gletscherrauschen, Vogelstimmen) als Untermalung.</p>
+      </div>
+      <div class="dots">
+        <div class="dot-inactive"></div>
+        <div class="dot-active"></div>
+      </div>
+    </div> -->
+    <!-- <div class="addon">
+      <div class="addon-icon">
+        <i class="fa-solid fa-martini-glass-citrus fa-5x"></i>
+      </div>
+      <div class="addon-text">
+        <h3 language="en">Gin-Expert</h3>
+        <h3 language="de">Gin-Experte</h3>
+        <p language="en">Gin expert or bartender for mixing tips.</p>
+        <p language="de">Gin-Experte oder Barkeeper für Mix-Tipps.</p>
+      </div>
+      <div class="dots">
+        <div class="dot-inactive"></div>
+        <div class="dot-active"></div>
+      </div>
+    </div> -->
+  </div>
+</section>
+
+<!-- Section Tours -->
+<section class="tours" id="tours">
+
+  <div class="row row-detail">
+
+    <div class="col-md-6 left-box">
+      <div>
+        <h5 language="en">Tailored for the discerning traveler</h5>
+        <h5 language="de" class="hl">Maßgeschneidert für Reisende mit hohen Ansprüchen</h5>
+      <h1 language="en">Tours</h1>
+      <h1 language="de">Touren</h1>
+      <p language="en">Our curated selection of private tours offer more than sightseeing — they offer a story, a connection, a moment that becomes a memory.</p>
+      <p language="de">Unsere ausgewählte Auswahl an privaten Touren bietet mehr als nur Sightseeing - sie bieten eine Geschichte, eine Verbindung, einen Moment, der zur Erinnerung wird.</p>
+      </div>
+    </div>
+
+    <div class="col-md-6 right-box">
+      <div class="gallery js-flickity"
+        data-flickity-options='{ "wrapAround": true }'>
+        <div class="gallery-cell">
+             <div>
+            <div class="card-bg">
+              <div class="card-img-wrapper">
+                <img src="img/cards/cows.jpg" alt="Storyteller Tour" loading="lazy">
+              </div>
+              <h1>Story Teller Tour</h1>
+            </div>
+           <div class="card-content">
+              <div class="text">
+                 <h3 language="en">The stories of the mountains</h3>
+                <h3 language="de">Die Geschichten der Berge</h3>
+                <p language="en">Let your guide take you on a personal journey through Berchtesgaden’s rich history, legends, and hidden gems known only to locals.</p>
+                <p language="de">Lassen Sie sich von Ihrem Guide auf eine persönliche Reise durch Berchtesgadens reiche Geschichte, Legenden und versteckte Kleinode mitnehmen, die nur Einheimischen bekannt sind.</p>
+              </div>
+              <a language="en" class="card-btn" href="./insider">See tour details</a>
+              <a language="de" class="card-btn" href="./insider">Tourdetails sehen</a>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-cell">
+           <div>
+            <div class="card-bg">
+              <div class="card-img-wrapper">
+                <img src="img/berchtesgaden-mit-watzmann-im-sommer.jpg" alt="Photostop Tour" loading="lazy">
+              </div>
+              <h1 language="de">Fotostop Tour</h1>
+              <h1 language="en">Photostop Tour</h1>              
+            </div>
+           <div class="card-content">
+              <div class="text">
+                <h3 language="en">The best places for your photos</h3>
+                <h3 language="de">Die besten Orte für Ihre Fotos</h3>
+                <p language="en">Discover the most photogenic spots in the region — from dramatic mountain backdrops to tranquil lakeside reflections, all guided by a pro.</p>
+                <p language="de">Entdecken Sie die fotogensten Orte der Region - von dramatischen Bergkulissen bis hin zu ruhigen Seespiegelungen - und lassen Sie sich dabei von einem Profi begleiten.</p>
+              </div>
+              <a language="en" class="card-btn" href="./photo">See tour details</a>
+              <a language="de" class="card-btn" href="./photo">Tourdetails sehen</a>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-cell">
+           <div>
+            <div class="card-bg">
+              <div class="card-img-wrapper">
+                <img src="img/bi-sommeraction-segway-6.jpg" alt="Active Tour" loading="lazy">
+              </div>
+               <h1 language="en">Active Tour</h1>
+              <h1 language="de">Aktiv Tour</h1>
+            </div>             
+           <div class="card-content">
+              <div class="text">
+                <h3 language="en">Let go off some steam!</h3>
+                <h3 language="de">Lassen Sie etwas Dampf ab!</h3>
+                <p language="en">Push your limits with guided hikes, e-bike routes, or climbing tours — tailored to your level and interests, always with VIP support.</p>
+                <p language="de">Gehen Sie bei geführten Wanderungen, E-Bike-Routen oder Segwaytouren an Ihre Grenzen - abgestimmt auf Ihr Niveau und Ihre Interessen, immer mit VIP-Betreuung.</p>
+              </div>
+              <a language="en" class="card-btn" href="./active">See tour details</a>
+              <a language="de" class="card-btn" href="./active">Tourdetails sehen</a>
+              
+            </div>
+          </div>
+        </div>
+        <div class="gallery-cell">
+           <div>
+            <div class="card-bg">
+              <div class="card-img-wrapper">
+                <img src="img/storyteller/waterdrops.jpg" alt="Rain Tour" loading="lazy">
+              </div>
+                <h1 language="en">Rain Tour</h1>
+                <h1 language="de">Regen Tour</h1>
+            </div>  
+           <div class="card-content">
+              <div class="text">
+                <h3 language="en">The rain reveals hidden treasures</h3>
+                <h3 language="de">Der Regen enthüllt verborgene Schätze</h3>
+                <p language="en">Even rainy days shine with us. Explore historic salt mines, relax in luxury spas, or enjoy a fireside gin tasting — Berchtesgaden, reimagined.</p>
+                <p language="de">Bei uns glänzen auch Regentage. Erkunden Sie historische Salzbergwerke, entspannen Sie in luxuriösen Spas oder genießen Sie ein Gin-Tasting - Berchtesgaden, neu interpretiert.</p>
+              </div>
+              <a language="en" class="card-btn" href="./rain">See tour details</a>
+              <a language="de" class="card-btn" href="./rain">Tourdetails sehen</a>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-cell">
+             <div>
+            <div class="card-bg">
+              <div class="card-img-wrapper">
+                <img src="img/berchtesgaden-mit-watzmann-im-sommer.jpg" alt="Photostop Tour" loading="lazy">
+              </div>
+              <h1>Sightseeing Tour</h1>
+            </div>
+           <div class="card-content">
+              <div class="text">
+                <h3 language="en">Discover Berchtesgaden your way</h3>
+                <h3 language="de">Entdecken Sie Berchtesgaden auf Ihre Art</h3>
+                <p language="en">Experience the region’s highlights and hidden gems in comfort and style. Your private Multivan tour adapts to your wishes—nature, culture, or local secrets, all at your own pace.</p>
+                <p language="de">Entdecken Sie Berchtesgaden entspannt und ganz nach Ihren Wünschen – ob Natur, Kultur oder geheime Lieblingsorte, alles in Ihrem Tempo.</p>
+              </div>
+              <a language="en" class="card-btn" href="./sightseeing">See tour details</a>
+              <a language="de" class="card-btn" href="./sightseeing">Tourdetails sehen</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div id="contact" class="contact">
+    <div class="contact-inner">
+      <h5 language="en">Contact us</h5>
+      <h5 language="de">Kontaktieren Sie uns</h5>
+      <h1 language="en">A personal talk is the beginning of everything!</h1>
+      <h1 language="de">Ein persönliches Gespräch ist der Anfang von allem!</h1>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <a href="https://g.page/MountainEntertainment?share">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-text">
+              <h6 language="en">Mountain Entertainment Event Agency</h6>
+              <h6 language="de">Mountain Entertainment Eventagentur</h6>
+              <p>Bahnhofspl. 2, 83471 Berchtesgaden</p>
+            </div>
+          </a>
+        </div>
+        <div class="contact-card">
+          <a href="tel:+49 8652 655813">
+            <div class="contact-icon">
+              <i class="fas fa-phone-volume"></i>
+            </div>
+            <div class="contact-text">
+              <h6 language="en">Telephone</h6>
+              <h6 language="de">Telefon</h6>
+              <p>+49 8652 655813</p>
+            </div>
+          </a>
+        </div>
+        <div class="contact-card">
+          <a href="mailto:info@mountain-entertainment.de">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-text">
+              <h6>E-Mail</h6>
+              <p>info@mountain-entertainment.de</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container2">
+     <div class="row">
+      <ul language="en" class="footer-links">
+        <li><a>Imprint</a></li>
+        <li><a>Privacy Policy</a></li>
+        <li><a href="./agb">Legal</a></li>
+      </ul>
+      <ul language="de" class="footer-links">
+        <li><a>Impressum</a></li>
+        <li><a>Datenschutz</a></li>
+        <li><a href="./agb">AGB</a></li>
+      </ul>
+      <!-- Social Icons -->
+     <div class="social-icons">
+      <ul>
+        <li><a href="https://www.instagram.com/me_berchtesgaden/" target="_blank" title="Instagram"><i aria-hidden="true" class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="https://www.facebook.com/MountainEntertainment/" target="_blank" title="Facebook"><i aria-hidden="true" class="fa-brands fa-facebook"></i></a></li>
+        <li><a href="https://www.youtube.com/user/mountainmove1" target="_blank" title="YouTube"><i aria-hidden="true" class="fa-brands fa-youtube"></i></a></li>
+        <li><a href="https://www.xing.com/profile/Peter_Beierl" target="_blank" title="Xing"><i aria-hidden="true" class="fa-brands fa-xing"></i></a></li>
+      </ul>
+      </div>
+      <!-- /Social Icons -->
+     </div>
+  </div>
+  <div class="container">
+
+     
+
+     <div class="row">
+
+       <div class="copyright">Mountain Sights © 2025. By <a href='https://www.mountain-entertainment.de/' target='_blank'> Mountain Entertainment</a></div>
+
+     </div>
+  </div>
+</footer>
+<!-- END FOOTER -->
+
+
+    <!-- Javascript files -->
+    <!-- jQuery -->
+    <script src="./js/jquery.js"></script>
+    <!-- Backstretch -->
+    <script src="./js/jquery.backstretch.min.js"></script>
+    <!-- CountDown  -->
+    <script src="./js/jquery.countdown.js"></script>
+    <!-- Validate form -->
+    <script src="./js/jquery.validate.js"></script>
+    <!-- Youtube Player -->
+    <script src="./js/jquery.mb.YTPlayer.min.js"></script>
+    <!-- Ajax chimp -->
+    <script src="./js/jquery.ajaxchimp.js"></script>
+    <!-- AOS -->
+    <script src="./js/aos.min.js"></script>
+    <!-- Counter -->
+    <script src="./js/jquery.countTo.min.js"></script>
+    <!-- jQuery Appear -->
+    <script src="./js/jquery.appear.min.js"></script>
+    <!-- Rain Animation -->
+    <script src="./js/rain.js"></script>
+    <!-- Rain Animation BG Video Remove is comment active bg video-->
+    <!-- <script src="js/rain_videobg.js"></script>-->
+    <!-- Google map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAV1KS10sb3O462XosfZTKohHJwi6C0joo"></script>
+    <!-- Custom -->
+    <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+</body>
+</html>

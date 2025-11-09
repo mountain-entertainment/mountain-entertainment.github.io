@@ -19,7 +19,16 @@
     <loc>https://mountain-concierge.de/sightseeing</loc>
   </url>
   <url>
-    <loc>https://mountain-concierge.de/gin-tonic-sound</loc>
+    <loc>https://mountain-concierge.de/gin-tonic-tasting</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/emerald-lake</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/alpine-border</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/summit-house</loc>
   </url>
   <url>
     <loc>https://mountain-concierge.de/winter/sightseeing</loc>
@@ -43,9 +52,6 @@
     <loc>https://mountain-concierge.de/highlights/alpine-loop</loc>
   </url>
   <url>
-    <loc>https://mountain-concierge.de/highlights/emerald-lake</loc>
-  </url>
-  <url>
     <loc>https://mountain-concierge.de/highlights/enchanted-forest</loc>
   </url>
   <url>
@@ -59,6 +65,15 @@
   </url>
   <url>
     <loc>https://mountain-concierge.de/highlights/snowshoe-hike</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/highlights/dokumentation</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/highlights/kaser</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/highlights/obersee</loc>
   </url>
 
 </urlset>
