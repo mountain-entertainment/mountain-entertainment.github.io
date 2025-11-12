@@ -291,10 +291,6 @@
      align-content: center;
 }
 
- .card-content .text p {
-    height: auto;
-}
-
  .card-btn {
      color: white;
      width: 190px;
