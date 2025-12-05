@@ -181,11 +181,6 @@
      height: 100vh;
      width: 100%;
      overflow: hidden;
-     display: flex;
-     flex-wrap: wrap;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
      position: relative;
 }
  header .typed {
@@ -205,7 +200,7 @@
  header .logo img {
      position: relative;
      z-index: 2;
-     max-width: 500px;
+     max-width: 300px;
 }
  header .line {
      display: inline-block;
@@ -277,6 +272,14 @@
  header .mouse a i {
      font-size: 1.3em;
      font-weight: 700;
+}
+
+header .container {
+    margin-top: 10em;
+    display: flex;
+    justify-content: end;
+    align-items: self-end;
+    flex-direction: column;
 }
 
  @keyframes wobbleArrow {
