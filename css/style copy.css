@@ -68,7 +68,7 @@
      position: fixed;
      top: 0;
      left: 0;
-     padding: 0 1.5rem;
+     padding: 0 2rem;
      background-color: white;
      z-index: var(--z-fixed);
      display: -webkit-box;
@@ -83,7 +83,7 @@
      align-items: center;
 }
  .header__logo, .nav__logo {
-     width: 60px;
+     width: 30px;
 }
  .header__toggle {
      font-size: 1.5rem;
@@ -98,7 +98,7 @@
          left: -100%;
          background-color: white;
          color: var(--orange);
-         width: 100%;
+         width: 75%;
          height: 100vh;
          padding: 1.5rem 0;
          z-index: var(--z-fixed);
@@ -367,7 +367,6 @@
 }
  .lang-wrapper {
      display: flex;
-     justify-content: center;
      align-items: center;
 }
  .switch {
