@@ -250,9 +250,9 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         }
       } else {
-        // Handle index.html (English root) → de (German root)
+        // Handle index.html (English root) → de/index.html (German root)
         if (currentFile === 'index.html' && isRootLevel) {
-          window.location.href = '/de';
+          window.location.href = '/de/';
         } else if (!isGermanFolder) {
           let newFile = enToDeFilenames[currentFile] || currentFile;
           let cleanFile = newFile.replace('.html', '');
