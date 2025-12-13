@@ -180,6 +180,7 @@ document.addEventListener("DOMContentLoaded", function () {
       
       // Mapping of English filenames to German filenames
       const enToDeFilenames = {
+        'index.html': 'de.html',
         'active.html': 'aktiv-tour.html',
         'alpine-border.html': 'alpengrenze.html',
         'emerald-lake.html': 'smaragdsee.html',
@@ -238,7 +239,11 @@ document.addEventListener("DOMContentLoaded", function () {
       
       if (this.checked) {
         console.log('Going to English from German');
-        if (isGermanFolder) {
+        // Handle de.html (German root) → index.html (English root)
+        if (currentFile === 'de.html' && isRootLevel) {
+          console.log('Redirecting from de.html to index.html');
+          window.location.href = '/';
+        } else if (isGermanFolder) {
           let newFile = deToEnFilenames[currentFile] || currentFile;
           let cleanFile = newFile.replace('.html', '');
           console.log('New file:', newFile, 'Clean file:', cleanFile);
@@ -258,7 +263,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       } else {
         console.log('Going to German from English');
-        if (!isGermanFolder) {
+        // Handle index.html (English root) → de.html (German root)
+        if (currentFile === 'index.html' && isRootLevel) {
+          console.log('Redirecting from index.html to de.html');
+          window.location.href = '/de.html';
+        } else if (!isGermanFolder) {
           let newFile = enToDeFilenames[currentFile] || currentFile;
           let cleanFile = newFile.replace('.html', '');
           console.log('New file:', newFile, 'Clean file:', cleanFile);
