@@ -176,7 +176,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (toggle) {
     toggle.addEventListener('change', function () {
-      console.log('Toggle clicked! Checked state:', this.checked);
       
       // Mapping of English filenames to German filenames
       const enToDeFilenames = {
@@ -219,68 +218,51 @@ document.addEventListener("DOMContentLoaded", function () {
       let currentPath = window.location.pathname;
       let currentFile = currentPath.substring(currentPath.lastIndexOf('/') + 1) || 'index.html';
       let folder = currentPath.substring(0, currentPath.lastIndexOf('/'));
-      
-      console.log('Current path:', currentPath);
-      console.log('Current file:', currentFile);
-      console.log('Folder:', folder);
+    
       
       // Normalize file name - add .html if not present
       if (!currentFile.includes('.') || currentFile === '') {
         currentFile = currentFile === '' ? 'index.html' : currentFile + '.html';
       }
-      console.log('Normalized file:', currentFile);
       
       let isRootLevel = !folder.includes('/winter') && !folder.includes('/highlights') && !folder.includes('/de/winter') && !folder.includes('/de/highlights');
       let isWinterLevel = folder.includes('/winter');
       let isHighlightsLevel = folder.includes('/highlights');
       let isGermanFolder = folder.includes('/de');
       
-      console.log('Is root level:', isRootLevel, 'Is winter level:', isWinterLevel, 'Is highlights level:', isHighlightsLevel, 'Is German folder:', isGermanFolder);
       
       if (this.checked) {
-        console.log('Going to English from German');
         // Handle de.html (German root) → index.html (English root)
         if (currentFile === 'de.html' && isRootLevel) {
-          console.log('Redirecting from de.html to index.html');
           window.location.href = '/';
         } else if (isGermanFolder) {
           let newFile = deToEnFilenames[currentFile] || currentFile;
           let cleanFile = newFile.replace('.html', '');
-          console.log('New file:', newFile, 'Clean file:', cleanFile);
           if (isRootLevel) {
             let basePath = folder.split('/de')[0];
-            console.log('Redirecting to:', basePath + '/' + cleanFile);
             window.location.href = basePath + '/' + cleanFile;
           } else if (isWinterLevel) {
             let basePath = folder.split('/de/winter')[0];
-            console.log('Redirecting to:', basePath + '/winter/' + cleanFile);
             window.location.href = basePath + '/winter/' + cleanFile;
           } else if (isHighlightsLevel) {
             let basePath = folder.split('/de/highlights')[0];
-            console.log('Redirecting to:', basePath + '/highlights/' + cleanFile);
             window.location.href = basePath + '/highlights/' + cleanFile;
           }
         }
       } else {
-        console.log('Going to German from English');
-        // Handle index.html (English root) → de.html (German root)
+        // Handle index.html (English root) → de (German root)
         if (currentFile === 'index.html' && isRootLevel) {
-          console.log('Redirecting from index.html to de.html');
-          window.location.href = '/de.html';
+          window.location.href = '/de';
         } else if (!isGermanFolder) {
           let newFile = enToDeFilenames[currentFile] || currentFile;
           let cleanFile = newFile.replace('.html', '');
-          console.log('New file:', newFile, 'Clean file:', cleanFile);
           if (isRootLevel) {
-            console.log('Redirecting to:', folder + '/de/' + cleanFile);
             window.location.href = folder + '/de/' + cleanFile;
           } else if (isWinterLevel) {
             let basePath = folder.split('/winter')[0];
-            console.log('Redirecting to:', basePath + '/de/winter/' + cleanFile);
             window.location.href = basePath + '/de/winter/' + cleanFile;
           } else if (isHighlightsLevel) {
             let basePath = folder.split('/highlights')[0];
-            console.log('Redirecting to:', basePath + '/de/highlights/' + cleanFile);
             window.location.href = basePath + '/de/highlights/' + cleanFile;
           }
         }
