@@ -229,12 +229,12 @@ document.addEventListener("DOMContentLoaded", function () {
       let isWinterLevel = folder.includes('/winter');
       let isHighlightsLevel = folder.includes('/highlights');
       let isGermanFolder = folder.includes('/de');
-      
+      const isGermanRoot = currentPath === '/de/' || currentPath === '/de';
       
       if (this.checked) {
         // Handle de.html (German root) → index.html (English root)
         if (currentFile === 'de.html' && isRootLevel) {
-          window.location.href = '/';
+          window.location.href = './';
         } else if (isGermanFolder) {
           let newFile = deToEnFilenames[currentFile] || currentFile;
           let cleanFile = newFile.replace('.html', '');
@@ -251,8 +251,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       } else {
         // Handle index.html (English root) → de/index.html (German root)
-        if (currentFile === 'index.html' && isRootLevel) {
-          window.location.href = '/de/';
+        if (isGermanRoot) {
+            window.location.href = '/';
         } else if (!isGermanFolder) {
           let newFile = enToDeFilenames[currentFile] || currentFile;
           let cleanFile = newFile.replace('.html', '');
