@@ -194,7 +194,7 @@ if (toggle) {
       'agb.html': 'agb.html',
       // Winter files
       'berchtesgadener-advent.html': 'berchtesgadener-advent.html',
-      'gin-tonic-vault.html': 'gin-tonic-tasting-bei-grassl.html',
+      'gin-tonic-vault.html': 'grassl-tresor.html',
       'salt-mines.html': 'salzbergwerk.html',
       'snowshoe-hike.html': 'schneeschuhwanderung.html',
       'winter-hike.html': 'winterwanderung.html',
