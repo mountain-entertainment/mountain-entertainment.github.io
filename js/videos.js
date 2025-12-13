@@ -25,9 +25,20 @@ function getVideoBasePath() {
   return './videos-folder/';
 }
 
+// Get correct base path for thumbnails (works for both English and German)
+function getThumbnailBasePath() {
+  const currentPath = window.location.pathname;
+  if (currentPath.includes('/de/')) {
+    return '../';
+  }
+  return './';
+}
+
 const videoBasePath = getVideoBasePath();
+const thumbnailBasePath = getThumbnailBasePath();
 
 let currentlyLoadingVideo = false;
+let currentSelectedVideoDiv = null;
 
 function setVideo(season, index) {
   const video = videosBySeason[season][index];
@@ -117,14 +128,23 @@ function populateVideoList(season) {
   videosBySeason[season].forEach((video, index) => {
     const videoDiv = document.createElement("div");
     videoDiv.classList.add("video");
+    
+    let thumbPath = video.thumb;
+    if (thumbPath.startsWith("./")) {
+      thumbPath = thumbnailBasePath + thumbPath.substring(2);
+    }
+    
     videoDiv.innerHTML = `
-      <img class="video-thumb" src="${video.thumb}" alt="${video.title}">
+      <img class="video-thumb" src="${thumbPath}" alt="${video.title}">
       <h3 class="video-title">${video.title}</h3>
     `;
+    videoDiv.style.cursor = "pointer";
     videoDiv.addEventListener("click", () => {
-      // Add loading effect to the clicked thumbnail
-      document.querySelectorAll(".video-list .video").forEach(v => v.style.opacity = "0.6");
+      document.querySelectorAll(".video-list .video").forEach(v => {
+        v.style.opacity = "0.6";
+      });
       videoDiv.style.opacity = "1";
+      currentSelectedVideoDiv = videoDiv;
       setVideo(season, index);
     });
     listContainer.appendChild(videoDiv);
@@ -133,6 +153,7 @@ function populateVideoList(season) {
   const firstVideo = listContainer.querySelector(".video");
   if (firstVideo) {
     firstVideo.style.opacity = "1";
+    currentSelectedVideoDiv = firstVideo;
   }
 }
 
