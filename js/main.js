@@ -160,10 +160,122 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  function initializeLanguageToggle() {
+    const currentLang = document.documentElement.getAttribute('lang') || 'en';
+    const isGermanPage = currentLang === 'de';
+    
+    if (toggle) {
+      toggle.checked = !isGermanPage;
+      showLanguage(isGermanPage ? 'de' : 'en');
+    }
+  }
+
+  initializeLanguageToggle();
+
+  setTimeout(initializeLanguageToggle, 100);
+
   if (toggle) {
-    showLanguage(toggle.checked ? 'en' : 'de');
     toggle.addEventListener('change', function () {
-      showLanguage(this.checked ? 'en' : 'de');
+      console.log('Toggle clicked! Checked state:', this.checked);
+      
+      // Mapping of English filenames to German filenames
+      const enToDeFilenames = {
+        'active.html': 'aktiv-tour.html',
+        'alpine-border.html': 'alpengrenze.html',
+        'emerald-lake.html': 'smaragdsee.html',
+        'gin-tonic-tasting.html': 'gin-tonic-tasting.html',
+        'insider.html': 'insider-tour.html',
+        'photo.html': 'fotostop-tour.html',
+        'rain.html': 'regen-tour.html',
+        'sightseeing.html': 'sightseeing-tour.html',
+        'sojourns.html': 'erlebnisse.html',
+        'summit-house.html': 'gipfelbau.html',
+        'videos.html': 'videos.html',
+        'agb.html': 'agb.html',
+        // Winter files
+        'berchtesgadener-advent.html': 'berchtesgadener-advent.html',
+        'gin-tonic-vault.html': 'gin-tonic-tasting-bei-grassl.html',
+        'salt-mines.html': 'salzbergwerk.html',
+        'snowshoe-hike.html': 'schneeschuhwanderung.html',
+        'winter-hike.html': 'winterwanderung.html',
+        // Highlights files
+        'alpine-loop.html': 'hohenringstrasse.html',
+        'dokumentation.html': 'ein-ort-und-seine-geschichte.html',
+        'enchanted-forest.html': 'zauberwald-und-smaragdgruener-see.html',
+        'hidden-lake.html': 'verborgener-see.html',
+        'kaser.html': 'kaser.html',
+        'lake-church.html': 'wallfahrtskirche.html',
+        'lantern-hike.html': 'laternenwanderung.html',
+        'royal-castle.html': 'koenigliches-schloss.html',
+        'skyline-peak.html': 'hochpanorama.html'
+      };
+
+      const deToEnFilenames = {};
+      Object.keys(enToDeFilenames).forEach(key => {
+        deToEnFilenames[enToDeFilenames[key]] = key;
+      });
+
+      let currentPath = window.location.pathname;
+      let currentFile = currentPath.substring(currentPath.lastIndexOf('/') + 1) || 'index.html';
+      let folder = currentPath.substring(0, currentPath.lastIndexOf('/'));
+      
+      console.log('Current path:', currentPath);
+      console.log('Current file:', currentFile);
+      console.log('Folder:', folder);
+      
+      // Normalize file name - add .html if not present
+      if (!currentFile.includes('.') || currentFile === '') {
+        currentFile = currentFile === '' ? 'index.html' : currentFile + '.html';
+      }
+      console.log('Normalized file:', currentFile);
+      
+      let isRootLevel = !folder.includes('/winter') && !folder.includes('/highlights') && !folder.includes('/de/winter') && !folder.includes('/de/highlights');
+      let isWinterLevel = folder.includes('/winter');
+      let isHighlightsLevel = folder.includes('/highlights');
+      let isGermanFolder = folder.includes('/de');
+      
+      console.log('Is root level:', isRootLevel, 'Is winter level:', isWinterLevel, 'Is highlights level:', isHighlightsLevel, 'Is German folder:', isGermanFolder);
+      
+      if (this.checked) {
+        console.log('Going to English from German');
+        if (isGermanFolder) {
+          let newFile = deToEnFilenames[currentFile] || currentFile;
+          let cleanFile = newFile.replace('.html', '');
+          console.log('New file:', newFile, 'Clean file:', cleanFile);
+          if (isRootLevel) {
+            let basePath = folder.split('/de')[0];
+            console.log('Redirecting to:', basePath + '/' + cleanFile);
+            window.location.href = basePath + '/' + cleanFile;
+          } else if (isWinterLevel) {
+            let basePath = folder.split('/de/winter')[0];
+            console.log('Redirecting to:', basePath + '/winter/' + cleanFile);
+            window.location.href = basePath + '/winter/' + cleanFile;
+          } else if (isHighlightsLevel) {
+            let basePath = folder.split('/de/highlights')[0];
+            console.log('Redirecting to:', basePath + '/highlights/' + cleanFile);
+            window.location.href = basePath + '/highlights/' + cleanFile;
+          }
+        }
+      } else {
+        console.log('Going to German from English');
+        if (!isGermanFolder) {
+          let newFile = enToDeFilenames[currentFile] || currentFile;
+          let cleanFile = newFile.replace('.html', '');
+          console.log('New file:', newFile, 'Clean file:', cleanFile);
+          if (isRootLevel) {
+            console.log('Redirecting to:', folder + '/de/' + cleanFile);
+            window.location.href = folder + '/de/' + cleanFile;
+          } else if (isWinterLevel) {
+            let basePath = folder.split('/winter')[0];
+            console.log('Redirecting to:', basePath + '/de/winter/' + cleanFile);
+            window.location.href = basePath + '/de/winter/' + cleanFile;
+          } else if (isHighlightsLevel) {
+            let basePath = folder.split('/highlights')[0];
+            console.log('Redirecting to:', basePath + '/de/highlights/' + cleanFile);
+            window.location.href = basePath + '/de/highlights/' + cleanFile;
+          }
+        }
+      }
     });
   }
 

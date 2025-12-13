@@ -4,7 +4,7 @@
     <loc>https://mountain-concierge.de/</loc>
   </url>
   <url>
-    <loc>https://mountain-concierge.de/storyteller</loc>
+    <loc>https://mountain-concierge.de/insider</loc>
   </url>
   <url>
     <loc>https://mountain-concierge.de/photo</loc>
@@ -31,28 +31,49 @@
     <loc>https://mountain-concierge.de/summit-house</loc>
   </url>
   <url>
-    <loc>https://mountain-concierge.de/winter/sightseeing</loc>
+    <loc>https://mountain-concierge.de/sojourns</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/videos</loc>
   </url>
   <url>
     <loc>https://mountain-concierge.de/agb</loc>
   </url>
   <url>
-    <loc>https://mountain-concierge.de/winter/gin-tonic-vault</loc>
+    <loc>https://mountain-concierge.de/winter/sightseeing</loc>
   </url>
   <url>
     <loc>https://mountain-concierge.de/winter/berchtesgadener-advent</loc>
   </url>
   <url>
+    <loc>https://mountain-concierge.de/winter/gin-tonic-vault</loc>
+  </url>
+  <url>
     <loc>https://mountain-concierge.de/winter/salt-mines</loc>
   </url>
   <url>
-    <loc>https://mountain-concierge.de/sojourns</loc>
+    <loc>https://mountain-concierge.de/winter/snowshoe-hike</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/winter/winter-hike</loc>
   </url>
   <url>
     <loc>https://mountain-concierge.de/highlights/alpine-loop</loc>
   </url>
   <url>
+    <loc>https://mountain-concierge.de/highlights/dokumentation</loc>
+  </url>
+  <url>
     <loc>https://mountain-concierge.de/highlights/enchanted-forest</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/highlights/hidden-lake</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/highlights/kaser</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/highlights/lake-church</loc>
   </url>
   <url>
     <loc>https://mountain-concierge.de/highlights/lantern-hike</loc>
@@ -64,19 +85,87 @@
     <loc>https://mountain-concierge.de/highlights/skyline-peak</loc>
   </url>
   <url>
-    <loc>https://mountain-concierge.de/highlights/snowshoe-hike</loc>
+    <loc>https://mountain-concierge.de/de/</loc>
   </url>
   <url>
-    <loc>https://mountain-concierge.de/highlights/dokumentation</loc>
+    <loc>https://mountain-concierge.de/de/insider-tour</loc>
   </url>
   <url>
-    <loc>https://mountain-concierge.de/highlights/kaser</loc>
+    <loc>https://mountain-concierge.de/de/fotostop-tour</loc>
   </url>
   <url>
-    <loc>https://mountain-concierge.de/highlights/hidden-lake</loc>
+    <loc>https://mountain-concierge.de/de/aktiv-tour</loc>
   </url>
   <url>
-    <loc>https://mountain-concierge.de/highlights/lake-church</loc>
+    <loc>https://mountain-concierge.de/de/regen-tour</loc>
   </url>
-
+  <url>
+    <loc>https://mountain-concierge.de/de/sightseeing-tour</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/de/gin-tonic-tasting</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/de/smaragdsee</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/de/alpengrenze</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/de/gipfelbau</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/de/erlebnisse</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/de/videos</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/de/agb</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/de/winter/winter-sightseeing-tour</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/de/winter/berchtesgadener-advent</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/de/winter/gin-tonic-tasting-bei-grassl</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/de/winter/salzbergwerk</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/de/winter/schneeschuhwanderung</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/de/winter/winterwanderung</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/de/highlights/hohenringstrasse</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/de/highlights/ein-ort-und-seine-geschichte</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/de/highlights/zauberwald-und-smaragdgruener-see</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/de/highlights/verborgener-see</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/de/highlights/kaser</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/de/highlights/wallfahrtskirche</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/de/highlights/laternenwanderung</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/de/highlights/koenigliches-schloss</loc>
+  </url>
+  <url>
+    <loc>https://mountain-concierge.de/de/highlights/hochpanorama</loc>
+  </url>
 </urlset>

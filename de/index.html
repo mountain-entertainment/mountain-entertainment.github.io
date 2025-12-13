@@ -1,0 +1,661 @@
+<!DOCTYPE HTML>
+<html lang="de">
+
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable=no">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="HandheldFriendly" content="True">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <meta name="description" content="Mountain Concierge - Ihr Bergexperte für Erlebnisse">
+      <meta name="keywords" content="Mountain Concierge, Berchtesgaden Touren, private Bergtouren, maßgeschneiderte Alpenerlebnisse, luxuriöser Bergführer, VIP-Touren, Berchtesgaden Sightseeing, Alpen Abenteuer, exklusive Bergtouren, Gin-Tonic-Tasting, Wintertouren Berchtesgaden, lokale Bergführer">
+      <meta name="author" content="Mountain Concierge, Mountain Entertainment">
+    
+      <title>Mountain Concierge</title>
+      
+      <!-- ============ GOOGLE FONTS ============ -->
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+      <!-- CSS -->
+      <!-- Animate css -->
+      <link rel="stylesheet" type="text/css" href="../css/animate.css">
+      <!-- Font-Awesome 6 PRO-->
+      <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+      <!-- Bootstrap 5 -->
+      <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+      <!-- AOS -->
+      <link rel="stylesheet" type="text/css" href="../css/aos.min.css">
+      <!-- Custom styles CSS -->
+      <link rel="stylesheet" type="text/css" href="../css/style.css">
+      <link rel="stylesheet" type="text/css" href="../css/footer.css">
+      <link rel="stylesheet" href="../css/style copy.css">
+      <link rel="stylesheet" href="../css/carousel.css">
+      <link rel="stylesheet" href="../css/contact.css">
+      <link rel="stylesheet" href="../css/tour-carousel.css">
+      <link rel="stylesheet" href="../css/fa.css">
+      <!-- Favicons -->
+      <link rel="shortcut icon" href="../images/favicon.ico">
+
+  </head>
+
+  <body>
+
+<!-- LOADER TEMPLATE -->
+<div id="page-loader">
+  <div class="loader-icon fa fa-spin colored-border"></div>
+</div>
+<!-- /LOADER TEMPLATE -->
+
+<!-- HEADER -->
+<header>
+
+  <div class="header-nav">
+    <a href="#" class="header__logo"><img src="../images/MC_RGB_Icon.svg" alt="logo" fetchpriority="high"></a>
+
+    <ion-icon name="menu-outline" class="header__toggle" id="nav-toggle"></ion-icon>
+
+    <nav class="nav" id="nav-menu">
+        <div class="nav__content bd-grid">
+
+            <ion-icon name="close-outline" class="nav__close" id="nav-close"></ion-icon>
+
+            <a href="#" class="nav__logo"><img src="../images/MC_RGB_Icon.svg" alt="logo"></a>
+
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="./#about" class="nav__link">Über uns</a></li>
+                    <li class="nav__item"><a class="nav__link_dropdown">Touren</a><i class="fas fa fa-chevron-down"></i>
+                      <div class="nav_dropdown">
+                        <a href="#tours" class="nav__link">Sommer</a>
+                        <a href="#tours-winter" class="nav__link">Winter</a>
+                        <a href="../erlebnisse" class="nav__link">Alle</a>
+                      </div>
+                    </li>
+                    <li class="nav__item"><a href="../videos" class="nav__link">Videos</a></li>
+                    <li class="nav__item"><a href="#it's ME" class="nav__link">It's ME</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="lang-wrapper">
+            <div class="switch">
+                <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+                <label for="language-toggle"></label>
+                <span class="on"><img src="../img/icons/germany.png"></span>
+                <span class="off"><img src="../img/icons/united-kingdom.png"></span>
+            </div>
+        </div>
+    </nav>
+  </div>
+  
+  <div class="container">
+
+      <div class="logo"><img src="../images/MC_RGB_logo.svg" alt="logo"></div>
+
+      <!-- MOUSE ICON -->
+      <div class="mouse-wrapper">
+      <div class="mouse">
+        <a href="#about">
+          <span>scroll</span>
+          <i class="fa fa-chevron-down"></i>
+        </a>
+      </div>
+      </div>
+      <!-- /MOUSE ICON -->
+
+  </div>
+
+     <!-- EFFECT BOX -->
+     <div id="effect-box">
+      <canvas id="rain"></canvas>
+    </div>
+
+    <div class="video-container" style="background-image: url('../media/eaglesnest-img.png'); background-size: cover; background-position: center;">
+      <div class="video-inner">
+        <video autoplay muted loop playsinline>
+          <source src="../videos-folder/eagles_nest.MP4" type="video/mp4" />
+          Ihr Browser unterstützt das Video-Tag nicht.
+        </video>
+      </div>
+      <div class="video-overlay"></div>
+    </div>
+
+
+    <script>
+
+      var dropAlpha = "../img/drop-alpha.png";
+      var dropColor = "../img/drop-color.png";
+      var imagebg = "../img/rain.jpg";
+      var imagefg = "../img/rain.jpg";
+
+    </script>
+
+</header>
+<!-- END HEADER -->
+
+<!-- About Section -->
+<section class="about" id="about">
+
+  <div class="about-inner">
+    <div style="display: contents;">
+      <h4 class="hxl">Ihr persönlicher Bergguide in Berchtesgaden!</h4>
+    </div>
+    <h1>Willkommen bei Mountain Concierge</h1>
+    <p>Über uns:</p>
+    <p><strong>Mountain Concierge</strong> ist eine neuartige Agentur, die es in Bergregionen so noch nicht gibt. Wir stehen Ihnen als Ihre lokalen Guides zur Seite, um Ihnen die atemberaubende Natur und Kultur desTalkessels von Berchtesgaden näherzubringen. Unsere Touren sind so individuell wie Sie und bieten Ihnen die Möglichkeit, die Schönheit der Alpen auf private und stilvolle Art zu erleben.</p>
+    <h5 style="margin-top: 20px;">Unsere Touren:</h5>
+    <p>Entdecken Sie die Vielfalt unserer Touren, die perfekt auf Ihre Wünsche abgestimmt sind:</p>
+    <ul>
+      <li><a href="../insider-tour">Insider-Tour</a>: Entdecken Sie verborgene Geschichten, Legenden und regionale Geheimnisse mit unseren lokalen Guides, während Sie die atemberaubende Landschaft erkunden.</li>
+      <li><a href="../fotostop-tour">Fotostop Tour</a>: Halten Sie die schönsten Momente fest! Unsere Guides zeigen Ihnen die spektakulärsten Fotospots der Umgebung.</li>
+      <li><a href="../sightseeing-tour">Sightseeing-Tour</a>: Erleben Sie die Highlights und versteckten Schätze von Berchtesgaden ganz entspannt und nach Ihren Interessen.</li>
+      <li><a href="../gin-tonic-tasting">Individuelle Tour</a>: Gestalten Sie Ihre eigene private Tour ganz nach Ihren Wünschen – persönlich und exklusiv.</li>
+    </ul>
+    <p>...und viele mehr!</p>
+    <p>Alle privaten Touren finden aktuell im malerischen Talkessel von Berchtesgaden statt. Unsere komfortablen VW Busse und der VW Amarok bringen Sie stilvoll zu den schönsten Plätzen der Region. Auf jede Tour stellen wir Ihnen ausreichend Wasser zur Verfügung, damit Sie erfrischt bleiben.</p>
+  </div>
+
+</section>
+
+<section class="why">
+  <div class="why-inner">
+    <h1>Warum Mountain Concierge?</h1>
+    <p>Wir bieten Ihnen die Möglichkeit, die Sehenswürdigkeiten in und um Berchtesgaden privat und in Ruhe zu entdecken, ohne den Trubel des Massentourismus. Profitieren Sie von unserer lokalen Expertise und erleben Sie die Berge von einer ganz neuen Seite.</p>
+    <p>Buchen Sie noch heute Ihre Tour!</p>
+    <a class="cta-btn cta-btn-w" href="#contact">zum Kontakt</a>
+  </div>
+</section>
+
+<!-- Section Services -->
+<section class="section-services" id="services">
+    <div class="col-md-6 left-box">
+      <img src="../img/bi-gin-tasting-4.jpg" alt="Mountain Concierge Services" class="services-image" loading="lazy">
+      <div class="title-section" data-aos="custom-fade-right" data-aos-delay="100" data-aos-once="true">
+        <i class="fa-solid fa-mountain-sun"></i>
+        <h2>Services</h2>
+        <p>Bei Mountain Concierge trifft Luxus auf Authentizität. Unsere Dienstleistungen sind auf diejenigen zugeschnitten, die mehr als nur eine Aussicht suchen - wir bieten Erlebnisse, die eindringlich, exklusiv und unvergesslich sind. 
+        Wir kümmern uns um jedes Detail, damit Sie Berchtesgaden wie ein echter VIP genießen können.</p>
+      </div>
+
+    </div>
+    
+    <div class="col-md-6 right-box">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="services-box" data-aos="custom-fade-up" data-aos-delay="100" data-aos-once="true">
+            <div class="icon">
+              <i aria-hidden="true" class="fa-solid fa-route"></i>
+            </div>
+            <div class="info-box">
+              <h2>Maßgeschneiderte Touren</h2>
+              <p>Die Touren können an Ihre Interessen angepasst werden - ob Naturhighlights wie der Königssee, historische Stätten wie das Kehlsteinhaus oder gemütliche Almbesuche.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="services-box" data-aos="custom-fade-up" data-aos-delay="200" data-aos-once="true">
+            <div class="icon">
+              <i aria-hidden="true" class="fa-regular fa-clock"></i>
+            </div>
+            <div class="info-box">
+              <h2>Ihre Zeit - Ihr Tempo</h2>
+              <p>Von kurzen Halbtagestouren bis hin zu ganztägigen Abenteuern mit Picknick oder Einkehr in urigen Berggasthöfen.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="services-box" data-aos="custom-fade-up" data-aos-delay="300" data-aos-once="true">
+            <div class="icon">
+              <i aria-hidden="true" class="fa-solid fa-map-location-dot"></i>
+            </div>
+            <div class="info-box">
+              <h2>Lokale Experten</h2>
+              <p>Private Führer geben ihr Wissen über Geschichte, Geologie und Traditionen weiter und beantworten individuelle Fragen.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="services-box" data-aos="custom-fade-up" data-aos-delay="400" data-aos-once="true">
+            <div class="icon">
+              <i aria-hidden="true" class="fa-solid fa-crown"></i>
+            </div>
+            <div class="info-box">
+              <h2>VIP</h2>
+              <p>Private Schifffahrten auf dem Königssee, Frühbesuche im Kehlsteinhaus oder geführte Wanderungen inklusive Gepäcktransport.</p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- Section Tours -->
+<section class="tours" id="tours">
+
+  <div class="row">
+
+    <div class="col-md-6 left-box">
+      <div>
+        <h5 class="hl">Maßgeschneidert für Reisende mit hohen Ansprüchen</h5>
+      <h1>Touren</h1>
+      <p>Unsere ausgewählte Auswahl an privaten Touren bietet mehr als nur Sightseeing - sie bieten eine Geschichte, eine Verbindung, einen Moment, der zur Erinnerung wird.</p>
+      </div>
+    </div>
+
+    <div class="col-md-6 right-box">
+      <div class="gallery js-flickity"
+        data-flickity-options='{ "wrapAround": true }'>
+        <div class="gallery-cell">
+          <div>
+            <div class="card-bg">
+              <div class="card-img-wrapper">
+                <img src="../img/cards/cows.jpg" alt="Insider Tour" loading="lazy">
+              </div>
+               <h1>Insider Tour</h1>
+            </div>
+            <div class="card-content">
+              <div class="text">
+                <h3>Insider-Geschichten und alpine Geheimnisse</h3>
+                <p>Erleben Sie mit Ihrem Guide faszinierende Insider-Geschichten, echte Einblicke und geheime Orte, die nur echte Kenner entdecken.</p>
+              </div>
+              <a class="card-btn" href="../insider-tour">Tourdetails sehen</a>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-cell">
+           <div>
+            <div class="card-bg">
+              <div class="card-img-wrapper">
+                <img src="../img/berchtesgaden-mit-watzmann-im-sommer.jpg" alt="Photostop Tour" loading="lazy">
+              </div>
+              <h1>Fotostop Tour</h1>              
+            </div>
+           <div class="card-content">
+              <div class="text">
+                <h3>Die besten Orte für Ihre Fotos</h3>
+                <p>Entdecken Sie die fotogensten Orte der Region - von dramatischen Bergkulissen bis hin zu ruhigen Seespiegelungen - und lassen Sie sich dabei von einem Profi begleiten.</p>
+              </div>
+              <a class="card-btn" href="../fotostop-tour">Tourdetails sehen</a>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-cell">
+           <div>
+            <div class="card-bg">
+              <div class="card-img-wrapper">
+                <img src="../img/bi-sommeraction-segway-6.jpg" alt="Active Tour" loading="lazy">
+              </div>
+               <h1>Aktiv Tour</h1>
+            </div>             
+           <div class="card-content">
+              <div class="text">
+                <h3>Lassen Sie etwas Dampf ab!</h3>
+                <p>Gehen Sie bei geführten Wanderungen, E-Bike-Routen oder Segwaytouren an Ihre Grenzen - abgestimmt auf Ihr Niveau und Ihre Interessen, immer mit VIP-Betreuung.</p>
+              </div>
+              <a class="card-btn" href="../aktiv-tour">Tourdetails sehen</a>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-cell">
+           <div>
+            <div class="card-bg">
+              <div class="card-img-wrapper">
+                <img src="../img/storyteller/waterdrops.jpg" alt="Rain Tour" loading="lazy">
+              </div>
+                <h1>Regen Tour</h1>
+            </div>  
+           <div class="card-content">
+              <div class="text">
+                <h3>Der Regen enthüllt verborgene Schätze</h3>
+                <p>Bei uns glänzen auch Regentage. Erkunden Sie historische Salzbergwerke, entspannen Sie in luxuriösen Spas oder genießen Sie ein Gin-Tasting - Berchtesgaden, neu interpretiert.</p>
+              </div>
+              <a class="card-btn" href="../regen-tour">Tourdetails sehen</a>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-cell">
+             <div>
+            <div class="card-bg">
+              <div class="card-img-wrapper">
+                <img src="../img/berchtesgaden-mit-watzmann-im-sommer.jpg" alt="Photostop Tour" loading="lazy">
+              </div>
+              <h1>Sightseeing Tour</h1>
+            </div>
+           <div class="card-content">
+              <div class="text">
+                <h3>Entdecken Sie Berchtesgaden auf Ihre Art</h3>
+                <p>Entdecken Sie Berchtesgaden entspannt und ganz nach Ihren Wünschen – ob Natur, Kultur oder geheime Lieblingsorte, alles in Ihrem Tempo.</p>
+              </div>
+              <a class="card-btn" href="../sightseeing">Tourdetails sehen</a>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-cell">
+             <div>
+            <div class="card-bg card-darken">
+              <div class="card-img-wrapper">
+                <img src="../img/gin-tonic-small.jpg" alt="Gin-Tonic-Tasting" loading="lazy">
+              </div>
+              <h1>Gin-Tonic-Tasting</h1>
+            </div>
+           <div class="card-content">
+              <div class="text">
+                <h3>Genuss, Klang und Alpenzauber</h3>
+                <p>Erleben Sie exklusive Gin-Tonic-Tastings an außergewöhnlichen Orten, untermalt von stimmungsvoller Musik und Alpenpanorama. Ihre private Genussreise – individuell gestaltet, voller besonderer Aromen und Klänge in Berchtesgaden.</p>
+              </div>
+              <a class="card-btn" href="../gin-tonic-tasting">Tourdetails sehen</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+</section>
+
+<section class="team" id="team">
+
+  <div class="row row-gin">
+
+    <div class="col-md-6 right-box">
+      <img class="background-image-gin-img" src="../img/gin-tonic.jpg" alt="Gin-Tonic-Tasting" class="gin-image" loading="lazy">
+      <div class="background-image-gin">
+        <div class="cta">
+          <h5>Genuss, Klang und Alpenzauber</h5>
+          <h2>Gin-Tonic-Tasting</h2>
+          <div class="liq"><a class="cta-btn cta-btn-o" href="../gin-tonic-tasting">Details sehen</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 left-box">
+
+      <div style="margin-top: 30px;">
+        <h5>Der Gin des Lebens liegt in den Bergen</h5>
+        <h1>Gin-Tonic-Tasting</h1>
+      </div>
+      <p>Gin-Tonic-Tasting ist die einzigartige Verbindung aus Alpenflair, exklusiven Gin-Tastings und ausgewählter Musik. Genießen Sie handverlesene Gins und Tonics an außergewöhnlichen Orten – begleitet von Live-Sounds oder DJ-Sets, die die Stimmung perfekt untermalen. Ob draußen mit Panoramablick oder drinnen im stilvollen Ambiente: Dieses Event verspricht unvergessliche Genussmomente, Klang und Alpenzauber.</p>
+    </div>
+
+</div>
+
+</section>
+
+<!-- <img id="isDay" style="height: 50px;" src="img/icons/sun.png">
+<div id="temperature">Loading weather...</div>
+<div id="humidity">Loading weather...</div>
+<div id="weather_code">Loading weather...</div>
+<div id="wind">Loading weather...</div> -->
+
+<section class="tours" id="tours-winter">
+
+  <div class="row">
+
+    <div class="col-md-6 left-box">
+      <div>
+        <h5 class="hl">Maßgeschneidert für Reisende mit hohen Ansprüchen</h5>
+      <h1>Winter Touren</h1>
+      <p>Unsere ausgewählte Auswahl an privaten Touren bietet mehr als nur Sightseeing - sie bieten eine Geschichte, eine Verbindung, einen Moment, der zur Erinnerung wird.</p>
+      </div>
+    </div>
+
+    <div class="col-md-6 right-box">
+      <div class="gallery js-flickity"
+        data-flickity-options='{ "wrapAround": true }'>
+        <div class="gallery-cell">
+             <div>
+            <div class="card-bg">
+              <div class="card-img-wrapper">
+                <img src="../img/winter/sun-thtough-trees.jpg" alt="Winter Sightseeing" loading="lazy">
+              </div>
+              <h1>Winter Sightseeing</h1>
+            </div>
+           <div class="card-content">
+              <div class="text">
+                <h3>Entdecken Sie Berchtesgadens Winterzauber</h3>
+                <p>Erleben Sie verschneite Landschaften und gemütliche Dörfer auf einer privaten Multivan-Tour – entdecken Sie Berchtesgadens Winterhöhepunkte entspannt und komfortabel.</p>
+              </div>
+              <a class="card-btn" href="./winter/winter-sightseeing-tour">Tourdetails sehen</a>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-cell">
+          <div>
+            <div class="card-bg">
+              <div class="card-img-wrapper">
+                <img src="../img/winter/advent/Berchtesgadener Advent.jpg" alt="Berchtesgadener Advent Market" loading="lazy">
+              </div>
+              <h1>Berchtesgadener Advent</h1>
+            </div>
+            <div class="card-content">
+              <div class="text">
+                <h3>Ein alpenländisches Weihnachten voller Tradition</h3>
+                <p>Schlendern Sie im Advent durch die stimmungsvollen Gassen Berchtesgadens – wo festliche Lichter, echtes Handwerk und alpenländische Köstlichkeiten eine zeitlose Winteratmosphäre schaffen.</p>
+              </div>
+              <a class="card-btn" href="./winter/berchtesgadener-advent">Tourdetails sehen</a>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-cell">
+          <div>
+            <div class="card-bg">
+              <div class="card-img-wrapper">
+                <img src="../img/winter/Grassl-Markt.jpg" alt="Gin & Tonic Tasting in the Vault" loading="lazy">
+              </div>
+              <h1>Gin-Tonic Tresor</h1>
+            </div>
+            <div class="card-content">
+              <div class="text">
+                <h3>Eine Verkostung mit geheimnisvollem Flair</h3>
+                <p>Erleben Sie eine einzigartige Gin-&-Tonic-Verkostung bei Grassl – an einem außergewöhnlichen Ort, der mehr birgt als edle Spirituosen. Ein exklusives Winterhighlight für neugierige Gäste.</p>
+              </div>
+              <a class="card-btn" href="./winter/gin-tonic-tasting-bei-grassl">Tourdetails sehen</a>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-cell">
+          <div>
+            <div class="card-bg">
+              <div class="card-img-wrapper">
+                <img src="../img/winter/salzbergwerk.jpeg" alt="Salt Mines Tour" loading="lazy">
+              </div>
+              <h1>Salzbergwerke</h1>
+            </div>
+            <div class="card-content">
+              <div class="text">
+                <h3>Entdecken Sie Berchtesgadens Untertagewelt</h3>
+                <p>Tauchen Sie tief in die historischen Salzbergwerke ein – rutschen Sie durch Stollen, überqueren Sie den Spiegelsee und erleben Sie die Magie Berchtesgadens unter Tage.</p>
+              </div>
+              <a class="card-btn" href="./winter/salzbergwerk">Tourdetails sehen</a>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-cell">
+          <div>
+            <div class="card-bg">
+              <div class="card-img-wrapper">
+                <img src="../img/winter/IMG_5169.jpeg" alt="Winter Hike" loading="lazy">
+              </div>
+              <h1>Winter&shy;wanderung</h1>
+            </div>
+            <div class="card-content">
+              <div class="text">
+                <h3>Entdecken Sie Berchtesgadens Winterwanderwege</h3>
+                <p>Tauchen Sie ein in eine verschneite Winterwelt – wandern Sie auf stillen Waldwegen, atmen Sie klare Bergluft und spüren Sie die Freiheit des Winters in Berchtesgaden.</p>
+              </div>
+              <a class="card-btn" href="./winter/winterwanderung">Tourdetails sehen</a>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-cell">
+          <div>
+            <div class="card-bg">
+              <div class="card-img-wrapper">
+                <img src="../img/winter/IMG_6497.jpeg" alt="Snowshoe Hike" loading="lazy">
+              </div>
+              <h1>Schneeschuh&shy;wanderung</h1>
+            </div>
+            <div class="card-content">
+              <div class="text">
+                <h3>Entdecken Sie Berchtesgaden mit Schneeschuhen</h3>
+                <p>Wandern Sie durch unberührte Winterlandschaften – verlassen Sie die ausgetretenen Pfade, genießen Sie alpine Panoramablicke und erleben Sie die stille Schönheit des Winters bei einer Schneeschuhwanderung.</p>
+              </div>
+              <a class="card-btn" href="./winter/schneeschuhwanderung">Tourdetails sehen</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+</section>
+
+<!-- Section Team -->
+<section class="team" id="team">
+
+  <div class="row" id="it's ME">
+
+    <div class="col-md-6 right-box">
+      <div class="background-image">
+        <div class="cta">
+          <h5>"Amüsieren Sie sich, wir machen den Rest!"</h5>
+          <h2>it's ME Eventagentur</h2>
+          <div class="liq"><a class="cta-btn cta-btn-o" href="https://www.mountain-entertainment.de/">Unsere Homepage besuchen</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 left-box">
+   
+      <div class="logo"><img src="../images/it-me.svg"></div>
+      <div>
+        <h5 class="hl">Der richtige Partner für Ihr Event in Berchtesgaden</h5>
+        <h1>Mountain Entertainment</h1>
+      </div>
+      <p>Wir sind mehr als eine Eventagentur - wir sind Ihre kreativen Partner bei der Gestaltung unvergesslicher alpiner Erlebnisse. Von Firmenveranstaltungen und hochkarätigen Incentives bis hin zu intimen Feiern, 
+      unser Team verwandelt Ideen in emotionale, elegante Realitäten. Mit jahrzehntelanger lokaler Erfahrung und globalem Flair bringen wir Menschen durch sinnvolle Erlebnisse in einer der atemberaubendsten Landschaften Bayerns zusammen.</p>
+    </div>
+
+    
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div id="contact" class="contact">
+    <div class="contact-inner">
+      <h5>Kontaktieren Sie uns</h5>
+      <h1>Ein persönliches Gespräch ist der Anfang von allem!</h1>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <a href="https://g.page/MountainEntertainment?share">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-text">
+              <h6>Mountain Entertainment Eventagentur</h6>
+              <p>Bahnhofspl. 2, 83471 Berchtesgaden</p>
+            </div>
+          </a>
+        </div>
+        <div class="contact-card">
+          <a href="tel:+49 8652 655813">
+            <div class="contact-icon">
+              <i class="fas fa-phone-volume"></i>
+            </div>
+            <div class="contact-text">
+              <h6>Telefon</h6>
+              <p>+49 8652 655813</p>
+            </div>
+          </a>
+        </div>
+        <div class="contact-card">
+          <a href="mailto:info@mountain-entertainment.de">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-text">
+              <h6>E-Mail</h6>
+              <p>info@mountain-entertainment.de</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container2">
+     <div class="row">
+      <ul class="footer-links">
+        <li><a>Impressum</a></li>
+        <li><a>Datenschutz</a></li>
+        <li><a href="../agb">AGB</a></li>
+      </ul>
+      <!-- Social Icons -->
+     <div class="social-icons">
+      <ul>
+        <li><a href="https://www.instagram.com/me_berchtesgaden/" target="_blank" title="Instagram"><i aria-hidden="true" class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="https://www.facebook.com/MountainEntertainment/" target="_blank" title="Facebook"><i aria-hidden="true" class="fa-brands fa-facebook"></i></a></li>
+        <li><a href="https://www.youtube.com/user/mountainmove1" target="_blank" title="YouTube"><i aria-hidden="true" class="fa-brands fa-youtube"></i></a></li>
+        <li><a href="https://www.xing.com/profile/Peter_Beierl" target="_blank" title="Xing"><i aria-hidden="true" class="fa-brands fa-xing"></i></a></li>
+      </ul>
+      </div>
+      <!-- /Social Icons -->
+     </div>
+  </div>
+  <div class="container">
+
+     
+
+     <div class="row">
+
+       <div class="copyright">Mountain Sights © 2025. By <a href='https://www.mountain-entertainment.de/' target='_blank'> Mountain Entertainment</a></div>
+
+     </div>
+  </div>
+</footer>
+<!-- END FOOTER -->
+
+
+    <!-- Javascript files -->
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+    <!-- Backstretch -->
+    <script src="../js/jquery.backstretch.min.js"></script>
+    <!-- CountDown  -->
+    <script src="../js/jquery.countdown.js"></script>
+    <!-- Validate form -->
+    <script src="../js/jquery.validate.js"></script>
+    <!-- Youtube Player -->
+    <script src="../js/jquery.mb.YTPlayer.min.js"></script>
+    <!-- Ajax chimp -->
+    <script src="../js/jquery.ajaxchimp.js"></script>
+    <!-- AOS -->
+    <script src="../js/aos.min.js"></script>
+    <!-- Counter -->
+    <script src="../js/jquery.countTo.min.js"></script>
+    <!-- jQuery Appear -->
+    <script src="../js/jquery.appear.min.js"></script>
+    <!-- Rain Animation -->
+    <script src="../js/rain.js"></script>
+
+    <script src="../js/weather.js"></script>
+    <!-- Rain Animation BG Video Remove is comment active bg video-->
+    <!-- <script src="js/rain_videobg.js"></script>-->
+    <!-- Google map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAV1KS10sb3O462XosfZTKohHJwi6C0joo"></script>
+    <!-- Custom -->
+    <script src="../js/main.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</body>
+</html>
