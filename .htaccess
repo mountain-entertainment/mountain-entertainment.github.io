@@ -3,6 +3,11 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} ^217\.154\.172\.247$
 RewriteRule ^(.*)$ https://mountain-concierge.de/$1 [L,R=301]
 
+# Special case: /de should serve /de.html (not the /de directory)
+RewriteCond %{REQUEST_URI} ^/de/?$
+RewriteCond %{REQUEST_FILENAME} !/de/
+RewriteRule ^de/?$ de.html [NC,L]
+
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html [NC,L]
