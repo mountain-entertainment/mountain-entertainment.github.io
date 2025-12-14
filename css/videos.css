@@ -112,6 +112,9 @@ header {
 }
 
 .list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   padding: 30px;
   box-shadow: rgba(149, 157, 165, 0.623) 0px 1px 8px;
   height: 100%;
@@ -184,9 +187,6 @@ header {
   }
 
   .list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
     height: fit-content;
     border-radius: 0 0 15px 15px;
   }

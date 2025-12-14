@@ -1,9 +1,9 @@
 const videosBySeason = {
   spring: [
-    { type: "local", file: "Fruehlingsfest.MP4", title: "Frühlingsfest", thumb: "./img/video-thumbnails/frühlingsfest.png" },
+    { type: "local", file: "Fruehlingsfest.MP4", title: "Frühlingsfest", thumb: "./img/video-thumbnails/fruehlingsfest.png" },
   ],
   summer: [
-    { type: "local", file: "eagles_nest.MP4", title: "", thumb: "./video-thumbnails/eaglesnest-img.png" },
+    { type: "local", file: "eagles_nest.MP4", title: "", thumb: "./img/video-thumbnails/eaglesnest-img.png" },
     { type: "local", file: "gin-tonic.mp4", title: "", thumb: "./img/video-thumbnails/gin-tonic-hintersee_small.jpg" },
     { type: "local", file: "koenigssee_boot.MOV", title: "", thumb: "./img/video-thumbnails/see_small.png" },
     { type: "local", file: "aschi.mp4", title: "", thumb: "./img/video-thumbnails/aschi.png" },
