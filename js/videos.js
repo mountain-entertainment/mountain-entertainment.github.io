@@ -57,6 +57,17 @@ function setVideo(season, index) {
   currentlyLoadingVideo = true;
 
   videoContainer.innerHTML = "";
+  
+  // Create and show loading spinner
+  const loader = document.createElement("div");
+  loader.id = "video-loader";
+  loader.className = "loader-icon fa fa-spin colored-border";
+  loader.style.position = "absolute";
+  loader.style.top = "50%";
+  loader.style.left = "50%";
+  loader.style.transform = "translate(-50%, -50%)";
+  loader.style.zIndex = "10";
+  videoContainer.appendChild(loader);
 
   let src = "";
 
@@ -75,6 +86,8 @@ function setVideo(season, index) {
     videoContainer.appendChild(iframe);
 
     setTimeout(() => {
+      const loader = document.getElementById("video-loader");
+      if (loader) loader.remove();
       iframe.style.opacity = "1";
       currentlyLoadingVideo = false;
     }, 100);
@@ -95,6 +108,8 @@ function setVideo(season, index) {
     videoContainer.appendChild(iframe);
 
     setTimeout(() => {
+      const loader = document.getElementById("video-loader");
+      if (loader) loader.remove();
       iframe.style.opacity = "1";
       currentlyLoadingVideo = false;
     }, 100);
@@ -116,7 +131,7 @@ function setVideo(season, index) {
     videoTag.style.width = "100%";
     videoTag.style.height = "100%";
     videoTag.style.objectFit = "cover";
-    videoTag.style.borderRadius = "17px 0 0 17px";
+    videoTag.style.borderRadius = "inherit";
     videoTag.style.opacity = "0";
     videoTag.style.transition = "opacity 0.5s ease-in-out";
 
@@ -125,6 +140,8 @@ function setVideo(season, index) {
     videoTag.addEventListener(
       "canplay",
       () => {
+        const loader = document.getElementById("video-loader");
+        if (loader) loader.remove();
         videoTag.style.opacity = "1";
         currentlyLoadingVideo = false;
       },
@@ -133,6 +150,8 @@ function setVideo(season, index) {
 
     setTimeout(() => {
       if (videoTag.style.opacity === "0") {
+        const loader = document.getElementById("video-loader");
+        if (loader) loader.remove();
         videoTag.style.opacity = "1";
         currentlyLoadingVideo = false;
       }
@@ -198,7 +217,7 @@ switchers.forEach((switcher) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const defaultSeason = "fall";
+  const defaultSeason = "winter";
 
   document.getElementById(defaultSeason)?.classList.add("active");
 

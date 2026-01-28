@@ -43,8 +43,7 @@ header {
   overflow: hidden;
   border-radius: 17px 0 0 17px;
   box-shadow: rgba(149, 157, 165, 0.623) 0px 1px 8px;
-
-  background-image: url('../img/video-thumbnails/herbst.jpg');
+  background-color: white;
   background-size: cover;
   background-position: center;
   z-index: 0;
@@ -170,6 +169,10 @@ header {
   }
 
   .video-wrapper {
+    border-radius: 17px 17px 0 0;
+  }
+
+  .video-wrapper video {
     border-radius: 17px 17px 0 0;
   }
 
