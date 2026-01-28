@@ -191,13 +191,16 @@ if (toggle) {
       'sojourns.html': 'erlebnisse.html',
       'summit-house.html': 'gipfelbau.html',
       'videos.html': 'videos.html',
-      'agb.html': 'agb.html',
+      'legal.html': 'agb.html',
+      'privacy.html': 'datenschutz.html',
+      'imprint.html': 'impressum.html',
       // Winter files
       'berchtesgadener-advent.html': 'berchtesgadener-advent.html',
       'gin-tonic-vault.html': 'grassl-tresor.html',
       'salt-mines.html': 'salzbergwerk.html',
       'snowshoe-hike.html': 'schneeschuhwanderung.html',
       'winter-hike.html': 'winterwanderung.html',
+      'winter-sightseeing-tour.html': 'sightseeing-tour.html',
       // Highlights files
       'alpine-loop.html': 'hohenringstrasse.html',
       'dokumentation.html': 'ein-ort-und-seine-geschichte.html',

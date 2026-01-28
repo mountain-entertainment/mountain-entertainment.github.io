@@ -12,7 +12,7 @@ const videosBySeason = {
     { type: "local", file: "Herbst.mp4", title: "Autumn", thumb: "./img/video-thumbnails/herbst_small.jpg" },
   ],
   winter: [
-    { type: "local", file: "winter.MOV", title: "Winter", thumb: "./img/video-thumbnails/markt_winter_small.jpg" },
+    { type: "local", file: "ice_stock.MOV", title: "Winter", thumb: "./img/video-thumbnails/ice_stock.png" },
     { type: "local", file: "hintersee_winter.MOV", title: "Wintersee", thumb: "./img/video-thumbnails/see_winter.png" },
   ]
 };
