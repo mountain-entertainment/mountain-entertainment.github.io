@@ -12,7 +12,7 @@ const videosBySeason = {
     { type: "local", file: "Herbst.mp4", title: "Autumn", thumb: "./img/video-thumbnails/herbst_small.jpg" },
   ],
   winter: [
-    { type: "local", file: "ice_stock.MOV", title: "Winter", thumb: "./img/video-thumbnails/ice_stock.png" },
+    { type: "local", file: "ice_stock.MOV", title: "Eisstockschießen", thumb: "./img/video-thumbnails/ice_stock.png" },
     { type: "local", file: "hintersee_winter.MOV", title: "Wintersee", thumb: "./img/video-thumbnails/see_winter.png" },
   ]
 };
@@ -25,7 +25,6 @@ function getVideoBasePath() {
   return './videos-folder/';
 }
 
-// Get correct base path for thumbnails (works for both English and German)
 function getThumbnailBasePath() {
   const currentPath = window.location.pathname;
   if (currentPath.includes('/de/')) {
@@ -40,19 +39,30 @@ const thumbnailBasePath = getThumbnailBasePath();
 let currentlyLoadingVideo = false;
 let currentSelectedVideoDiv = null;
 
+let currentVideoKey = null;
+
 function setVideo(season, index) {
   const video = videosBySeason[season][index];
   const videoContainer = document.querySelector(".video-wrapper");
 
-  if (currentlyLoadingVideo) {
+  const newKey = `${season}-${index}`;
+
+  if (currentVideoKey === newKey) {
     return;
   }
+
+  currentVideoKey = newKey;
+
+  if (currentlyLoadingVideo) return;
   currentlyLoadingVideo = true;
+
+  videoContainer.innerHTML = "";
 
   let src = "";
 
   if (video.type === "youtube") {
-    src = `https://www.youtube.com/embed/${video.id}?si=5cjljTz_atfyxqoO&autoplay=1&mute=1&loop=1&playlist=${video.id}&start=${video.start || 0}&vq=hd1080p`;
+    src = `https://www.youtube.com/embed/${video.id}?autoplay=1&mute=1&loop=1&playlist=${video.id}&start=${video.start || 0}`;
+
     const iframe = document.createElement("iframe");
     iframe.id = "video-frame";
     iframe.src = src;
@@ -61,16 +71,18 @@ function setVideo(season, index) {
     iframe.allowFullscreen = true;
     iframe.style.opacity = "0";
     iframe.style.transition = "opacity 0.5s ease-in-out";
-    
+
     videoContainer.appendChild(iframe);
-    
+
     setTimeout(() => {
       iframe.style.opacity = "1";
       currentlyLoadingVideo = false;
     }, 100);
+  }
 
-  } else if (video.type === "vimeo") {
-    src = `https://player.vimeo.com/video/${video.id}?h=7732c0008a&autoplay=1&muted=1&background=1&loop=1&title=0&byline=0&portrait=0`;
+  else if (video.type === "vimeo") {
+    src = `https://player.vimeo.com/video/${video.id}?autoplay=1&muted=1&background=1&loop=1`;
+
     const iframe = document.createElement("iframe");
     iframe.id = "video-frame";
     iframe.src = src;
@@ -79,15 +91,16 @@ function setVideo(season, index) {
     iframe.allowFullscreen = true;
     iframe.style.opacity = "0";
     iframe.style.transition = "opacity 0.5s ease-in-out";
-    
+
     videoContainer.appendChild(iframe);
-    
+
     setTimeout(() => {
       iframe.style.opacity = "1";
       currentlyLoadingVideo = false;
     }, 100);
+  }
 
-  } else if (video.type === "local") {
+  else if (video.type === "local") {
     const videoTag = document.createElement("video");
     videoTag.id = "video-frame";
     videoTag.src = `${videoBasePath}${video.file}`;
@@ -96,6 +109,7 @@ function setVideo(season, index) {
     videoTag.loop = true;
     videoTag.playsInline = true;
     videoTag.controls = false;
+
     videoTag.style.position = "absolute";
     videoTag.style.top = "0";
     videoTag.style.left = "0";
@@ -105,14 +119,18 @@ function setVideo(season, index) {
     videoTag.style.borderRadius = "17px 0 0 17px";
     videoTag.style.opacity = "0";
     videoTag.style.transition = "opacity 0.5s ease-in-out";
-    
+
     videoContainer.appendChild(videoTag);
-    
-    videoTag.addEventListener("canplay", () => {
-      videoTag.style.opacity = "1";
-      currentlyLoadingVideo = false;
-    }, { once: true });
-    
+
+    videoTag.addEventListener(
+      "canplay",
+      () => {
+        videoTag.style.opacity = "1";
+        currentlyLoadingVideo = false;
+      },
+      { once: true }
+    );
+
     setTimeout(() => {
       if (videoTag.style.opacity === "0") {
         videoTag.style.opacity = "1";
@@ -125,31 +143,37 @@ function setVideo(season, index) {
 function populateVideoList(season) {
   const listContainer = document.querySelector(".video-list .list");
   listContainer.innerHTML = "";
+
   videosBySeason[season].forEach((video, index) => {
     const videoDiv = document.createElement("div");
     videoDiv.classList.add("video");
-    
+
     let thumbPath = video.thumb;
     if (thumbPath.startsWith("./")) {
       thumbPath = thumbnailBasePath + thumbPath.substring(2);
     }
-    
+
     videoDiv.innerHTML = `
       <img class="video-thumb" src="${thumbPath}" alt="${video.title}">
       <h3 class="video-title">${video.title}</h3>
     `;
+
     videoDiv.style.cursor = "pointer";
+
     videoDiv.addEventListener("click", () => {
       document.querySelectorAll(".video-list .video").forEach(v => {
         v.style.opacity = "0.6";
       });
+
       videoDiv.style.opacity = "1";
       currentSelectedVideoDiv = videoDiv;
+
       setVideo(season, index);
     });
+
     listContainer.appendChild(videoDiv);
   });
-  
+
   const firstVideo = listContainer.querySelector(".video");
   if (firstVideo) {
     firstVideo.style.opacity = "1";
@@ -158,18 +182,26 @@ function populateVideoList(season) {
 }
 
 const switchers = document.querySelectorAll(".season-switch");
+
 switchers.forEach((switcher) => {
   switcher.addEventListener("click", () => {
     switchers.forEach(s => s.classList.remove("active"));
     switcher.classList.add("active");
+
     const season = switcher.id;
+
+    currentVideoKey = null;
+
     populateVideoList(season);
+    setVideo(season, 0);
   });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
   const defaultSeason = "fall";
+
   document.getElementById(defaultSeason)?.classList.add("active");
+
   populateVideoList(defaultSeason);
   setVideo(defaultSeason, 0);
 });
