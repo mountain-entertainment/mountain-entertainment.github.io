@@ -75,6 +75,8 @@
      transform: translateY(-50%);
      z-index: 10;
      transition: all 0.2s ease-in-out;
+     /* border: 2px solid var(--orange);
+     border-radius: 100%; */
 }
  .flickity-prev-next-button .flickity-button-icon {
      display: none;

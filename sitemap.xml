@@ -37,7 +37,7 @@
     <loc>https://mountain-concierge.de/videos</loc>
   </url>
   <url>
-    <loc>https://mountain-concierge.de/agb</loc>
+    <loc>https://mountain-concierge.de/legal</loc>
   </url>
   <url>
     <loc>https://mountain-concierge.de/winter/sightseeing</loc>
@@ -124,6 +124,9 @@
     <loc>https://mountain-concierge.de/de/agb</loc>
   </url>
   <url>
+    <loc>https://mountain-concierge.de/de/impresum</loc>
+  </url>
+  <url>
     <loc>https://mountain-concierge.de/de/winter/winter-sightseeing-tour</loc>
   </url>
   <url>
@@ -142,10 +145,10 @@
     <loc>https://mountain-concierge.de/de/winter/winterwanderung</loc>
   </url>
   <url>
-    <loc>https://mountain-concierge.de/de/highlights/hohenringstrasse</loc>
+    <loc>https://mountain-concierge.de/de/highlights/hoehenringstrasse</loc>
   </url>
   <url>
-    <loc>https://mountain-concierge.de/de/highlights/ein-ort-und-seine-geschichte</loc>
+    <loc>https://mountain-concierge.de/de/highlights/ausstellung</loc>
   </url>
   <url>
     <loc>https://mountain-concierge.de/de/highlights/zauberwald-und-smaragdgruener-see</loc>
