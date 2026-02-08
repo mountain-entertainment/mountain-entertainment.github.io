@@ -3,7 +3,7 @@
     Version: 1.0.6
     Author: Mountain-Themes
     Author URL: https://themeforest.net/user/mountain-themes
-    Woody © 2025. Design & Coded by Mountain-Themes.
+    Woody © 2026. Design & Coded by Mountain-Themes.
 
     TABLE OF CONTENTS
     ---------------------------
@@ -192,7 +192,7 @@ if (toggle) {
       'summit-house.html': 'gipfelbau.html',
       'videos.html': 'videos.html',
       'legal.html': 'agb.html',
-      'privacy.html': 'datenschutz.html',
+      'privacy-policy.html': 'datenschutz.html',
       'imprint.html': 'impressum.html',
       // Winter files
       'berchtesgadener-advent.html': 'berchtesgadener-advent.html',
