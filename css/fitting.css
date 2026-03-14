@@ -1,0 +1,27 @@
+.fitting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fitting-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 10vh 0 2vh 0;
+}
+
+h4::before, h5::before {
+    display: block;
+    position: relative;
+    content: '';
+    right: 65px;
+    top: 14px;
+    height: 3px;
+    width: 4rem;
+    background-color: var(--orange);
+}
+
+.card-content .text p {
+    height: fit-content;
+}
