@@ -1,35 +1,49 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="de">
+
   <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <meta name="HandheldFriendly" content="True">
       <meta name="apple-mobile-web-app-status-bar-style" content="black">
-      <meta name="description" content="Discover the stories behind Berchtesgaden with Mountain Concierge’s Insider tours—authentic, immersive, and unforgettable alpine experiences.">
-      <meta name="keywords" content="Mountain Concierge, insider tours, Berchtesgaden stories, guided storytelling, alpine legends, private tours, local history, exclusive experiences, Berchtesgaden culture, mountain adventures">
+      <meta name="description" content="Entdecken Sie die alpine Geschichte mit Mountain Concierge's Storyteller-Touren—authentisch, immersiv und unvergesslich.">
+      <meta name="keywords" content="Mountain Concierge, Storyteller-Touren, Berchtesgaden Geschichten, geführtes Storytelling, alpine Legenden, private Touren, Lokalgeschichte, exklusive Erlebnisse, Berchtesgaden Kultur, Bergabenteuer">
       <meta name="author" content="Mountain Concierge, Mountain Entertainment">
     
-      <title>Videos | Mountain Concierge</title>
+      <title>Event in Berchtesgaden buchen | Mountain Concierge</title>
       
       <!-- ============ GOOGLE FONTS ============ -->
       <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600' rel='stylesheet' type='text/css'>
       <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css' rel='stylesheet'>
+
       <!-- CSS -->
-      <link rel="stylesheet" type="text/css" href="./css/animate.css">
+      <!-- Animate css -->
+      <link rel="stylesheet" type="text/css" href="../css/animate.css">
+      <!-- Font-Awesome 6 PRO-->
       <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
-      <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-      <link rel="stylesheet" type="text/css" href="./css/aos.min.css">
-      <link rel="stylesheet" type="text/css" href="./css/footer.css">
-      <link rel="stylesheet" type="text/css" href="./css/detail.css">
-      <link rel="stylesheet" type="text/css" href="./css/videos.css">
-      <link rel="stylesheet" href="./css/style copy.css">
-      <link rel="stylesheet" href="css/contact.css">
-      <link rel="stylesheet" href="css/fa.css">
-      <link rel="shortcut icon" href="./images/favicon.ico">
-      <style>
+      <!-- Bootstrap 5 -->
+      <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+      <!-- AOS -->
+      <link rel="stylesheet" type="text/css" href="../css/aos.min.css">
+      <!-- Custom styles CSS -->
+      <link rel="stylesheet" type="text/css" href="../css/detail.css">
+      <link rel="stylesheet" type="text/css" href="../css/footer.css">
+      <link rel="stylesheet" href="../css/style copy.css">
+      <link rel="stylesheet" href="../css/carousel.css">
+      <link rel="stylesheet" href="../css/contact.css">
+      <link rel="stylesheet" href="../css/tour-carousel.css">
+      <link rel="stylesheet" href="../css/fa.css">
+      <link rel="stylesheet" href="../css/pure.css">
+      <link rel="stylesheet" href="../css/style.css">
+
+      <!-- Favicons -->
+      <link rel="shortcut icon" href="../images/favicon.ico">
+
+       <style>
+        /* Basic styles to help visualize the layout */
         .container-carousel { display: flex; }
         .carousel__wrapper { display: flex; }
         .item img { margin-bottom: 10px; }
@@ -37,118 +51,118 @@
         .instagram__buttons .left, .instagram__buttons .right { display: flex; gap: 10px; }
         .instagram__buttons .right { margin-left: auto; }
       </style>
+
   </head>
+
   <body>
+
 <!-- LOADER TEMPLATE -->
 <div id="page-loader">
   <div class="loader-icon fa fa-spin colored-border"></div>
 </div>
 <!-- /LOADER TEMPLATE -->
+
 <!-- HEADER -->
 <header>
+
   <div class="header-nav">
-    <a href="./" class="header__logo"><img src="./images/MC_RGB_Icon.svg" alt="logo"></a>
+    <a href="./" class="header__logo"><img src="../images/MC_RGB_Icon.svg" alt="logo"></a>
+
     <ion-icon name="menu-outline" class="header__toggle" id="nav-toggle"></ion-icon>
+
     <nav class="nav" id="nav-menu">
         <div class="nav__content bd-grid">
+
             <ion-icon name="close-outline" class="nav__close" id="nav-close"></ion-icon>
-            <a href="./" class="nav__logo"><img src="./images/MC_RGB_Icon.svg" alt="logo"></a>
+
+            <a href="./" class="nav__logo"><img src="../images/MC_RGB_Icon.svg" alt="logo"></a>
+
             <div class="nav__menu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="./#about" class="nav__link">About</a></li>
-                    <li class="nav__item"><a class="nav__link_dropdown">Tours</a><i class="fas fa fa-chevron-down"></i>
+                    <li class="nav__item"><a href="./#about" class="nav__link">Über uns</a></li>
+                    <li class="nav__item"><a class="nav__link_dropdown">Touren</a><i class="fas fa fa-chevron-down"></i>
                       <div class="nav_dropdown">
-                        <a href="./#tours" class="nav__link">Summer</a>
+                        <a href="#tours" class="nav__link">Sommer</a>
                         <a href="./#tours-winter" class="nav__link">Winter</a>
-                        <a href="./sojourns" class="nav__link">All</a>
+                        <a href="./erlebnisse" class="nav__link">Alle</a>
                       </div>
                     </li>
-                    <li class="nav__item"><a href="#" class="nav__link">Videos</a></li>
+                    <li class="nav__item"><a href="./videos" class="nav__link">Videos</a></li>
                     <li class="nav__item"><a href="./#it's ME" class="nav__link">It's ME</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                    <li class="nav__item"><a href="./book" class="nav__link">Book now</a></li>
-                </ul></div>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Kontakt</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Jetzt buchen</a></li>
+                </ul>
+            </div>
         </div>
         <div class="lang-wrapper">
             <div class="switch">
                 <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
                 <label for="language-toggle"></label>
-                <span class="on"><img src="img/icons/germany.png"></span>
-                <span class="off"><img src="img/icons/united-kingdom.png"></span>
+                <span class="on"><img src="../img/icons/germany.png"></span>
+                <span class="off"><img src="../img/icons/united-kingdom.png"></span>
             </div>
         </div>
     </nav>
+    
+  </div>
+  <div class="video-outer" style="background-image: url('../img/alpine_border/_F4H2139.jpg'); background-size: cover; background-position: center;">
+  <div class="video-inner">
+    <!-- <video autoplay muted loop playsinline>
+      <source src="../videos-folder/eagles_nest.MP4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video> -->
   </div>
 </div>
+
 </header>
+
 <!-- END HEADER -->
 
 <section class="intro">
   <div class="intro-inner">
-    <h1>Videos</h1>
+    <h4 class="hl">Jetzt Tour buchen</h4>
+    <h1>bei Mountain Concierge</h1>
   </div>
 </section>
 
-<div class="video-search">
-  <div class="season-switch" id="spring">
-    <p><strong>Spring</strong></p>
-    
-  </div>
-  <div class="season-switch" id="summer">
-    <p><strong>Summer</strong></p>
-    
-  </div>
-  <div class="season-switch" id="fall">
-    <p><strong>Autumn</strong></p>
-    
-  </div>
-  <div class="season-switch" id="winter">
-    <p><strong>Winter</strong></p>
-  </div>
-</div>
-<section class="video-player">
-  <div class="current-video">
-    <div class="video-wrapper">
-      <iframe 
-        id="video-frame"
-        src="https://player.vimeo.com/video/1127267638?h=7732c0008a&autoplay=1&muted=1&background=1&loop=1&title=0&byline=0&portrait=0"
-        frameborder="0"
-        allow="autoplay; fullscreen; picture-in-picture"
-        allowfullscreen>
-      </iframe>
+<section class="pure">
+    <div class="pure-text">
+        <div class="pure-logo">
+            <img src="../images/pure/logo_and_name.svg"> 
+        </div>
+        <h2>Buchen Sie ein Erlebnis durch unseren Partner</h2>
     </div>
-  </div>
-  <div class="video-list">
-    <div class="list">
-      <div class="video">
-        <img class="video-thumb" src="./img/video-thumbnails/herbst.jpg">
-        <h3 class="video-title">Title</h3>
-      </div>
+    <div class="pure-content">
+        <div class="pure-video">
+            <video src="https://www.pure-germany.com/site/assets/files/1/pure_germany_switzerland_austria_finest_travel_and_experiences.mp4" type="video/mp4" autoplay muted loop playsinline></video>
+            <div class="pure-cta">
+                <h5>Einzigartige Reiseerlebnisse</h5>
+                <h2>Pure Germany – PGSA</h2>
+                <div class="liq">
+                    <a class="cta-btn cta-btn-o" href="https://www.pure-germany.com/contact-us/" target="_blank">Jetzt Kontakt aufnehmen</a>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
 <section class="why">
   <div class="why-inner">
-    <h1>Why Mountain Concierge?</h1>
-    
-    <p>We offer you the opportunity to discover the sights in and around Berchtesgaden privately and in peace, without the hustle and bustle of mass tourism. Benefit from our local expertise and experience the mountains from a whole new perspective.</p>
-    
-    <p>Book your tour today!</p>
-    
-    <a class="cta-btn cta-btn-w" href="./book">Book now</a>
-    
+    <h1>Warum Mountain Concierge?</h1>
+    <p>Wir bieten Ihnen die Möglichkeit, die Sehenswürdigkeiten in und um Berchtesgaden privat und in Ruhe zu entdecken, ohne den Trubel des Massentourismus. Profitieren Sie von unserer lokalen Expertise und erleben Sie die Berge von einer ganz neuen Seite.</p>
+    <p>Buchen Sie noch heute Ihre Tour!</p>
   </div>
 </section>
+
+<!-- Section Tours -->
+
 
 <!-- FOOTER -->
 <footer>
   <div id="contact" class="contact">
     <div class="contact-inner">
-      <h5>Contact us</h5>
-      
-      <h1>A personal talk is the beginning of everything!</h1>
-      
+      <h5>Kontaktieren Sie uns</h5>
+      <h1>Ein persönliches Gespräch ist der Anfang von allem!</h1>
       <div class="contact-cards">
         <div class="contact-card">
           <a href="https://g.page/MountainEntertainment?share">
@@ -156,8 +170,7 @@
               <i class="fas fa-map-marker-alt"></i>
             </div>
             <div class="contact-text">
-              <h6>Mountain Entertainment Event Agency</h6>
-              
+              <h6>Mountain Entertainment Eventagentur</h6>
               <p>Bahnhofspl. 2, 83471 Berchtesgaden</p>
             </div>
           </a>
@@ -168,8 +181,7 @@
               <i class="fas fa-phone-volume"></i>
             </div>
             <div class="contact-text">
-              <h6>Telephone</h6>
-              
+              <h6>Telefon</h6>
               <p>+49 8652 655813</p>
             </div>
           </a>
@@ -191,10 +203,11 @@
   <div class="container2">
      <div class="row">
       <ul class="footer-links">
-        <li><a href="./imprint">Imprint</a></li>
-        <li><a href="./privacy-policy">Privacy Policy</a></li>
-        <li><a href="./legal">Legal</a></li>
-      </ul><!-- Social Icons -->
+        <li><a href="./impressum">Impressum</a></li>
+        <li><a href="./datenschutz">Datenschutz</a></li>
+        <li><a href="./agb">AGB</a></li>
+      </ul>
+      <!-- Social Icons -->
      <div class="social-icons">
       <ul>
         <li><a href="https://www.instagram.com/me_berchtesgaden/" target="_blank" title="Instagram"><i aria-hidden="true" class="fa-brands fa-instagram"></i></a></li>
@@ -208,6 +221,8 @@
   </div>
   <div class="container">
 
+     
+
      <div class="row">
 
        <div class="copyright">Mountain Concierge © 2026. By <a href='https://www.mountain-entertainment.de/' target='_blank'> Mountain Entertainment</a></div>
@@ -217,29 +232,32 @@
 </footer>
 <!-- END FOOTER -->
 
+
     <!-- Javascript files -->
     <!-- jQuery -->
-    <script src="./js/jquery.js"></script>
+    <script src="../js/jquery.js"></script>
     <!-- Backstretch -->
-    <script src="./js/jquery.backstretch.min.js"></script>
+    <script src="../js/jquery.backstretch.min.js"></script>
     <!-- CountDown  -->
-    <script src="./js/jquery.countdown.js"></script>
+    <script src="../js/jquery.countdown.js"></script>
     <!-- Validate form -->
-    <script src="./js/jquery.validate.js"></script>
+    <script src="../js/jquery.validate.js"></script>
     <!-- Youtube Player -->
-    <script src="./js/jquery.mb.YTPlayer.min.js"></script>
+    <script src="../js/jquery.mb.YTPlayer.min.js"></script>
     <!-- Ajax chimp -->
-    <script src="./js/jquery.ajaxchimp.js"></script>
+    <script src="../js/jquery.ajaxchimp.js"></script>
     <!-- AOS -->
-    <script src="./js/aos.min.js"></script>
+    <script src="../js/aos.min.js"></script>
     <!-- Counter -->
-    <script src="./js/jquery.countTo.min.js"></script>
+    <script src="../js/jquery.countTo.min.js"></script>
     <!-- jQuery Appear -->
-    <script src="./js/jquery.appear.min.js"></script> 
+    <script src="../js/jquery.appear.min.js"></script>
+    <!-- Rain Animation -->
+    <script src="../js/rain.js"></script>
+    <!-- Google map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAV1KS10sb3O462XosfZTKohHJwi6C0joo"></script>
     <!-- Custom -->
-    <script src="./js/main.js"></script>
-    <script src="./js/videos.js"></script>
-    <!--<script src="./js/slider.js"></script>-->
+    <script src="../js/main.js"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
 </body>

@@ -194,6 +194,7 @@ if (toggle) {
       'legal.html': 'agb.html',
       'privacy-policy.html': 'datenschutz.html',
       'imprint.html': 'impressum.html',
+      'book.html': 'buchen.html',
       // Winter files
       'berchtesgadener-advent.html': 'berchtesgadener-advent.html',
       'gin-tonic-vault.html': 'grassl-tresor.html',
