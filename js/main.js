@@ -84,6 +84,13 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   const images = document.querySelectorAll('.carousel .item img');
+  let lightboxImages = document.querySelectorAll('.images-collection img');
+  
+  // Fallback: if no images-collection exists, use carousel images
+  if (lightboxImages.length === 0) {
+    lightboxImages = images;
+  }
+  
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
   const prevBtn = document.getElementById('prevBtn');
@@ -113,12 +120,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Show current image in lightbox
   function showImage() {
-    if (!lightboxImg || !images[currentIndex]) return;
+    if (!lightboxImg || !lightboxImages[currentIndex]) return;
 
     lightboxImg.classList.add('fade-out');
 
     setTimeout(() => {
-      lightboxImg.src = images[currentIndex].src + '?t=' + new Date().getTime();
+      lightboxImg.src = lightboxImages[currentIndex].src + '?t=' + new Date().getTime();
       lightboxImg.onload = () => {
         lightboxImg.classList.remove('fade-out');
       };
