@@ -208,7 +208,7 @@ if (toggle) {
       'salt-mines.html': 'salzbergwerk.html',
       'snowshoe-hike.html': 'schneeschuhwanderung.html',
       'winter-hike.html': 'winterwanderung.html',
-      'winter-sightseeing-tour.html': 'sightseeing-tour.html',
+      'winter-sightseeing.html': 'winter-sightseeing-tour.html',
       // Highlights files
       'alpine-loop.html': 'hohenringstrasse.html',
       'dokumentation.html': 'ein-ort-und-seine-geschichte.html',
